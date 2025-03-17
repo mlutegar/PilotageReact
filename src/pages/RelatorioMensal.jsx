@@ -1,6 +1,6 @@
 import Base from "./Base"
 
-const Home = () => {
+const RelatorioMensal = () => {
   return (
     <Base>
       <h1>
@@ -10,4 +10,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default RelatorioMensal
