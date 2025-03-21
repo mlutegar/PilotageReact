@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
   /* CSS HSL */
@@ -13,11 +12,14 @@
   --detalhe: hsla(9, 63%, 45%, 1);
 */
 
-  --primaria: hsla(0, 1%, 20%, 1);
-  --background: hsla(81, 21%, 74%, 1);
-  --secundaria: hsla(135, 7%, 64%, 1);
-  --destaque: hsla(8, 34%, 54%, 1);
-  --detalhe:hsla(241, 96%, 72%, 1);
+  --background1: #FFFFFF;
+  --background2: #003560;
+  --background3: #9CB1C3;
+  --background4: #F5F7F9;
+  --primaria: #022747;
+  --secundaria: #FFFFFF;
+  --destaque: #9CB1C3;
+  --detalhe: #79819C;
 }
 
 /* borda vermelha em todos os elementos para debug */
@@ -27,13 +29,13 @@
 
 body {
   margin: 0;
-  font-family: 'Lora', serif;
-  background-color: var(--background);
+  font-family: "PT Sans", sans-serif;
+  background-color: var(--background1);
   color:var(--primaria);
 }
 
 a {
-  font-family: 'Roboto', sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
 
 div.container {

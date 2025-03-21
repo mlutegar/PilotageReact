@@ -3,15 +3,29 @@ import { Top } from "./Style";
 
 const Header = () => (
   <Top>
-    <Link to="/">Home</Link>
-    <Link to="/fotos">Fotos</Link>
-    <Link to="/atletas">Atletas</Link>
-    
-    { window.sessionStorage.getItem('accessToken')
-    ? <Link to="/logout">Logout</Link>
-    : <Link to="/login">Login</Link>
-    }
-    
+      <div className="logo-header">
+          <div className="detalhe"/>
+          <Link to="/"><img src="imagens/Logo.png" alt="Logo"/></Link>
+      </div>
+
+      <div className={"menu"}>
+          <div className={"botao-menu"}>
+              <div className="hover"/>
+              <Link to="/fotos">Home</Link>
+          </div>
+          <div className={"botao-menu"}>
+              <div className="hover"/>
+              <Link to="/atletas">Relatórios</Link>
+          </div>
+          <div className={"botao-menu"}>
+              <div className="hover"/>
+              <Link to="/atletas">Quem Somos</Link>
+          </div>
+          <div className={"botao-menu"}>
+              <div className="hover"/>
+              <Link to="/atletas">Contato</Link>
+          </div>
+      </div>
   </Top>
 )
 
