@@ -1,11 +1,10 @@
 import Base from "./Base"
+import Banner from "../components/Banner/Banner";
 
 const Home = () => {
   return (
     <Base>
-      <h1>
-     Aplicação React Base
-      </h1>
+        <Banner/>
     </Base>
   )
 }

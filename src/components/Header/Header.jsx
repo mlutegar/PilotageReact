@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import { Top } from "./Style";
+import { Menu } from "./Style";
+import { BotaoMenu } from "./Style";
+import React from "react";
 
 const Header = () => (
   <Top>
@@ -8,24 +11,24 @@ const Header = () => (
           <Link to="/"><img src="imagens/Logo.png" alt="Logo"/></Link>
       </div>
 
-      <div className={"menu"}>
-          <div className={"botao-menu"}>
+      <Menu>
+          <BotaoMenu>
               <div className="hover"/>
               <Link to="/fotos">Home</Link>
-          </div>
-          <div className={"botao-menu"}>
+          </BotaoMenu>
+          <BotaoMenu>
               <div className="hover"/>
               <Link to="/atletas">Relatórios</Link>
-          </div>
-          <div className={"botao-menu"}>
+          </BotaoMenu>
+          <BotaoMenu>
               <div className="hover"/>
               <Link to="/atletas">Quem Somos</Link>
-          </div>
-          <div className={"botao-menu"}>
+          </BotaoMenu>
+          <BotaoMenu>
               <div className="hover"/>
               <Link to="/atletas">Contato</Link>
-          </div>
-      </div>
+          </BotaoMenu>
+      </Menu>
   </Top>
 )
 
