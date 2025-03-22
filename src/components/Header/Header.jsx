@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import { Top } from "./Style";
-import { Menu } from "./Style";
-import { BotaoMenu } from "./Style";
+import { Top, Menu, BotaoMenu } from "./Style";
 import React from "react";
 
 const Header = () => (
