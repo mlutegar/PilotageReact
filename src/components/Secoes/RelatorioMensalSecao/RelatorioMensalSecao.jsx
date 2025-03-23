@@ -1,12 +1,14 @@
 import { RelatorioMensalSecaoStyle } from "./Style";
-import TituloPrimario from "../../Texto/TituloPrimario/TituloPrimario";
+import TituloPrimario from "../../Elementos/Textos/TituloPrimario/TituloPrimario";
 
 const RelatorioMensalSecao = () => {
     return (
         <RelatorioMensalSecaoStyle>
-            <TituloPrimario>
-                Relatório Mensal
-            </TituloPrimario>
+            <div className={'conteudo'}>
+                <TituloPrimario>
+                    Relatório Mensal
+                </TituloPrimario>
+            </div>
         </RelatorioMensalSecaoStyle>
     );
 }

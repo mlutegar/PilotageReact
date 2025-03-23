@@ -1,5 +1,5 @@
 import { ContatoStyle } from "./Style";
-import TituloPrimario from "../../Texto/TituloPrimario/TituloPrimario";
+import TituloPrimario from "../../Elementos/Textos/TituloPrimario/TituloPrimario";
 
 const Contato = () => {
     return (

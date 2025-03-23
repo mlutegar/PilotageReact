@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import {BannerStyle, Texto} from "./Style";
-import FaleConoscoButtom from "../../FaleConoscoButtom/FaleConoscoButtom";
+import FaleConoscoButtom from "../../Elementos/Botoes/FaleConoscoButtom/FaleConoscoButtom";
 
 const Banner = () => (
     <BannerStyle>

@@ -3,7 +3,9 @@ import { FooterSecundarioStyle } from "./Style";
 const FooterSecundario = () => {
     return (
         <FooterSecundarioStyle>
-            <h1>NomeComponente</h1>
+            <div className={"conteudo"}>
+                <h1>NomeComponente</h1>
+            </div>
         </FooterSecundarioStyle>
     );
 }

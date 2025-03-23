@@ -1,5 +1,5 @@
 import styled from "styled-components"
 
-export const ContatoStyle = styled.div`
+export const ContatoStyle = styled.section`
 
 `

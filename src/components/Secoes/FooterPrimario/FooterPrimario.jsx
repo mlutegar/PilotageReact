@@ -1,9 +1,12 @@
-import { FooterPrimarioStyle } from "./Style";
+import {FooterPrimarioStyle} from "./Style";
 
 const FooterPrimario = () => {
     return (
         <FooterPrimarioStyle>
-            <h1>NomeComponente</h1>
+            <div className={'conteudo'}>
+                <h1>NomeComponente</h1>
+
+            </div>
         </FooterPrimarioStyle>
     );
 }

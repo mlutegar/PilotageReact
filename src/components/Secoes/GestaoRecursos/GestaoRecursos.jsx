@@ -1,7 +1,8 @@
 import { GestaoRecursosStyle } from "./Style";
-import TituloPrimario from "../../Texto/TituloPrimario/TituloPrimario";
-import TextoCorrido from "../../Texto/TextoCorrido/TextoCorrido";
+import TituloPrimario from "../../Elementos/Textos/TituloPrimario/TituloPrimario";
+import TextoCorrido from "../../Elementos/Textos/TextoCorrido/TextoCorrido";
 import Cadeado from "../../Icones/Cadeado";
+import Mao from "../../Icones/Mao";
 
 const GestaoRecursos = () => {
     return (
@@ -29,6 +30,7 @@ const GestaoRecursos = () => {
             <TextoCorrido>
                 Não recebemos comissões de terceiros. Nossa remuneração vem exclusivamente da taxa de gestão, garantindo que as decisões sejam sempre focadas no melhor retorno para você.
             </TextoCorrido>
+            <Mao/>
         </GestaoRecursosStyle>
     );
 }
