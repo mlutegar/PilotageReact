@@ -14,25 +14,43 @@ const GestaoRecursos = () => {
                 Com tantas opções de investimento no mercado, como escolher a melhor?
             </TextoCorrido>
             <TextoCorrido>
-                Na Pilotage Investimentos, administramos seu patrimônio com eficiência, diversificando riscos conforme seu perfil, objetivos e necessidade de liquidez.
-                Criamos Carteiras Administradas personalizadas, sempre alinhadas à sua política de investimentos e sob supervisão da CVM.
+                Na Pilotage Investimentos, administramos seu patrimônio com eficiência, diversificando riscos conforme
+                seu perfil, objetivos e necessidade de liquidez.
+                Criamos Carteiras Administradas personalizadas, sempre alinhadas à sua política de investimentos e sob
+                supervisão da CVM.
             </TextoCorrido>
-            <TextoCorrido>
-                Transparência e Segurança
-            </TextoCorrido>
-            <TextoCorrido>
-                Seus ativos são sempre registrados em seu nome e movimentados diretamente entre sua conta e as aplicações, sem intermediação da Pilotage.
-            </TextoCorrido>
-            <Cadeado/>
-            <TextoCorrido>
-                Independência Total
-            </TextoCorrido>
-            <TextoCorrido>
-                Não recebemos comissões de terceiros. Nossa remuneração vem exclusivamente da taxa de gestão, garantindo que as decisões sejam sempre focadas no melhor retorno para você.
-            </TextoCorrido>
-            <Mao/>
+
+            <div className={'item'}>
+                <div>
+                    <Cadeado/>
+                </div>
+                <div>
+                    <TextoCorrido>
+                        Transparência e Segurança
+                    </TextoCorrido>
+                    <TextoCorrido>
+                        Seus ativos são sempre registrados em seu nome e movimentados diretamente entre sua conta e as
+                        aplicações, sem intermediação da Pilotage.
+                    </TextoCorrido>
+                </div>
+            </div>
+
+            <div className={'item'}>
+                <div>
+                    <Mao/>
+                </div>
+                <div>
+                    <TextoCorrido>
+                        Independência Total
+                    </TextoCorrido>
+                    <TextoCorrido>
+                        Não recebemos comissões de terceiros. Nossa remuneração vem exclusivamente da taxa de gestão,
+                        garantindo que as decisões sejam sempre focadas no melhor retorno para você.
+                    </TextoCorrido>
+                </div>
+            </div>
         </GestaoRecursosStyle>
-    );
+);
 }
 
 export default GestaoRecursos;

@@ -8,3 +8,6 @@ export const TextoCorridoStyle = styled.div`
     font-weight: 400;
     line-height: normal;
 `
+export const Bold = styled.span`
+  font-weight: bold;
+`;

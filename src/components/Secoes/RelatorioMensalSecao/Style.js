@@ -16,6 +16,8 @@ export const RelatorioMensalSecaoStyle = styled.section`
         max-width: 1440px;
         margin: 0 auto;
     }
-
-
+    
+    .cards{
+        display: flex;
+    }
 `

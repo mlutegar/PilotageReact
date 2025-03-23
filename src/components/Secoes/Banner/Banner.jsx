@@ -1,6 +1,6 @@
-import {Link} from "react-router-dom";
-import {BannerStyle, Texto} from "./Style";
+import {BannerStyle} from "./Style";
 import FaleConoscoButtom from "../../Elementos/Botoes/FaleConoscoButtom/FaleConoscoButtom";
+import Dots from "../../Elementos/Dots/Dots";
 
 const Banner = () => (
     <BannerStyle>
@@ -11,6 +11,7 @@ const Banner = () => (
                 e <strong>Independente.</strong>
             </div>
             <div className={"btn"}><FaleConoscoButtom/></div>
+            <Dots total={3} ativo={0}/>
         </div>
     </BannerStyle>
 )

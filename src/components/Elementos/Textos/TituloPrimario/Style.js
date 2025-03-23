@@ -8,4 +8,5 @@ export const TituloPrimarioStyle = styled.div`
     font-weight: 400;
     line-height: normal;
     padding-bottom: 3.8rem;
+    text-align: center;
 `

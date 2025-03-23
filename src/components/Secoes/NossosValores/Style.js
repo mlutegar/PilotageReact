@@ -17,4 +17,15 @@ export const NossosValoresStyle = styled.section`
         max-width: 1440px;
         margin: 0 auto;
     }
+    
+    .itens{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .item{
+        display: flex;
+        flex-direction: column;
+    }
 `
