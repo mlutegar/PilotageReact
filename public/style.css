@@ -2,24 +2,24 @@
 
 
 :root {
-  /* CSS HSL */
-  /* https://coolors.co/ */
+    /* CSS HSL */
+    /* https://coolors.co/ */
 
-/*  --primaria: hsla(210, 67%, 43%, 1);
-  --background: hsla(108, 22%, 87%, 1);
-  --secundaria: hsla(34, 100%, 50%, 1);
-  --destaque: hsla(355, 78%, 56%, 1);
-  --detalhe: hsla(9, 63%, 45%, 1);
-*/
+    /*  --primaria: hsla(210, 67%, 43%, 1);
+      --background: hsla(108, 22%, 87%, 1);
+      --secundaria: hsla(34, 100%, 50%, 1);
+      --destaque: hsla(355, 78%, 56%, 1);
+      --detalhe: hsla(9, 63%, 45%, 1);
+    */
 
-  --background1: #FFFFFF;
-  --background2: #003560;
-  --background3: #9CB1C3;
-  --background4: #F5F7F9;
-  --primaria: #022747;
-  --secundaria: #FFFFFF;
-  --destaque: #9CB1C3;
-  --detalhe: #79819C;
+    --background1: #FFFFFF;
+    --background2: #003560;
+    --background3: #9CB1C3;
+    --background4: #F5F7F9;
+    --primaria: #022747;
+    --secundaria: #FFFFFF;
+    --destaque: #9CB1C3;
+    --detalhe: #79819C;
 }
 
 /* borda vermelha em todos os elementos para debug */
@@ -28,16 +28,19 @@
 }*/
 
 body {
-  margin: 0;
-  font-family: "PT Sans", sans-serif;
-  background-color: var(--background1);
-  color:var(--primaria);
+    font-family: "PT Sans", sans-serif;
+    background-color: var(--background1);
+    color: var(--primaria);
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    overflow-x: hidden;
 }
 
 a {
-  font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans", sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6{
-  margin: 0;
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
 }

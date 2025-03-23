@@ -1,6 +1,6 @@
-import Header from "../components/Header/Header";
-import FooterPrimario from "../components/FooterPrimario/FooterPrimario";
-import FooterSecundario from "../components/FooterSecundario/FooterSecundario";
+import Header from "../components/Secoes/Header/Header";
+import FooterPrimario from "../components/Secoes/FooterPrimario/FooterPrimario";
+import FooterSecundario from "../components/Secoes/FooterSecundario/FooterSecundario";
 
 const Base = (props) => (
     <>

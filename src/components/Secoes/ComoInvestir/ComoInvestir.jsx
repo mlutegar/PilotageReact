@@ -1,5 +1,5 @@
 import { ComoInvestirStyle } from "./Style";
-import TituloPrimario from "../Texto/TituloPrimario/TituloPrimario";
+import TituloPrimario from "../../Texto/TituloPrimario/TituloPrimario";
 
 const ComoInvestir = () => {
     return (

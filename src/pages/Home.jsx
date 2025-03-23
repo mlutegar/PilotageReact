@@ -1,14 +1,14 @@
 import Base from "./Base"
-import Banner from "../components/Banner/Banner";
-import SobreNos from "../components/SobreNos/SobreNos";
-import NossosValores from "../components/NossosValores/NossosValores";
-import GestaoRecursos from "../components/GestaoRecursos/GestaoRecursos";
-import ComoInvestir from "../components/ComoInvestir/ComoInvestir";
-import NossaEquipe from "../components/NossaEquipe/NossaEquipe";
-import RelatorioMensalSecao from "../components/RelatorioMensalSecao/RelatorioMensalSecao";
-import Contato from "../components/Contato/Contato";
-import FooterPrimario from "../components/FooterPrimario/FooterPrimario";
-import FooterSecundario from "../components/FooterSecundario/FooterSecundario";
+import Banner from "../components/Secoes/Banner/Banner";
+import SobreNos from "../components/Secoes/SobreNos/SobreNos";
+import NossosValores from "../components/Secoes/NossosValores/NossosValores";
+import GestaoRecursos from "../components/Secoes/GestaoRecursos/GestaoRecursos";
+import ComoInvestir from "../components/Secoes/ComoInvestir/ComoInvestir";
+import NossaEquipe from "../components/Secoes/NossaEquipe/NossaEquipe";
+import RelatorioMensalSecao from "../components/Secoes/RelatorioMensalSecao/RelatorioMensalSecao";
+import Contato from "../components/Secoes/Contato/Contato";
+import FooterPrimario from "../components/Secoes/FooterPrimario/FooterPrimario";
+import FooterSecundario from "../components/Secoes/FooterSecundario/FooterSecundario";
 
 const Home = () => {
   return (

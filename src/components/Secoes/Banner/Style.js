@@ -2,16 +2,22 @@
 
 import styled from "styled-components"
 
-export const BannerStyle = styled.header`
+export const BannerStyle = styled.div`
     background: url("imagens/Banner1.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100%;
     animation: fadeIn 1.5s ease-in-out;
 
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
     .conteudo-banner {
-        padding: 15rem 10rem;
+        padding: 15rem 2rem;
         max-width: 1440px;
         height: 100%;
         width: 100%;
@@ -44,6 +50,7 @@ export const BannerStyle = styled.header`
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        max-width: 450px;
 
         animation: slideIn 1.5s ease-out;
 
@@ -65,14 +72,5 @@ export const BannerStyle = styled.header`
     
     @media (max-width: 768px) {
         padding: 0 10px;
-    }
-`
-
-export const Texto = styled.div`
-    max-width: 450px;
-    
-    @media (max-width: 768px){
-        max-width: 100%;
-        text-align: center;
     }
 `

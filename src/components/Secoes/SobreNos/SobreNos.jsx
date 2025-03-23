@@ -1,6 +1,6 @@
 import {SobreNosStyle} from "./Style";
-import TituloPrimario from "../Texto/TituloPrimario/TituloPrimario";
-import TextoCorrido from "../Texto/TextoCorrido/TextoCorrido";
+import TituloPrimario from "../../Texto/TituloPrimario/TituloPrimario";
+import TextoCorrido from "../../Texto/TextoCorrido/TextoCorrido";
 
 const SobreNos = () => {
     return (

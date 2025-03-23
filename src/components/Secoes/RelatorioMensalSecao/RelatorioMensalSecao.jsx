@@ -1,5 +1,5 @@
 import { RelatorioMensalSecaoStyle } from "./Style";
-import TituloPrimario from "../Texto/TituloPrimario/TituloPrimario";
+import TituloPrimario from "../../Texto/TituloPrimario/TituloPrimario";
 
 const RelatorioMensalSecao = () => {
     return (
