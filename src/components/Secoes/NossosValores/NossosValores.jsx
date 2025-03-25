@@ -11,50 +11,56 @@ const NossosValores = () => {
         <NossosValoresStyle>
             <div className={"conteudo"}>
                 <TituloPrimarioInvertido>
-                    Nossos Valores
+                    Nossos <strong>Valores</strong>
                 </TituloPrimarioInvertido>
-                <TextoCorridoInvertido>
-                    “A Pilotage Investimentos sempre atua de forma totalmente isenta, sem conflitos de interesse, com
-                    estilo de trabalho baseado nas relações de confiança mútua, construídas cuidadosamente ao longo do tempo,
-                    sempre personalizando seus serviços à estratégia de longo prazo de cada cliente, sem perder o foco
-                    nos resultados.”
-                </TextoCorridoInvertido>
-
-                <TextoCorridoInvertido>
-                    ”Cada cliente é tratado de forma única, com sua própria política de investimentos, totalmente
-                    aderente ao seu perfil de investidor, com verificação diária de exposição da sua carteira e reuniões de
-                    acompanhamento no mínimo mensais.”
-                </TextoCorridoInvertido>
-
-                <TituloPrimarioInvertido>
-                    Atendimento Personalizado
-                </TituloPrimarioInvertido>
-
-                <div className={'itens'}>
-                    <div className={'item'}>
-                        <Olho/>
-                        <TextoCorridoInvertido>
-                            ✔Verificação diária da exposição da carteira
-                        </TextoCorridoInvertido>
+                <div className={'paragrafo1'}>
+                    <TextoCorridoInvertido>
+                        “A <strong>Pilotage Investimentos</strong> sempre atua de forma <strong>totalmente isenta, sem conflitos de interesse</strong>,
+                        com
+                        estilo de trabalho baseado nas <strong>relações de confiança mútua</strong>, construídas cuidadosamente <strong>ao longo
+                        do tempo</strong>,
+                        sempre personalizando seus serviços à estratégia de longo prazo de cada cliente, sem perder o
+                        <strong>foco nos resultados</strong>.”
+                    </TextoCorridoInvertido>
+                </div>
+                <div className={'paragrafo2'}>
+                    <TextoCorridoInvertido>
+                        ”Cada cliente é tratado de forma <strong>única</strong>, com sua própria <strong>política de investimentos</strong>, totalmente
+                        aderente ao seu perfil de investidor, com <strong>verificação diária</strong>  de exposição da sua carteira e
+                        <strong> reuniões de acompanhamento</strong> no mínimo mensais.”
+                    </TextoCorridoInvertido>
+                </div>
+                    <div className={"titulo2"}>
+                        <TituloPrimarioInvertido>
+                            Atendimento <strong>Personalizado</strong>
+                        </TituloPrimarioInvertido>
                     </div>
 
-                    <div className={'item'}>
-                        <Grafico/>
-                        <TextoCorridoInvertido>
-                            ✔Gestão estratégica alinhada aos seus objetivos
-                        </TextoCorridoInvertido>
-                    </div>
+                    <div className={'itens'}>
+                        <div className={'item'}>
+                            <Olho/>
+                            <TextoCorridoInvertido>
+                                ✔ Verificação diária da exposição da carteira
+                            </TextoCorridoInvertido>
+                        </div>
 
-                    <div className={'item'}>
-                        <Calendario/>
-                        <TextoCorridoInvertido>
-                            ✔Acompanhamento contínuo com reuniões mensais
-                        </TextoCorridoInvertido>
+                        <div className={'item'}>
+                            <Grafico/>
+                            <TextoCorridoInvertido>
+                                ✔ Gestão estratégica alinhada aos seus objetivos
+                            </TextoCorridoInvertido>
+                        </div>
+
+                        <div className={'item'}>
+                            <Calendario/>
+                            <TextoCorridoInvertido>
+                                ✔ Acompanhamento contínuo com reuniões mensais
+                            </TextoCorridoInvertido>
+                        </div>
                     </div>
                 </div>
-            </div>
         </NossosValoresStyle>
-    );
+);
 }
 
 export default NossosValores;
