@@ -1,20 +1,22 @@
 import styled from "styled-components"
 
 export const CardComoInvestirStyle = styled.div`
-    width: 4rem;
-    height: 10rem;
+    width: 27.375rem;
+    height: 31.125rem;
+    flex-shrink: 0;
     background-color: #fff;
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: 1rem;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    box-shadow: 30px 30px 0px var(--sombra);
+;
 
     .header {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         width: 100%;
         height: 2rem;
@@ -24,7 +26,30 @@ export const CardComoInvestirStyle = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 100%;
+        color: black;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
+    
+    .titulo {
+        color: var(--primaria);
+        text-align: center;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    
+    .subtitulo {
+        color: black;
+        font-size: 1.375rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-align: center;
+        max-width: 20rem;
+    }
+    
 `

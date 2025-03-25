@@ -16,4 +16,17 @@ export const ComoInvestirStyle = styled.section`
         max-width: 1440px;
         margin: 0 auto;
     }
+    
+    .cardGrid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 7rem;
+    }
+    
+    .cardContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
 `

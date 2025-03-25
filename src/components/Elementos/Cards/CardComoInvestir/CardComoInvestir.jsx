@@ -1,6 +1,6 @@
 import { CardComoInvestirStyle } from "./Style";
 
-const CardComoInvestir = ({icone, titulo, conteudo}) => {
+const CardComoInvestir = ({icone, titulo, subtitulo, conteudo}) => {
     return (
         <CardComoInvestirStyle>
             <div className={'header'}>
@@ -11,9 +11,13 @@ const CardComoInvestir = ({icone, titulo, conteudo}) => {
                     {titulo}
                 </div>
             </div>
+            <div className={'subtitulo'}>
+                {subtitulo}
+            </div>
             <div className={'conteudo'}>
                 {conteudo}
             </div>
+
         </CardComoInvestirStyle>
     );
 }

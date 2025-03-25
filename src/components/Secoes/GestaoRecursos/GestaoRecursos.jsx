@@ -26,34 +26,35 @@ const GestaoRecursos = () => {
                     supervisão da CVM.
                 </TextoCorrido>
             </div>
+            <div className={'itens'}>
+                <div className={'item'}>
+                    <div>
+                        <Cadeado/>
+                    </div>
+                    <div>
+                        <TextoCorrido>
+                            <h4>Transparência e Segurança</h4>
+                        </TextoCorrido>
+                        <TextoCorrido>
+                            Seus ativos são sempre registrados em seu nome e movimentados diretamente entre sua conta e as
+                            aplicações, sem intermediação da Pilotage.
+                        </TextoCorrido>
+                    </div>
+                </div>
 
-            <div className={'item'}>
-                <div>
-                    <Cadeado/>
-                </div>
-                <div>
-                    <TextoCorrido>
-                        <h4>Transparência e Segurança</h4>
-                    </TextoCorrido>
-                    <TextoCorrido>
-                        Seus ativos são sempre registrados em seu nome e movimentados diretamente entre sua conta e as
-                        aplicações, sem intermediação da Pilotage.
-                    </TextoCorrido>
-                </div>
-            </div>
-
-            <div className={'item'}>
-                <div>
-                    <Mao/>
-                </div>
-                <div>
-                    <TextoCorrido>
-                        <h4>Independência Total</h4>
-                    </TextoCorrido>
-                    <TextoCorrido>
-                        Não recebemos comissões de terceiros. Nossa remuneração vem exclusivamente da taxa de gestão,
-                        garantindo que as decisões sejam sempre focadas no melhor retorno para você.
-                    </TextoCorrido>
+                <div className={'item'}>
+                    <div>
+                        <Mao/>
+                    </div>
+                    <div>
+                        <TextoCorrido>
+                            <h4>Independência Total</h4>
+                        </TextoCorrido>
+                        <TextoCorrido>
+                            Não recebemos comissões de terceiros. Nossa remuneração vem exclusivamente da taxa de gestão,
+                            garantindo que as decisões sejam sempre focadas no melhor retorno para você.
+                        </TextoCorrido>
+                    </div>
                 </div>
             </div>
         </div>

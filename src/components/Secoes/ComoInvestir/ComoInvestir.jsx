@@ -13,33 +13,46 @@ const ComoInvestir = () => {
                 <TituloPrimario>
                     Como é investir na Pilotage?
                 </TituloPrimario>
+                <div className={"cardGrid"}>
+                    <div className={"cardContainer"}>
+                        <CardComoInvestir
+                            icone={<MaoAberta/>}
+                            titulo={"Análise Inicial"}
+                            subtitulo={"O primeiro passo é conhecer você!"}
+                            conteudo={"Nessa etapa, analisamos sua situação financeira, objetivos e necessidades para entender como podemos ajudar. Nosso foco é oferecer um atendimento personalizado, garantindo que sua experiência de investimento seja eficiente e alinhada com suas expectativas. Se identificarmos um bom alinhamento, seguimos para próxima fase!"}
+                        />
+                    </div>
 
-                <CardComoInvestir
-                    icone={<MaoAberta/>}
-                    titulo={"Abra sua conta"}
-                    conteudo={"Faça seu cadastro e abra sua conta de forma rápida e segura."}
-                />
+                    <div className={"cardContainer"}>
+                        <CardComoInvestir
+                            icone={<Lupa/>}
+                            titulo={"Análise do Investidor"}
+                            subtitulo={"Seu perfil, sua estratégia!"}
+                            conteudo={"Aqui, analisamos seu perfil de investidor, considerando fatores como apetite ao risco, horizonte de tempo e metas financeiras. Com base nessa análise, definimos juntos a melhor estratégia de investimento, garantindo que sua carteira esteja alinhada com seus objetivos e estilo de vida."}
+                        />
+                    </div>
 
-                <CardComoInvestir
-                    icone={<Lupa/>}
-                    titulo={"Escolha seu investimento"}
-                    conteudo={"Navegue entre as opções de investimento e escolha a melhor para você."}
-                />
+                    <div className={"cardContainer"}>
+                        <CardComoInvestir
+                            icone={<GraficoSeta/>}
+                            titulo={"Monitoramento Contínuo"}
+                            subtitulo={"Monitoramento contínuo para garantir o seu sucesso!"}
+                            conteudo={"O investimento não termina na alocação dos ativos. Mensalmente, ou sempre que precisar, realizamos reuniões de acompanhamento para revisar sua carteira e fazer ajustes estratégicos. Além disso, você pode monitorar sua carteira diariamente pela plataforma, garantindo total transparência e controle."}
+                        />
+                    </div>
 
-                <CardComoInvestir
-                    icone={<GraficoSeta/>}
-                    titulo={"Acompanhe seus investimentos"}
-                    conteudo={"Acompanhe seus investimentos e veja seu dinheiro render."}
-                />
-
-                <CardComoInvestir
-                    icone={<Dinheiro/>}
-                    titulo={"Resgate seu dinheiro"}
-                    conteudo={"Resgate seu dinheiro a qualquer momento e sem burocracia."}
-                />
-            </div>
+                    <div className={"cardContainer"}>
+                        <CardComoInvestir
+                            icone={<Dinheiro/>}
+                            titulo={"Escolha dos Ativos"}
+                            subtitulo={"Escolha inteligente de ativos para um futuro sólido!."}
+                            conteudo={"Com seu perfil definido, selecionamos os melhores ativos disponíveis, seguindo a Política de Investimentos acordada. Nossa equipe realiza uma gestão de ativos, buscando oportunidades estratégicas para maximizar seus retornos, sempre com transparência e alinhamento aos seus interesses."}
+                        />
+                    </div>
+                    </div>
+                </div>
         </ComoInvestirStyle>
-    );
+);
 }
 
 export default ComoInvestir;
