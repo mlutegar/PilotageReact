@@ -4,6 +4,7 @@ export const SobreNosStyle = styled.section`
     .conteudo{
         display: flex;
         justify-content: space-between;
+        padding-bottom: 1.5rem;
 
         .parte{
             width: 50%;
