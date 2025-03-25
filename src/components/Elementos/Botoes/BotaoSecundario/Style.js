@@ -1,12 +1,12 @@
 import styled from "styled-components"
 
-const BotaoSecundarioStyle = styled.header`
+const BotaoSecundarioStyle = styled.button`
     button {
         width: 13.09769rem;
         height: 3.24325rem;
         flex-shrink: 0;
         border-radius: 3.125rem;
-        background: var(--secundaria);
+        background: var(--primaria);
         display: flex;
         align-items: center;
         justify-content: center;

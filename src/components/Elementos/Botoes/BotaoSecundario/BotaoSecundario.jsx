@@ -1,10 +1,8 @@
 import {BotaoSecundarioStyle} from "./Style";
 
-const BotaoSecundario = () => (
+const BotaoSecundario = ({children}) => (
     <BotaoSecundarioStyle>
-        <button>
-            <a>Fale Conosco</a>
-        </button>
+        {children}
     </BotaoSecundarioStyle>
 )
 

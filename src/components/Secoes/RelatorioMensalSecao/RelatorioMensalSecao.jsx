@@ -1,6 +1,7 @@
 import { RelatorioMensalSecaoStyle } from "./Style";
 import TituloPrimario from "../../Elementos/Textos/TituloPrimario/TituloPrimario";
 import CardRelatorio from "../../Elementos/Cards/CardRelatorio/CardRelatorio";
+import BotaoPrimario from "../../Elementos/Botoes/BotaoPrimario/BotaoPrimario";
 
 const RelatorioMensalSecao = () => {
     return (
@@ -15,6 +16,10 @@ const RelatorioMensalSecao = () => {
                     <CardRelatorio/>
                     <CardRelatorio/>
                 </div>
+
+                <BotaoPrimario>
+                    Ir para relatorio
+                </BotaoPrimario>
             </div>
         </RelatorioMensalSecaoStyle>
     );

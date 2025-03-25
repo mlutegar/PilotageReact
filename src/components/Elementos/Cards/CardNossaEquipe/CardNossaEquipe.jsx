@@ -2,6 +2,7 @@ import { CardNossaEquipeStyle } from "./Style";
 import Email from "../../../Icones/Email";
 import Link from "../../../Icones/Link";
 import BotaoPrimario from "../../Botoes/BotaoPrimario/BotaoPrimario";
+import BotaoSecundario from "../../Botoes/BotaoSecundario/BotaoSecundario";
 
 const CardNossaEquipe = ({foto, nome, curriculo, urls}) => {
     return (
@@ -22,7 +23,9 @@ const CardNossaEquipe = ({foto, nome, curriculo, urls}) => {
                 <Email/>
                     <Link/>
                 </div>
-                <BotaoPrimario></BotaoPrimario>
+                <BotaoSecundario>
+                    Saiba mais
+                </BotaoSecundario>
             </div>
         </CardNossaEquipeStyle>
     );
