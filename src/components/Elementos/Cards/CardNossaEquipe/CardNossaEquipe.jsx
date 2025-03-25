@@ -1,4 +1,4 @@
-import { CardNossaEquipeStyle } from "./Style";
+import {CardNossaEquipeStyle} from "./Style";
 import Email from "../../../Icones/Email";
 import Link from "../../../Icones/Link";
 import BotaoPrimario from "../../Botoes/BotaoPrimario/BotaoPrimario";
@@ -20,7 +20,7 @@ const CardNossaEquipe = ({foto, nome, curriculo, urls}) => {
                     <img src={curriculo} alt={'Curriculo'}/>
                 </div>
                 <div className={'urls'}>
-                <Email/>
+                    <Email/>
                     <Link/>
                 </div>
                 <BotaoSecundario>

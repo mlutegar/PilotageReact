@@ -8,16 +8,18 @@ export const NossaEquipeStyle = styled.section`
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    
-    .conteudo{
+
+    .conteudo {
         max-width: 1440px;
         margin: 0 auto;
         padding: 0 2rem;
     }
-    
-    .cards  {
+
+    .cards {
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 3rem;
+        margin-top: 6rem;
     }
 `
