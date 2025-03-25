@@ -16,10 +16,10 @@ const CardNossaEquipe = ({foto, nome, curriculo, urls}) => {
                     {nome}
                 </div>
                 <div className={'curriculo'}>
-                    {curriculo}
+                    <img src={curriculo} alt={'Curriculo'}/>
                 </div>
                 <div className={'urls'}>
-                    <Email/>
+                <Email/>
                     <Link/>
                 </div>
                 <FaleConoscoButtom></FaleConoscoButtom>

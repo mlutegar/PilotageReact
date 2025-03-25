@@ -14,4 +14,10 @@ export const NossaEquipeStyle = styled.section`
         margin: 0 auto;
         padding: 0 2rem;
     }
+    
+    .cards  {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 `
