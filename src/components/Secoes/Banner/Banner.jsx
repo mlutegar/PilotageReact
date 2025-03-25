@@ -1,5 +1,5 @@
 import {BannerStyle} from "./Style";
-import FaleConoscoButtom from "../../Elementos/Botoes/FaleConoscoButtom/FaleConoscoButtom";
+import BotaoPrimario from "../../Elementos/Botoes/BotaoPrimario/BotaoPrimario";
 import Dots from "../../Elementos/Dots/Dots";
 
 const Banner = () => (
@@ -10,7 +10,7 @@ const Banner = () => (
                 com <strong>Gestão Segura </strong>
                 e <strong>Independente.</strong>
             </div>
-            <div className={"btn"}><FaleConoscoButtom/></div>
+            <div className={"btn"}><BotaoPrimario/></div>
             <Dots total={3} ativo={0}/>
         </div>
     </BannerStyle>

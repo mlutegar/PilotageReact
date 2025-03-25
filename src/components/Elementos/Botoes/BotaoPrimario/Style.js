@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const FaleConoscoButtomStyle = styled.header`
+const BotaoPrimarioStyle = styled.header`
     button {
         width: 13.09769rem;
         height: 3.24325rem;
@@ -45,4 +45,4 @@ const FaleConoscoButtomStyle = styled.header`
         line-height: normal;
     }
 `
-export {FaleConoscoButtomStyle}
+export {BotaoPrimarioStyle}

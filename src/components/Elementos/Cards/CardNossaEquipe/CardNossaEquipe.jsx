@@ -1,7 +1,7 @@
 import { CardNossaEquipeStyle } from "./Style";
 import Email from "../../../Icones/Email";
 import Link from "../../../Icones/Link";
-import FaleConoscoButtom from "../../Botoes/FaleConoscoButtom/FaleConoscoButtom";
+import BotaoPrimario from "../../Botoes/BotaoPrimario/BotaoPrimario";
 
 const CardNossaEquipe = ({foto, nome, curriculo, urls}) => {
     return (
@@ -22,7 +22,7 @@ const CardNossaEquipe = ({foto, nome, curriculo, urls}) => {
                 <Email/>
                     <Link/>
                 </div>
-                <FaleConoscoButtom></FaleConoscoButtom>
+                <BotaoPrimario></BotaoPrimario>
             </div>
         </CardNossaEquipeStyle>
     );
