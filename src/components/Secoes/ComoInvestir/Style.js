@@ -27,6 +27,46 @@ export const ComoInvestirStyle = styled.section`
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
     }
     
+    .cardContainer::after {
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-top: 5px solid black;
+        position: absolute;
+    }
+
+    .analise-inicial::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 2px;
+        background-color: black;
+        top: 50%;
+        left: 100%;
+        transform: translateY(-50%);
+    }
+    
+    .analise-investidor::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 50px;
+        background-color: black;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .escolha-ativos::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 2px;
+        background-color: black;
+        top: 50%;
+        right: 100%;
+        transform: translateY(-50%);
+    }
 `

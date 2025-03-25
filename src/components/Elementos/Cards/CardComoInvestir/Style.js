@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 export const CardComoInvestirStyle = styled.div`
-    width: 27.375rem;
-    height: 31.125rem;
+    width: 25rem;
+    height: 30rem;
     flex-shrink: 0;
     background-color: #fff;
     border-radius: 2rem;
@@ -31,6 +31,7 @@ export const CardComoInvestirStyle = styled.div`
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        text-align: center;
     }
     
     .titulo {
