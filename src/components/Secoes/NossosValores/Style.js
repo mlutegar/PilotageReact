@@ -23,6 +23,12 @@ export const NossosValoresStyle = styled.section`
         justify-content: space-between;
         width: 100%;
     }
+
+    @media (max-width: 768px) {
+        .itens{
+            flex-direction: column;
+        }
+    }
     
     .item{
         display: flex;

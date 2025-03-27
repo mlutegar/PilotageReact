@@ -8,6 +8,10 @@ export const InputSecundarioStyle = styled.input`
     padding: 0 1.25rem;
     border: none;
     
+    @media (max-width: 768px) {
+        width: 16.5rem;
+    }
+    
     &::placeholder {
         color: rgba(0, 0, 0, 0.43);
         font-family: "PT Sans";

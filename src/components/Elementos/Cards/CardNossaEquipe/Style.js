@@ -8,7 +8,49 @@ export const CardNossaEquipeStyle = styled.div`
     align-items: center;
     border-radius: 0.9375rem;
     box-shadow: 0px 6px 23.9px -15px rgba(0, 0, 0, 0.25);
-    
+    border: 2px solid transparent;
+
+    &:hover {
+        border: 2px solid #003560;
+        cursor: pointer;
+    }
+
+    .modal {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 0;
+        background: rgba(2, 39, 71, 0.81);
+        z-index: 100;
+        transform: scale(1.4);
+    }
+
+    .card {
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.9375rem;
+        box-shadow: 0px 6px 23.9px -15px rgba(0, 0, 0, 0.25);
+    }
+
+    .modal.hidden {
+        display: none;
+    }
+
+    svg {
+        transition: 0.5s all ease;
+    }
+
+    svg:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+
     .curriculo, .urls {
         display: flex;
     }

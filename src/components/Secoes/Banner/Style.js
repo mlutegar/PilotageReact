@@ -19,8 +19,14 @@ export const BannerStyle = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    .dots{
+
+    @media (max-width: 768px) {
+        width: auto;
+        position: static;
+        margin: 0;
+    }
+
+    .dots {
         position: relative;
         bottom: 6rem;
     }
@@ -33,6 +39,13 @@ export const BannerStyle = styled.div`
         display: flex;
         flex-direction: column;
         margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+        .conteudo-banner {
+            padding: 10rem 2rem;
+            width: auto;
+        }
     }
 
     @keyframes fadeIn {
@@ -77,6 +90,13 @@ export const BannerStyle = styled.div`
 
     .btn {
         padding-top: 2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        .btn {
+            justify-content: center;
+            display: flex;
+        }
     }
 
     @media (max-width: 768px) {

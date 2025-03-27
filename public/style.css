@@ -34,8 +34,27 @@ body {
     color: var(--primaria);
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 2rem;
+    /*padding: 0 2rem;*/
     overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    padding: 0 2px;
+
+    body{
+        padding: 0 0;
+    }
+
+    #root{
+        overflow: hidden;
+    }
+
 }
 
 a {

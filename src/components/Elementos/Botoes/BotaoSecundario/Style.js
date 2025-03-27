@@ -8,13 +8,14 @@ const BotaoSecundarioStyle = styled.button`
     border-radius: 3.125rem;
     background: #9CB1C3;
     color: white;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
     border-style: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    cursor: pointer;animation: slideIn 1.5s ease-out;
+    cursor: pointer;
+    animation: slideIn 1.5s ease-out;
 
     @keyframes slideIn {
         from {
@@ -28,11 +29,11 @@ const BotaoSecundarioStyle = styled.button`
     }
 
     &:hover {
-        background: var(--background4); 
+        background: #a5c0d9;
         transform: scale(1.1);
     }
 
-   
+
     &:active {
         transform: scale(0.95);
     }

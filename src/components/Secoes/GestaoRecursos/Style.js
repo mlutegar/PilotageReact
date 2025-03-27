@@ -17,6 +17,13 @@ export const GestaoRecursosStyle = styled.section`
         max-width: 57.5rem;
         margin: 2rem 0;
     }
+
+    @media (max-width: 768px) {
+        .item {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
     
     .titulo {
         color: black;

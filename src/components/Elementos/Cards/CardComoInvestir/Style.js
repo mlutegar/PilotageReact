@@ -12,7 +12,12 @@ export const CardComoInvestirStyle = styled.div`
     align-items: center;
     padding: 1rem;
     box-shadow: 30px 30px 0px var(--sombra);
-;
+    
+    @media (max-width: 768px) {
+        width: auto;
+        height: auto;
+        box-shadow: none;
+    }
 
     .header {
         display: flex;
@@ -20,6 +25,13 @@ export const CardComoInvestirStyle = styled.div`
         align-items: center;
         width: 100%;
         height: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        .header {
+            flex-direction: column;
+            height: auto;
+        }
     }
     
     .conteudo {

@@ -1,8 +1,6 @@
 import styled from "styled-components"
 
 export const FormularioStyle = styled.div`
-    width: 74.75rem;
-    height: 37.4375rem;
     flex-shrink: 0;
     border-radius: 0.9375rem;
     background: #F5F7F9;
@@ -11,9 +9,22 @@ export const FormularioStyle = styled.div`
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    padding: 5rem 2rem;
+    width: 100%;
+    
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 1rem;
+    }
     
     .inputs{
         display: flex;
         gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
     }
 `

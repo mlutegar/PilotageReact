@@ -22,11 +22,12 @@ const Contato = () => {
                             <strong> Endereço </strong>
                         </TextoCorrido>
                         <Predio/>
-                            <TextoCorrido>
-                        Av, Magalhães de Castro, 4800 - 10º andar sala 104 Jardim Panorama, São Paulo/SP CEP 05676-120
+                        <TextoCorrido>
+                            Av, Magalhães de Castro, 4800 - 10º andar sala 104 Jardim Panorama, São Paulo/SP CEP
+                            05676-120
 
                         </TextoCorrido>
-                       </div>
+                    </div>
                     <div className={'info-item'}>
                         <TextoCorrido>
                             <strong>Telefone</strong>
@@ -39,8 +40,10 @@ const Contato = () => {
                     </div>
                 </div>
             </div>
-            <Newsletter/>
-<Formulario/>
+            <div className={'forms'}>
+                <Newsletter/>
+                <Formulario/>
+            </div>
         </ContatoStyle>
     );
 }
