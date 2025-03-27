@@ -1,39 +1,37 @@
 import styled from "styled-components"
 
-const BotaoPrimarioStyle = styled.header`
-    button {
-        width: 13.09769rem;
-        height: 3.24325rem;
-        flex-shrink: 0;
-        border-radius: 3.125rem;
-        background: var(--secundaria);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-style: none;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-        cursor: pointer;animation: slideIn 1.5s ease-out;
+const BotaoPrimarioStyle = styled.button`
+    width: 13.09769rem;
+    height: 3.24325rem;
+    flex-shrink: 0;
+    border-radius: 3.125rem;
+    background: var(--secundaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    cursor: pointer;animation: slideIn 1.5s ease-out;
 
-        @keyframes slideIn {
-            from {
-                transform: translateY(-20px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+    @keyframes slideIn {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
         }
     }
 
-    button:hover {
+    &:hover {
         background: var(--background4); 
         transform: scale(1.1);
     }
 
    
-    button:active {
+    &:active {
         transform: scale(0.95);
     }
 

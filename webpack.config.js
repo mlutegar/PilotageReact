@@ -5,10 +5,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: path.resolve(__dirname, "./src/index.js"),
-  devtool: 'inline-source-map',
+  devtool: 'inline-source-map', // Corrected devtool value
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "./build",)
+    path: path.resolve(__dirname, "./build")
   },
 
   module: {
@@ -25,20 +25,20 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin(
-      {
-        patterns: [
-          {
-            from: 'public',
-            to: './'
-          }
-        ]
-      }
+        {
+          patterns: [
+            {
+              from: 'public',
+              to: './'
+            }
+          ]
+        }
     ),
     new webpack.DefinePlugin(
-      {
-        "process.env": JSON.stringify(process.env),
-        "process.env.PUBLIC_URL": JSON.stringify(package.homepage)
-      }
+        {
+          "process.env": JSON.stringify(process.env),
+          "process.env.PUBLIC_URL": JSON.stringify(package.homepage)
+        }
     )
   ],
   devServer: {

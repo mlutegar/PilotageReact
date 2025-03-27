@@ -16,6 +16,10 @@ export const BannerStyle = styled.div`
     margin-left: -50vw;
     margin-right: -50vw;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     .conteudo-banner {
         padding: 15rem 2rem;
         max-width: 1440px;
@@ -65,11 +69,11 @@ export const BannerStyle = styled.div`
             }
         }
     }
-    
+
     .btn {
         padding-top: 2rem;
     }
-    
+
     @media (max-width: 768px) {
         padding: 0 10px;
     }

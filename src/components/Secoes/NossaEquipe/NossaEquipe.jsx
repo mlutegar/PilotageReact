@@ -8,10 +8,10 @@ const NossaEquipe = () => {
         <NossaEquipeStyle>
             <div className={'conteudo'}>
                 <TituloPrimario>
-                    Nossa Equipe
+                    Nossa <strong>Equipe</strong>
                 </TituloPrimario>
-                <TextoCorrido>
-                    Conheça os profissionais que cuidam dos seus investimentos
+                <TextoCorrido style={{textAlign: 'center'}}>
+                    Conheça os profissionais que <strong>cuidam dos seus investimentos</strong>
                 </TextoCorrido>
 
                 <div className={'cards'}>

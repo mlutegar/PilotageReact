@@ -11,8 +11,10 @@ const Banner = () => (
                 e <strong>Independente.</strong>
             </div>
             <div className={"btn"}><BotaoPrimario/></div>
-            <Dots total={3} ativo={0}/>
+
         </div>
+
+        <Dots total={3} ativo={0}/>
     </BannerStyle>
 )
 

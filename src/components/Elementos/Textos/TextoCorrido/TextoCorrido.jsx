@@ -1,7 +1,7 @@
-import { TextoCorridoStyle, Bold } from "./Style";
+import { TextoCorridoStyle } from "./Style";
 
-const TextoCorrido = ({ children }) => {
-    return <TextoCorridoStyle>{children}</TextoCorridoStyle>;
+const TextoCorrido = ({ children, className, style }) => {
+    return <TextoCorridoStyle className={className} style={style}>{children}</TextoCorridoStyle>;
 }
 
 export default TextoCorrido;

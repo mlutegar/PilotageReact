@@ -15,9 +15,21 @@ export const RelatorioMensalSecaoStyle = styled.section`
         padding: 0 2rem;
         max-width: 1440px;
         margin: 0 auto;
+        overflow: hidden;
     }
     
     .cards{
         display: flex;
+        justify-content: center;
+        gap: 16rem;
+    }
+    
+    .botoes{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
     }
 `

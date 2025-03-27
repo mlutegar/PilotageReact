@@ -1,10 +1,11 @@
 import {BotaoPrimarioStyle} from "./Style";
+import TextoCorrido from "../../Textos/TextoCorrido/TextoCorrido";
 
-const BotaoPrimario = () => (
+const BotaoPrimario = ({children}) => (
     <BotaoPrimarioStyle>
-        <button>
-            <a>Fale Conosco</a>
-        </button>
+        <TextoCorrido>
+            {children}
+        </TextoCorrido>
     </BotaoPrimarioStyle>
 )
 
