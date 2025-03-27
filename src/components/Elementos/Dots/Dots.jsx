@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, DotContainer, DotSVG, DotPill } from './Style';
 
-const Dots = ({ total = 5, ativo = 0 }) => {
+const Dots = ({ total = 5, ativo = 0, className }) => {
     /*
       - total: quantidade total de "bolinhas".
       - ativo: índice (base 0) do item que está selecionado.
@@ -11,7 +11,7 @@ const Dots = ({ total = 5, ativo = 0 }) => {
     const dotsArray = Array.from({ length: total }, (_, index) => index);
 
     return (
-        <Container>
+        <Container className={className}>
             {dotsArray.map((dotIndex) =>
                 dotIndex === ativo ? (
                     // Se for o índice ativo, renderiza a "bolinha" marcada

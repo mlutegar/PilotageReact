@@ -19,6 +19,11 @@ export const BannerStyle = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    .dots{
+        position: relative;
+        bottom: 6rem;
+    }
 
     .conteudo-banner {
         padding: 15rem 2rem;
