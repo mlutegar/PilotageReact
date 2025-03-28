@@ -16,7 +16,7 @@ root.render(
         <Route path="/" element={<Home/>} />
         <Route path="/canal-de-denuncias" element={<CanalDeDenuncias/>} />
         <Route path="/documentos-regulatorios" element={<DocumentosRegulatorios/>} />
-        <Route path="/politicas-de-privacidad" element={<PoliticaDePrivacidade/>} />
+        <Route path="/politicas-de-privacidade" element={<PoliticaDePrivacidade/>} />
         <Route path="/relatorio-mensal" element={<RelatorioMensal/>} />
       </Routes>
     </HashRouter>
