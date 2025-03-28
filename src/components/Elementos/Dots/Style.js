@@ -22,6 +22,17 @@ export const DotSVG = styled.svg`
   /* Ajustes para o SVG da bolinha não marcada */
   width: 17px;
   height: 17px;
+    transition: 0.5s all ease;
+    
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+    
+    &:active {
+        transform: scale(1);
+    }
+    
 `;
 
 export const DotPill = styled.div`
@@ -31,5 +42,12 @@ export const DotPill = styled.div`
   flex-shrink: 0;
   border-radius: 1.25rem;
   background: #003560;
+
+    transition: 0.5s all ease;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
 `;
 

@@ -1,7 +1,7 @@
 import { TextoCorridoInvertidoStyle } from "./Style";
 
-const TextoCorridoInvertido = ({ children }) => {
-    return <TextoCorridoInvertidoStyle>{children}</TextoCorridoInvertidoStyle>;
+const TextoCorridoInvertido = ({ children, className }) => {
+    return <TextoCorridoInvertidoStyle className={className}>{children}</TextoCorridoInvertidoStyle>;
 }
 
 export default TextoCorridoInvertido;

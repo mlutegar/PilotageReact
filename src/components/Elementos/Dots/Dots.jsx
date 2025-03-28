@@ -1,7 +1,11 @@
 import React from 'react';
 import { Container, DotContainer, DotSVG, DotPill } from './Style';
 
-const Dots = ({ total = 5, ativo = 0, className }) => {
+const a = () => {
+    console.log('a');
+}
+
+const Dots = ({ total = 5, ativo = 0, className, onDotClick = a }) => {
     /*
       - total: quantidade total de "bolinhas".
       - ativo: índice (base 0) do item que está selecionado.
@@ -14,11 +18,9 @@ const Dots = ({ total = 5, ativo = 0, className }) => {
         <Container className={className}>
             {dotsArray.map((dotIndex) =>
                 dotIndex === ativo ? (
-                    // Se for o índice ativo, renderiza a "bolinha" marcada
                     <DotPill key={dotIndex} />
                 ) : (
-                    // Caso contrário, renderiza a bolinha não marcada (SVG)
-                    <DotContainer key={dotIndex}>
+                    <DotContainer key={dotIndex} onClick={() => onDotClick(dotIndex)}>
                         <DotSVG
                             xmlns="http://www.w3.org/2000/svg"
                             width="17"

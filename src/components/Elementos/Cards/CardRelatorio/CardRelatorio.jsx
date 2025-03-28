@@ -2,10 +2,10 @@ import { CardRelatorioStyle } from "./Style";
 import TextoCorrido from "../../Textos/TextoCorrido/TextoCorrido";
 import TextoCorridoInvertido from "../../Textos/TextoCorridoInvertido/TextoCorridoInvertido";
 
-const CardRelatorio = ({data}) => {
+const CardRelatorio = ({data, className}) => {
     return (
-        <CardRelatorioStyle>
-            <TextoCorridoInvertido>
+        <CardRelatorioStyle className={className}>
+            <TextoCorridoInvertido className={'data'}>
                 {data}
             </TextoCorridoInvertido>
         </CardRelatorioStyle>

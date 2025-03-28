@@ -18,7 +18,15 @@ export const CardRelatorioStyle = styled.div`
         background: linear-gradient(0deg, rgba(107, 135, 165, 0.77) 0%, rgba(107, 135, 165, 0.77) 100%), url('/imagens/relatorio/default.png') lightgray 50% / cover no-repeat;
     }
 
+    &:hover .data {
+        display: block;
+    }
+
     &:active {
         transform: scale(1);
+    }
+    
+    .data{
+        display: none;
     }
 `

@@ -26,7 +26,7 @@ export const RelatorioMensalSecaoStyle = styled.section`
     }
     
     .principal{
-        transform: scale(1.1);
+        transform: scale(1.2);
     }
     
     .botoes{
