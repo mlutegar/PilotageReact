@@ -32,13 +32,22 @@ const RelatorioMensalSecao = () => {
         }
     ];
 
-    const inicio = paginaAtual * 3;
-    const fim = inicio + 3;
-    const relatoriosPagina = relatorios.slice(inicio, fim);
+    const inicio = paginaAtual;
 
     const onDotClick = (dotIndex) => {
         setPaginaAtual(dotIndex);
     }
+
+    const get3RelatoriosConsecutivos = (relatorios, inicio) => {
+        const total = relatorios.length;
+        return [
+            relatorios[inicio % total],
+            relatorios[(inicio + 1) % total],
+            relatorios[(inicio + 2) % total]
+        ]
+    }
+
+    const relatoriosPagina = get3RelatoriosConsecutivos(relatorios, inicio);
 
     return (
         <RelatorioMensalSecaoStyle>
