@@ -1,11 +1,10 @@
-import Base from "./Base"
+import Base from "./Base";
+import DocumentosRegulatoriosPage from "../components/Secoes/DocumentosRegulatorios/DocumentosRegulatoriosPage";
 
 const DocumentosRegulatorios = () => {
     return (
         <Base>
-            <h1>
-                Aplicação React Base
-            </h1>
+            <DocumentosRegulatoriosPage />
         </Base>
     )
 }
