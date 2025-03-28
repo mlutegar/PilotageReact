@@ -1,9 +1,13 @@
 import { CardRelatorioStyle } from "./Style";
+import TextoCorrido from "../../Textos/TextoCorrido/TextoCorrido";
+import TextoCorridoInvertido from "../../Textos/TextoCorridoInvertido/TextoCorridoInvertido";
 
-const CardRelatorio = () => {
+const CardRelatorio = ({data}) => {
     return (
         <CardRelatorioStyle>
-            <img src={'/imagens/relatorio/default.png'} alt={'Relatório'} />
+            <TextoCorridoInvertido>
+                {data}
+            </TextoCorridoInvertido>
         </CardRelatorioStyle>
     );
 }

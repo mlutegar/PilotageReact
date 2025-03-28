@@ -4,6 +4,7 @@ import Link from "../../../Icones/Link";
 import BotaoPrimario from "../../Botoes/BotaoPrimario/BotaoPrimario";
 import BotaoSecundario from "../../Botoes/BotaoSecundario/BotaoSecundario";
 import {useState} from "react";
+import {BotaoFechar} from "../../../Icones/BotaoFechar";
 
 const CardNossaEquipe = ({foto, nome, curriculo, urls}) => {
     const [modal, setModal] = useState(false);
@@ -34,6 +35,8 @@ const CardNossaEquipe = ({foto, nome, curriculo, urls}) => {
                     Saiba mais
                 </BotaoSecundario>
             </div>
+
+            {/*<BotaoFechar className={"close"}/>*/}
 
             <div className={modal ? 'modal' : 'modal hidden'}>
                 <div className={'card'}>

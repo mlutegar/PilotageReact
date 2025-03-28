@@ -6,6 +6,7 @@ import TituloPrimarioInvertido from "../../Elementos/Textos/TituloPrimarioInvert
 import Dots from "../../Elementos/Dots/Dots";
 
 const RelatorioMensalSecao = () => {
+
     return (
         <RelatorioMensalSecaoStyle>
             <div className={'conteudo'}>
@@ -15,7 +16,9 @@ const RelatorioMensalSecao = () => {
 
                 <div className={'cards'}>
                     <CardRelatorio/>
-                    <CardRelatorio/>
+                    <div className={"principal"}>
+                        <CardRelatorio/>
+                    </div>
                     <CardRelatorio/>
                 </div>
 

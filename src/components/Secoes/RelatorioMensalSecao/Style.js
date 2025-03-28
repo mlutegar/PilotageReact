@@ -22,6 +22,11 @@ export const RelatorioMensalSecaoStyle = styled.section`
         display: flex;
         justify-content: center;
         gap: 16rem;
+        margin: 5rem 0;
+    }
+    
+    .principal{
+        transform: scale(1.1);
     }
     
     .botoes{
@@ -30,6 +35,6 @@ export const RelatorioMensalSecaoStyle = styled.section`
         gap: 2rem;
         justify-content: center;
         align-items: center;
-        margin-top: 2rem;
+        margin: 10px;
     }
 `
