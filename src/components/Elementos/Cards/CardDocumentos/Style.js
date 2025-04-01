@@ -26,5 +26,9 @@ export const CardDocumentosStyle = styled.div`
         justify-content: center;
     }
     
+    .botao a{
+        text-decoration: none;
+    }
+    
     
 `

@@ -1,10 +1,6 @@
 import {DocumentosRegulatoriosPageStyle} from "./Style";
 import TituloPrimario from "../../Elementos/Textos/TituloPrimario/TituloPrimario";
 import TextoCorrido from "../../Elementos/Textos/TextoCorrido/TextoCorrido";
-import Logo from "../../Icones/Logo";
-import {Bold} from "../../Elementos/Textos/TextoCorrido/Style";
-import MaoAberta from "../../Icones/MaoAberta";
-import CardComoInvestir from "../../Elementos/Cards/CardComoInvestir/CardComoInvestir";
 import CardDocumentos from "../../Elementos/Cards/CardDocumentos/CardDocumentos";
 import {FormularioReferencia} from "../../Icones/DocumentosIcones/FormularioReferencia";
 import {CodigoEtica} from "../../Icones/DocumentosIcones/CodigoEtica";
@@ -32,46 +28,56 @@ const DocumentosRegulatoriosPage = () => {
                         icone={<FormularioReferencia/>}
                         titulo={"Formulário de Referência"}
                         botao={"Acessar"}
+                        link={"https://cvmweb.cvm.gov.br/SWB/Sistemas/SCW/CPublica/FormRefAdmCart/ConsultaFormReferenciaAdmCarteiraPJ.aspx?PK_PARTIC=144475&COMPTC=2023"}
                     />
                     <CardDocumentos
                         icone={<CodigoEtica/>}
                         titulo={"Código de Ética"}
                         botao={"Baixar"}
+                        link={"https://pilotage.com.br/home/wp-content/uploads/2023/11/2023-PGR-Codigo-de-Etica.pdf"}
                     />
                     <CardDocumentos
                         icone={<Regras/>}
                         titulo={"Regras e Procedimentos dos Controles Internos"}
                         botao={"Baixar"}
+                        link={"https://pilotage.com.br/site/wp-content/uploads/2021/03/PGR-Controles-Internos.pdf"}
                     />
                     <CardDocumentos
                         icone={<PoliticaSeguranca/>}
                         titulo={"Política de Segurança da Informação"}
                         botao={"Baixar"}
+                        link={"https://pilotage.com.br/site/wp-content/uploads/2021/03/PGR-Seguranc%CC%A7a-da-Informac%CC%A7a%CC%83o.pdf"}
                     />
                     <CardDocumentos
                         icone={<PoliticaGestao/>}
                         titulo={"Política de Gestão de Riscos"}
                         botao={"Acessar"}
+                        link={"https://pilotage.com.br/site/wp-content/uploads/2021/03/PGR-Seguranc%CC%A7a-da-Informac%CC%A7a%CC%83o.pdf"}
                     />
                     <CardDocumentos
                         icone={<PoliticaNegociacao/>}
                         titulo={"Política de Negociação de Valores por Sócios e Colaboradores"}
                         botao={"Baixar"}
+                        link={"https://pilotage.com.br/site/wp-content/uploads/2021/03/PGR-Poli%CC%81tica-de-Compra-e-Venda-de-Valores-Mobilia%CC%81rios-por-Colaboradores-e-a-Pro%CC%81pria-Empresa.pdf"}
                     />
                     <CardDocumentos
                         icone={<PolticaRateio/>}
                         titulo={"Política de Rateio de Ordens"}
                         botao={"Baixar"}
+                        link={"https://pilotage.com.br/site/wp-content/uploads/2021/03/PGR-Politica-de-Rateio-de-Ordens.pdf"}
+
                     />
                     <CardDocumentos
                         icone={<ManualPrecificacao/>}
                         titulo={"Manual de Precificação de Ativos de Carteiras Administradas"}
                         botao={"Baixar"}
+                        link={"https://pilotage.com.br/home/wp-content/uploads/2022/04/2021_pgr_manual_de_precificacao_de_ativos.pdf"}
                     />
                     <CardDocumentos
                         icone={<PoliticaGestao/>}
                         titulo={"Política de Geração de Liquidez"}
                         botao={"Acessar"}
+                        link={"https://pilotage.com.br/home/wp-content/uploads/2022/11/2022-PGR-Politca-de-Gerenciamento-de-Liquidez.pdf"}
                     />
                 </div>
                 <div className={"disclaimer"}>

@@ -1,11 +1,10 @@
 import Base from "./Base"
+import PoliticaDePrivacidadePage from "../components/Secoes/PoliticaDePrivacidadePage/PoliticaDePrivacidadePage";
 
 const PoliticaDePrivacidade = () => {
     return (
         <Base>
-            <h1>
-                Aplicação React Base
-            </h1>
+            <PoliticaDePrivacidadePage />
         </Base>
     )
 }

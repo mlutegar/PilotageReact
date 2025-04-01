@@ -1,7 +1,7 @@
 import { CardDocumentosStyle } from "./Style";
 import BotaoSecundario from "../../Botoes/BotaoSecundario/BotaoSecundario";
 
-const CardDocumentos = ({icone, titulo, botao}) => {
+const CardDocumentos = ({ icone, titulo, botao, link }) => {
     return (
         <CardDocumentosStyle>
             <div className={'icone'}>
@@ -11,9 +11,10 @@ const CardDocumentos = ({icone, titulo, botao}) => {
                 {titulo}
             </div>
             <div className={'botao'}>
-                <BotaoSecundario>{botao}</BotaoSecundario>
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                    <BotaoSecundario>{botao}</BotaoSecundario>
+                </a>
             </div>
-
         </CardDocumentosStyle>
     );
 }
