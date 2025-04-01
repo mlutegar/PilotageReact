@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const NewsletterStyle = styled.div`
     width: 100%;
-    padding: 5rem 2rem;
+    padding: 3rem 2rem;
     flex-shrink: 0;
     border-radius: 0.9375rem;
     background: #F5F7F9;
@@ -11,6 +11,12 @@ export const NewsletterStyle = styled.div`
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    
+    
+    .titulo {
+        font-size: 2rem;
+        padding-bottom: 0;
+    }
     
     @media (max-width: 768px) {
         width: 100%;

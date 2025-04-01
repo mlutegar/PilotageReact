@@ -7,8 +7,8 @@ import InputSecundario from "../../Elementos/InputSecundario/InputSecundario";
 const Formulario = () => {
     return (
         <FormularioStyle>
-            <TituloPrimario>
-                <strong>Formulário de Cotato</strong>
+            <TituloPrimario className={"titulo"}>
+                <strong>Formulário de Contato</strong>
             </TituloPrimario>
 
             <div className={"inputs"}>

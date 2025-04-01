@@ -3,14 +3,15 @@ import Logo from "../../Icones/Logo";
 import TextoCorrido from "../../Elementos/Textos/TextoCorrido/TextoCorrido";
 import InputPrimario from "../../Elementos/InputPrimario/InputPrimario";
 import BotaoSecundario from "../../Elementos/Botoes/BotaoSecundario/BotaoSecundario";
+import TituloPrimario from "../../Elementos/Textos/TituloPrimario/TituloPrimario";
 
 const Newsletter = () => {
     return (
         <NewsletterStyle>
             <Logo/>
-            <TextoCorrido>
+            <TituloPrimario className={"titulo"}>
                 <strong>Gostaria de receber os Relatórios Mensais da Pilotage</strong>
-            </TextoCorrido>
+            </TituloPrimario>
             <InputPrimario
                 placeholder="Seu e-mail"
                 value=""

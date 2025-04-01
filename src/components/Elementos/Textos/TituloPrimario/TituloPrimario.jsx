@@ -1,8 +1,8 @@
 import {TituloPrimarioStyle} from "./Style";
 
-const TituloPrimario = ({children, style}) => {
+const TituloPrimario = ({children, style, className}) => {
     return (
-        <TituloPrimarioStyle style={style}>
+        <TituloPrimarioStyle className={className} style={style}>
             {children}
         </TituloPrimarioStyle>
     );

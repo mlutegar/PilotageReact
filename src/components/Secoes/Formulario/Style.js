@@ -9,8 +9,13 @@ export const FormularioStyle = styled.div`
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 5rem 2rem;
+    padding: 3rem 2rem;
     width: 100%;
+
+    .titulo {
+        font-size: 2rem;
+        padding-bottom: 0;
+    }
     
     @media (max-width: 768px) {
         width: 100%;
