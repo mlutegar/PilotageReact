@@ -7,6 +7,7 @@ import ComoInvestir from "../components/Secoes/ComoInvestir/ComoInvestir";
 import NossaEquipe from "../components/Secoes/NossaEquipe/NossaEquipe";
 import RelatorioMensalSecao from "../components/Secoes/RelatorioMensalSecao/RelatorioMensalSecao";
 import Contato from "../components/Secoes/Contato/Contato";
+import Teste from "../components/Teste/Teste";
 
 const Home = () => {
   return (
