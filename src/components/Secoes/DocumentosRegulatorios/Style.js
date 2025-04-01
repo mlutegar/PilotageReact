@@ -15,7 +15,7 @@ export const DocumentosRegulatoriosPageStyle = styled.section`
     }
         
     .subtitulo h3{
-        color: black;
+        color: #333333;
         font-size: 2rem;
         font-style: normal;
         font-weight: 700;
@@ -35,7 +35,7 @@ export const DocumentosRegulatoriosPageStyle = styled.section`
         border-radius: 0.9375rem;
         background: #F5F7F9;
         padding: 2rem;
-        color: black;
+        color: #333333;
         font-size: 1.25rem;
         font-style: normal;
         font-weight: 400;

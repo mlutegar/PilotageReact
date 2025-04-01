@@ -1,8 +1,8 @@
 import { InputSecundarioStyle } from "./Style";
 
-const InputSecundario = ({placeholder, value}) => {
+const InputSecundario = ({placeholder, value, className}) => {
     return (
-        <InputSecundarioStyle
+        <InputSecundarioStyle className={className}
             placeholder={placeholder}
             value={value}
         />

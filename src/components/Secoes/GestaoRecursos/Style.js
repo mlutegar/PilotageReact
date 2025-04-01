@@ -32,7 +32,7 @@ export const GestaoRecursosStyle = styled.section`
     }
     
     .titulo {
-        color: black;
+        color: #333333;
         font-size: 3rem;
         font-style: normal;
         font-weight: 400;

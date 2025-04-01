@@ -1,11 +1,10 @@
 import Base from "./Base"
+import CanalDeDenunciasPage from "../components/Secoes/CanalDeDenunciasPage/CanalDeDenunciasPage";
 
 const CanalDeDenuncias = () => {
     return (
         <Base>
-            <h1>
-                Aplicação React Base
-            </h1>
+            <CanalDeDenunciasPage />
         </Base>
     )
 }

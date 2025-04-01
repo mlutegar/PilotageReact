@@ -1,10 +1,10 @@
 import {ContatoStyle} from "./Style";
-import TituloPrimario from "../../Elementos/Textos/TituloPrimario/TituloPrimario";
 import Predio from "../../Icones/Predio";
 import Telefone from "../../Icones/Telefone";
 import TextoCorrido from "../../Elementos/Textos/TextoCorrido/TextoCorrido";
 import Newsletter from "../Newsletter/Newsletter";
 import Formulario from "../Formulario/Formulario";
+import TituloPrimario from "../../Elementos/Textos/TituloPrimario/TituloPrimario";
 
 const Contato = () => {
     return (

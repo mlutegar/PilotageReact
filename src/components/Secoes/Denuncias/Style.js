@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const FormularioStyle = styled.div`
+export const DenunciasStyle = styled.div`
     flex-shrink: 0;
     border-radius: 0.9375rem;
     background: #F5F7F9;
@@ -16,6 +16,16 @@ export const FormularioStyle = styled.div`
         font-size: 2rem;
         padding-bottom: 0;
     }
+    
+    .texto {
+        max-width: 49.5625rem;
+        flex-shrink: 0;
+        color: #333333;
+        text-align: justify;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;}
     
     @media (max-width: 768px) {
         width: 100%;
@@ -34,7 +44,11 @@ export const FormularioStyle = styled.div`
         }
     }
     
-    .mensagem {
+    .form {
+        width: 85%;
+    }
+
+    .form-mensagem {
         width: 85%;
         height: 10rem;
     }

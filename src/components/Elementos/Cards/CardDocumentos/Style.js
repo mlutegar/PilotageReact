@@ -15,7 +15,7 @@ export const CardDocumentosStyle = styled.div`
     
     
     .titulo {
-        color: black;
+        color: #333333;
         text-align: center;
         font-size: 1.25rem;
         font-style: normal;

@@ -29,8 +29,10 @@ const Formulario = () => {
                 />
             </div>
 
-            <div>
-
+            <div className={"inputs"}>
+                <InputSecundario className={"mensagem"}
+                    placeholder={"Mensagem"}
+                />
             </div>
 
             <BotaoSecundario>

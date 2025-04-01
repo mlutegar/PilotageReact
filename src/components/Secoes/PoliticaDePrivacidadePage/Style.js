@@ -1,8 +1,6 @@
 import styled from "styled-components"
 
-export const PoliticaDePrivacidadePageStyle = styled.div`
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+export const PoliticaDePrivacidadePageStyle = styled.section`
     
     .titulo {
         display: flex;

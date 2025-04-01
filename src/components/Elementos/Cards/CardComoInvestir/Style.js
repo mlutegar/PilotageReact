@@ -46,7 +46,7 @@ export const CardComoInvestirStyle = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        color: black;
+        color: #333333;
         font-size: 1.125rem;
         font-style: normal;
         font-weight: 400;
@@ -64,7 +64,7 @@ export const CardComoInvestirStyle = styled.div`
     }
     
     .subtitulo {
-        color: black;
+        color: #333333;
         font-size: 1.375rem;
         font-style: normal;
         font-weight: 700;
