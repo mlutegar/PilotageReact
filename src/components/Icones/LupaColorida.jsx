@@ -1,6 +1,6 @@
 export const LupaColorida = ({className}) => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+        <svg className={className} xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
             <path opacity="0.5"
                   d="M28.7771 15.8052C28.7771 22.9694 22.9693 28.7772 15.8051 28.7772C8.64096 28.7772 2.83325 22.9694 2.83325 15.8052C2.83325 8.64104 8.64096 2.83333 15.8051 2.83333C22.9693 2.83333 28.7771 8.64104 28.7771 15.8052Z"
                   fill="white"/>

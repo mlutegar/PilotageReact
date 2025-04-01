@@ -2,6 +2,7 @@ import {SidebarStyle} from "./Style";
 import TextoCorrido from "../../Elementos/Textos/TextoCorrido/TextoCorrido";
 import InputPesquisa from "../../Elementos/InputPesquisa/InputPesquisa";
 import CaixaDeRelatorios from "../../Elementos/CaixaDeRelatorios/CaixaDeRelatorios";
+import SelectPesquisa from "../../Elementos/SelectPesquisa/SelectPesquisa";
 
 const Sidebar = () => {
     return (
@@ -19,18 +20,24 @@ const Sidebar = () => {
             <TextoCorrido>
                 <strong>Arquivo</strong>
             </TextoCorrido>
-            <TextoCorrido>
-                Mês
-            </TextoCorrido>
-            <InputPesquisa
+            <div className={'filtros'}>
+                <div>
+                    <TextoCorrido>
+                        Mês
+                    </TextoCorrido>
+                    <SelectPesquisa
 
-            />
-            <TextoCorrido>
-                Ano
-            </TextoCorrido>
-            <InputPesquisa
+                    />
+                </div>
+                <div>
+                    <TextoCorrido>
+                        Ano
+                    </TextoCorrido>
+                    <SelectPesquisa
 
-            />
+                    />
+                </div>
+            </div>
         </SidebarStyle>
     );
 }

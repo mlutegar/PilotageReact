@@ -6,7 +6,9 @@ const CaixaDeRelatorios = () => {
     return (
         <CaixaDeRelatoriosStyle>
             {relatorios.map((relatorio, index) => (
-                    <TextoCorrido>
+                    <TextoCorrido
+                        className={'item'}
+                    >
                         {relatorio.nome}
                     </TextoCorrido>
                 )

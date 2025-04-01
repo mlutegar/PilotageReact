@@ -11,7 +11,9 @@ const InputPesquisa = () => {
                 value={""}
             />
             <div className={"lupa"}>
-                <LupaColorida/>
+                <LupaColorida
+                    className={"svg"}
+                />
             </div>
         </InputPesquisaStyle>
     );
