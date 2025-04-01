@@ -24,10 +24,34 @@ export const ContatoStyle = styled.section`
             flex-direction: column;
         }
     }
+    
+    .descricao{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .endereco {
+        max-width: 22.8125rem;
+    }
+    
+    .info {
+        display: flex;
+        gap: 6rem;
+        flex-direction: column;
+    }
+    
+    .info-item{
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+    }
 
     @media (max-width: 768px){
         .mapa img{
-            width: 100%;
+            width: 50% !important;
+            height: 50% !important;
         }
     }
 `

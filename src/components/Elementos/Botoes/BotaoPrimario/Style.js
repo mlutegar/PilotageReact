@@ -10,7 +10,6 @@ const BotaoPrimarioStyle = styled.button`
     align-items: center;
     justify-content: center;
     border-style: none;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     cursor: pointer;animation: slideIn 1.5s ease-out;
 

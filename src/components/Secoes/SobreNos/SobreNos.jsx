@@ -8,7 +8,7 @@ const SobreNos = () => {
     return (
         <SobreNosStyle>
             <TituloPrimario>
-                Sobre a Pilotage
+                Sobre a <strong>Pilotage</strong>
             </TituloPrimario>
             <div className={"conteudo"}>
                 <div className={'parte'}>

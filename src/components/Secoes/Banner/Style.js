@@ -32,7 +32,7 @@ export const BannerStyle = styled.div`
     }
 
     .conteudo-banner {
-        padding: 15rem 2rem;
+        padding: 15rem 4rem;
         max-width: 1440px;
         height: 100%;
         width: 100%;
