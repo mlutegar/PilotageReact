@@ -1,7 +1,15 @@
 import styled from "styled-components"
 
-export const InputPesquisaStyle = styled.div`
+export const SelectPesquisaStyle = styled.div`
     position: relative;
+    
+    select{
+        flex-shrink: 0;
+        width: 90% !important;
+        height: 3.0625rem;
+        border: none;
+        
+    }
     
     .lupa{
         width: 3.4375rem;

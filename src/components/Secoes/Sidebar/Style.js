@@ -11,4 +11,16 @@ export const SidebarStyle = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    
+    .filtros{
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        
+        div{
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+        }
+    }
 `

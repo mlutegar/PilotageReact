@@ -16,4 +16,8 @@ export const InputPrimarioStyle = styled.input`
         font-weight: 400;
         line-height: normal;
     }
+    
+    &:focus {
+        outline: none;
+    }
 `

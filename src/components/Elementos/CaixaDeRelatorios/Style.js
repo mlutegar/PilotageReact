@@ -7,5 +7,20 @@ export const CaixaDeRelatoriosStyle = styled.div`
     background: #FFF;
     box-sizing: border-box;
     padding: 1.5rem;
-    
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .item {
+        cursor: pointer;
+        transition: 0.5s all ease;
+
+        &:hover {
+            color: #085696;
+        }
+        
+        &:active {
+            transform: scale(0.9);
+        }
+    }
 `
