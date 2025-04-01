@@ -20,7 +20,7 @@ export const ComoInvestirStyle = styled.section`
     .cardGrid{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 7rem;
+        row-gap: 3rem;
         
         @media (max-width: 768px){
             grid-template-columns: 1fr;
@@ -30,47 +30,40 @@ export const ComoInvestirStyle = styled.section`
     .cardContainer{
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         position: relative;
     }
     
-    .cardContainer::after {
-        border-right: 5px solid transparent;
-        border-left: 5px solid transparent;
-        border-top: 5px solid black;
-        position: absolute;
-    }
-
-    .analise-inicial::after {
-        content: "";
-        position: absolute;
-        width: 50px;
-        height: 2px;
-        background-color: black;
-        top: 50%;
-        left: 100%;
-        transform: translateY(-50%);
+    .analise-inicial {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     
-    .analise-investidor::after {
-        content: "";
-        position: absolute;
-        width: 2px;
-        height: 50px;
-        background-color: black;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
+    .analise-investidor{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 4rem;
     }
-
-    .escolha-ativos::after {
-        content: "";
-        position: absolute;
-        width: 50px;
-        height: 2px;
-        background-color: black;
-        top: 50%;
-        right: 100%;
-        transform: translateY(-50%);
+    
+    .seta2 {
+        rotate: 90deg;
     }
+    
+    .escolha-ativos {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .seta3 {
+        rotate: 180deg;
+    }
+    
+    
 `
