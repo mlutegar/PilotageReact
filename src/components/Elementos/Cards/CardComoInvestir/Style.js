@@ -12,6 +12,14 @@ export const CardComoInvestirStyle = styled.div`
     align-items: center;
     padding: 1rem;
     box-shadow: 30px 30px 0px var(--sombra);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    animation: zoomIn 0.5s ease;
+    z-index: 10;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 20px 20px 0px var(--sombra);
+    }
     
     @media (max-width: 768px) {
         width: auto;

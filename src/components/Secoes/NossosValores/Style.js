@@ -22,6 +22,7 @@ export const NossosValoresStyle = styled.section`
         display: flex;
         justify-content: space-between;
         width: 100%;
+        
     }
 
     @media (max-width: 768px) {
@@ -37,6 +38,12 @@ export const NossosValoresStyle = styled.section`
         align-items: center;
         text-align: center;
         gap: 2rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: zoomIn 4s ease;
+
+        &:hover {
+            transform: translateY(-10px);
+        }
     }
     
     .paragrafo1 ,

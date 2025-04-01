@@ -9,16 +9,18 @@ export const CardNossaEquipeStyle = styled.div`
     border-radius: 0.9375rem;
     box-shadow: 0px 6px 23.9px -15px rgba(0, 0, 0, 0.25);
     border: 2px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: zoomIn 4s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
     
     .close{
         position: absolute;
         z-index: 200;
     }
-
-    &:hover {
-        border: 2px solid #003560;
-        cursor: pointer;
-    }
+    
 
     .modal {
         position: fixed;

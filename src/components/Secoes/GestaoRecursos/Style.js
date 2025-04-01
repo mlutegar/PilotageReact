@@ -16,6 +16,12 @@ export const GestaoRecursosStyle = styled.section`
         gap: 2rem;
         max-width: 57.5rem;
         margin: 2rem 0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: zoomIn 4s ease;
+
+        &:hover {
+            transform: translateY(-10px);
+        }
     }
 
     @media (max-width: 768px) {

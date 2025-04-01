@@ -30,6 +30,7 @@ export const ContatoStyle = styled.section`
         flex-direction: row;
         align-items: center;
         gap: 1rem;
+        
     }
     
     .endereco {
@@ -46,6 +47,12 @@ export const ContatoStyle = styled.section`
         display: flex;
         gap: 1rem;
         flex-direction: column;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: zoomIn 4s ease;
+
+        &:hover {
+            transform: translateY(-10px);
+        }
     }
 
     @media (max-width: 768px){
