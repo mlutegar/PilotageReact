@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const Top = styled.header`
-    padding: 2rem 0;
+    padding: 1.1rem 0;
     background-color: var(--secundaria);
     display: flex;
     flex-direction: row;
@@ -10,8 +10,9 @@ const Top = styled.header`
     justify-content: space-between;
 
     a {
+        position: relative;
         color: var(--primaria);
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -20,10 +21,27 @@ const Top = styled.header`
         margin: 0 .7em;
         background-color: var(--background1);
         text-decoration: none;
-
-        &:hover {
-        }
+        transition: color 0.3s ease-in-out;
     }
+
+    a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: var(--primaria);
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    a:hover::after {
+        transform: scaleX(1);
+    }
+
+
 
     .logo-header {
         display: flex;
@@ -33,8 +51,6 @@ const Top = styled.header`
 
     .logo-header img {
         width: 14.5rem;
-        height: 3.2438rem;
-
     }
 
     .detalhe {
@@ -46,21 +62,7 @@ const Top = styled.header`
         flex-shrink: 0;
         background: var(--primaria);
     }
-
-    @media screen and (max-width: 768px) {
-        .detalhe {
-            display: none;
-        }
-    }
-
-    .hover {
-        display: none;
-        width: 0.9375rem;
-        height: 0.9375rem;
-        flex-shrink: 0;
-        background-color: var(--detalhe);
-    }
-
+    
 
 `
 

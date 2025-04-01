@@ -5,26 +5,20 @@ import React from "react";
 const Header = () => (
   <Top>
       <div className="logo-header">
-          <div className="detalhe"/>
-          <Link to="/"><img src="imagens/Logo.png" alt="Logo"/></Link>
+          <Link to="/"><img src="imagens/pilotage.jpg" alt="Logo"/></Link>
       </div>
-
       <Menu>
           <BotaoMenu>
-              <div className="hover"/>
-              <Link to="/fotos">Home</Link>
+              <Link to="/">Home</Link>
           </BotaoMenu>
           <BotaoMenu>
-              <div className="hover"/>
-              <Link to="/atletas">Relatórios</Link>
+              <Link to="/">Relatórios</Link>
           </BotaoMenu>
           <BotaoMenu>
-              <div className="hover"/>
-              <Link to="/atletas">Quem Somos</Link>
+              <Link to="/">Quem Somos</Link>
           </BotaoMenu>
           <BotaoMenu>
-              <div className="hover"/>
-              <Link to="/atletas">Contato</Link>
+              <Link to="/">Contato</Link>
           </BotaoMenu>
       </Menu>
   </Top>
