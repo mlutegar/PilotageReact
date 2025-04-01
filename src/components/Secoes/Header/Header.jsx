@@ -5,7 +5,7 @@ import React from "react";
 const Header = () => (
   <Top>
       <div className="logo-header">
-          <Link to="/"><img src="imagens/pilotage.jpg" alt="Logo"/></Link>
+          <img src="imagens/pilotage.jpg" alt="Logo"/>
       </div>
       <Menu>
           <BotaoMenu>
