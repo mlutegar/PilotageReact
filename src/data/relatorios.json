@@ -2,21 +2,25 @@
   {
     "nome": "Janeiro de 2025",
     "data": "01/01/2021",
-    "link": "https://www.google.com"
+    "link": "https://www.google.com",
+    "descricao": "Início do ano de 2025 com novas oportunidades e desafios. Acompanhe as tendências e eventos deste mês."
   },
   {
     "nome": "Fevereiro de 2025",
     "data": "01/02/2021",
-    "link": "https://www.google.com"
+    "link": "https://www.google.com",
+    "descricao": "Mês de fevereiro de 2025, com foco em metas de curto prazo e avaliações do início do ano. Prepare-se para o que vem pela frente."
   },
   {
     "nome": "Março de 2025",
     "data": "01/03/2021",
-    "link": "https://www.google"
+    "link": "https://www.google",
+    "descricao": "Março traz uma análise dos resultados obtidos até agora e o planejamento para os próximos passos. Um mês crucial para ajustes."
   },
   {
     "nome": "Abril de 2025",
     "data": "01/04/2021",
-    "link": "https://www.google.com"
+    "link": "https://www.google.com",
+    "descricao": "Abril marca a virada do primeiro quadrimestre. Hora de rever os objetivos de 2025 e ajustar as estratégias para os próximos meses."
   }
 ]

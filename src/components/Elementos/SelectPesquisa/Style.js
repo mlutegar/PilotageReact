@@ -8,26 +8,34 @@ export const SelectPesquisaStyle = styled.div`
         width: 90% !important;
         height: 3.0625rem;
         border: none;
-        
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    select::-ms-expand {
+        display: none;
     }
     
     .lupa{
         width: 3.4375rem;
         height: 3.0625rem;
         flex-shrink: 0;
-        background: #003560;
         display: flex;
         justify-content: center;
         text-align: center;
         position: absolute;
-        right: 0;
+        right: 2rem;
         top: 0;
         align-items: center;
         transition: 0.5s all ease;
         
         &:hover{
             cursor: pointer;
-            background: #00254d;
         }
         
         svg{
