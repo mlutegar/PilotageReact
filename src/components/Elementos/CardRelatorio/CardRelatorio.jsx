@@ -1,8 +1,11 @@
 import {CardRelatorioStyle} from "./Style";
 import TextoCorrido from "../Textos/TextoCorrido/TextoCorrido";
 import BotaoSecundario from "../Botoes/BotaoSecundario/BotaoSecundario";
+import {useNavigate} from "react-router-dom";
 
 const CardRelatorio = ({imagem, titulo, descricao}) => {
+    const navigate = useNavigate();
+
     return (
         <CardRelatorioStyle>
             <div>
@@ -24,7 +27,9 @@ const CardRelatorio = ({imagem, titulo, descricao}) => {
 
                 </div>
 
-                <BotaoSecundario>
+                <BotaoSecundario
+                    onClick={() => navigate('/leitor')}
+                    >
                     Saiba Mais
                 </BotaoSecundario>
             </div>

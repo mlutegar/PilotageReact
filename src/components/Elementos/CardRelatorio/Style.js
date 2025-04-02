@@ -4,10 +4,18 @@ export const CardRelatorioStyle = styled.div`
     display: flex;
     gap: 2rem;
     
+    img{
+        width: 15.97338rem;
+        height: 22.625rem;
+        flex-shrink: 0;
+        aspect-ratio: 255.57/362.00;
+    }
+    
     .conteudo{
         display: flex;
         flex-direction: column;
         gap: 5rem;
+        margin-right: 5rem;
     }
     
     .linha{

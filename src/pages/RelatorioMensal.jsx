@@ -8,30 +8,23 @@ const RelatorioMensal = () => {
     return (
         <Base>
             <div style={{display: "flex", width: "100%", justifyContent: "space-between"}}>
-                <div style={{width: "70%"}}>
+                <div>
                     <TituloPrimario style={{textAlign: "left"}}>
                         <strong>Relatórios Mensais</strong>
                     </TituloPrimario>
 
-                    {relatorios.map((relatorio, index) => {
-                        return (
-                            <CardRelatorio
-                                key={index}
-                                imagem={relatorio.imagem}
-                                titulo={relatorio.nome}
-                                descricao={relatorio.descricao}
-                            />
-                        )
-                    })}
-
-                    <CardRelatorio
-                        titulo={"Relatório Mensal Pilotage - FEV / 2025"}
-                        descricao={"Confira aqui o Relatório Mensal Pilotage do mês de Fevereiro de 2025 e veja nossas análises sobre\n" +
-                            "                    economia internacional, economia brasileira e como estamos atuando neste período. A Pilotage publica\n" +
-                            "                    mensalmente este relatório no site. Use a barra de controle para ampliar ou reduzir, virar páginas\n" +
-                            "                    ou visualizar o relatório em tela cheia."}
-                    />
-
+                    <div style={{display: "flex", flexDirection: "column", gap: "5rem", marginBottom: "5rem"}}>
+                        {relatorios.map((relatorio, index) => {
+                            return (
+                                <CardRelatorio
+                                    key={index}
+                                    imagem={relatorio.imagem}
+                                    titulo={relatorio.nome}
+                                    descricao={relatorio.descricao}
+                                />
+                            )
+                        })}
+                    </div>
                 </div>
 
                 <Sidebar/>
