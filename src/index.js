@@ -21,7 +21,8 @@ root.render(
                 <Route path="/politicas-de-privacidade" element={<PoliticaDePrivacidade/>}/>
                 <Route path="/relatorio-mensal" element={<RelatorioMensal/>}/>
 
-                <Route path="/leito-relatorio" element={<LeitorRelatorio/>}/>
+                {/* Fixed the typo in the path from "/leito-relatorio" to "/leitor-relatorio" */}
+                <Route path="/leitor-relatorio" element={<LeitorRelatorio/>}/>
             </Routes>
         </HashRouter>
     </React.StrictMode>

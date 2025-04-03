@@ -1,19 +1,27 @@
 import { CardRelatorioStyle } from "./Style";
-import TextoCorrido from "../../Textos/TextoCorrido/TextoCorrido";
 import TextoCorridoInvertido from "../../Textos/TextoCorridoInvertido/TextoCorridoInvertido";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const CardRelatorio = ({data, className}) => {
+const CardRelatorio = ({ data, nome, link, className }) => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate('/leito-relatorio');
+        // Pass the PDF URL as a state parameter when navigating
+        navigate('/leitor-relatorio', {
+            state: {
+                pdfUrl: link,
+                title: nome
+            }
+        });
     }
 
     return (
         <CardRelatorioStyle className={className} onClick={handleClick}>
             <TextoCorridoInvertido className={'data'}>
                 {data}
+            </TextoCorridoInvertido>
+            <TextoCorridoInvertido className={'nome'}>
+                {nome}
             </TextoCorridoInvertido>
         </CardRelatorioStyle>
     );
