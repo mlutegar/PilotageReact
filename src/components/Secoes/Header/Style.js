@@ -8,6 +8,19 @@ const Top = styled.header`
     margin: 0;
     align-items: center;
     justify-content: space-between;
+    
+    .logo-header{
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.01);
+            transition: 0.3s;
+        }
+        
+        &:active {
+            transform: scale(0.99);
+            transition: 0.3s;
+        }
+    }
 
     a {
         position: relative;

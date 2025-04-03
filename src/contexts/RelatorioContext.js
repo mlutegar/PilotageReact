@@ -5,7 +5,6 @@ const RelatorioContext = createContext();
 const RelatorioProvider = ({ children }) => {
     const [relatorios, setRelatorios] = useState([]);
     const [loading, setLoading] = useState(true);
-    // const [loading, setLoading] = useState(false);
 
     const fetchRelatorios = async () => {
         const storedData = localStorage.getItem('relatorios');

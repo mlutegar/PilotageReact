@@ -3,6 +3,8 @@ import Base from "./Base";
 import Teste from "../components/Teste/Teste";
 import Sidebar from "../components/Secoes/Sidebar/Sidebar";
 import TituloPrimario from "../components/Elementos/Textos/TituloPrimario/TituloPrimario";
+import TextoCorrido from "../components/Elementos/Textos/TextoCorrido/TextoCorrido";
+import {Botaoseta} from "../components/Icones/Botaoseta";
 
 const LeitorRelatorio = () => {
     // Use location to get the state that was passed during navigation
@@ -15,13 +17,38 @@ const LeitorRelatorio = () => {
     return (
         <Base>
             <div style={{display: "flex", width: "100%", justifyContent: "space-between"}}>
-                <div>
-                    <TituloPrimario style={{textAlign: "left"}}>
-                        {title}
+            <div style={{display: "flex", flexDirection: "column", gap: "3rem", marginTop: "2.69rem", marginRight: "2.69rem"}}>
+                    <TituloPrimario style={{textAlign: "left", padding: 0}}>
+                        <strong> {title} </strong>
                     </TituloPrimario>
+
+                    <TextoCorrido>
+                        Confira aqui o Relatório Mensal Pilotage do mês de [MES] de [ANO] e veja nossas análises sobre
+                        economia internacional, economia brasileira e como estamos atuando neste período.
+                        A Pilotage publica mensalmente este relatório no site.
+                        Use a barra de controle para ampliar ou reduzir, virar páginas ou visualizar o relatório em tela
+                        cheia.
+                    </TextoCorrido>
+
+
                     <Teste
                         pdfUrl={pdfUrl}
                     />
+
+
+                    <div style={{display: "flex", justifyContent: "space-between", borderTop: "1px solid black", paddingTop: "1rem"}}>
+                        <button
+                            style={{display: "flex", alignItems: "center", border: "none", background: "transparent"}}>
+                            <Botaoseta direction="left"/>
+                            <span>Anterior</span>
+                        </button>
+                        <button
+                            style={{display: "flex", alignItems: "center", border: "none", background: "transparent"}}>
+                            <span>Avançar</span>
+                            <Botaoseta direction="right"/>
+                        </button>
+                    </div>
+
                 </div>
 
                 <Sidebar/>

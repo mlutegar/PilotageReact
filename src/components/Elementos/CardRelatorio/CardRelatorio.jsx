@@ -3,7 +3,7 @@ import TextoCorrido from "../Textos/TextoCorrido/TextoCorrido";
 import BotaoSecundario from "../Botoes/BotaoSecundario/BotaoSecundario";
 import {useNavigate} from "react-router-dom";
 
-const CardRelatorio = ({imagem, titulo, descricao}) => {
+const CardRelatorio = ({titulo, descricao}) => {
     const navigate = useNavigate();
 
     return (
