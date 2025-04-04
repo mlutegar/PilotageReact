@@ -23,10 +23,10 @@ const Header = () => {
                         <Link to='/relatorio-mensal'>Relatórios</Link>
                     </BotaoMenu>
                     <BotaoMenu>
-                        <Link to="/">Quem Somos</Link>
+                        <a href="#sobre-nos">Sobre Nós</a>
                     </BotaoMenu>
                     <BotaoMenu>
-                        <Link to="/">Contato</Link>
+                        <a href="#contato">Contato</a>
                     </BotaoMenu>
                 </Menu>
             </Top>

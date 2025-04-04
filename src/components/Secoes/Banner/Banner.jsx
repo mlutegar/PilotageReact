@@ -22,8 +22,8 @@ const Banner = () => {
         {
             titulo: (
                 <>
-                    A história da Pilotage:
-                    10 anos de compromisso com seu futuro.
+                    A história da <strong>Pilotage:</strong>
+                    <br/>10 anos de compromisso <strong>com seu futuro.</strong>
                 </>
             ),
             btnTexto: <><strong>Saiba mais</strong></>,
@@ -32,7 +32,8 @@ const Banner = () => {
         {
             titulo: (
                 <>
-                    Encontre profissionais dedicados a cuidar do seu futuro financeiro.
+                    Encontre profissionais <strong>dedicados</strong> a cuidar do <br/>
+                    <strong>seu futuro financeiro.</strong>
                 </>
             ),
             btnTexto: <><strong>Nossa Equipe</strong></>,
@@ -41,7 +42,7 @@ const Banner = () => {
         {
             titulo: (
                 <>
-                    Com a Pilotage, você investe com segurança e tranquilidade.
+                    Com a <strong>Pilotage</strong>, você investe com <strong>segurança <br/>e tranquilidade.</strong>
                 </>
             ),
             btnTexto: <><strong>Como investir?</strong></>,
@@ -50,7 +51,7 @@ const Banner = () => {
         {
             titulo: (
                 <>
-                    Atendimento exclusivo para entender suas necessidades e proporcionar as melhores soluções financeiras.
+                    <strong>Atendimento exclusivo</strong> para entender suas <strong>necessidades</strong> e proporcionar as melhores <strong>soluções financeiras.</strong>
                 </>
             ),
             btnTexto: <><strong>Como investir?</strong></>,

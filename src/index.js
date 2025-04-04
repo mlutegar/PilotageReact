@@ -7,6 +7,7 @@ import DocumentosRegulatorios from "./pages/DocumentosRegulatorios";
 import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade";
 import RelatorioMensal from "./pages/RelatorioMensal";
 import LeitorRelatorio from "./pages/LeitorRelatorio";
+import SobreNos from "./components/Secoes/SobreNos/SobreNos";
 
 const container = document.getElementById("root");
 const root = createRoot(container);
@@ -23,6 +24,7 @@ root.render(
 
                 {/* Fixed the typo in the path from "/leito-relatorio" to "/leitor-relatorio" */}
                 <Route path="/leitor-relatorio" element={<LeitorRelatorio/>}/>
+
             </Routes>
         </HashRouter>
     </React.StrictMode>

@@ -25,7 +25,7 @@ export const BannerStyle = styled.div`
     }
 
     .dots {
-        position: relative;
+        margin-bottom: 2rem;
         bottom: 6rem;
     }
 
@@ -70,7 +70,7 @@ export const BannerStyle = styled.div`
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        max-width: 450px;
+        max-width: 550px;
 
         animation: slideIn 1.5s ease-out;
 
@@ -87,7 +87,7 @@ export const BannerStyle = styled.div`
     }
 
     .btn {
-        padding-top: 2rem;
+        padding-top: 3rem;
     }
 
     @media screen and (max-width: 768px) {
