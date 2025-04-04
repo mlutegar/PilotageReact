@@ -7,6 +7,15 @@ export const ContatoStyle = styled.section`
     align-items: center;
     gap: 2.5rem;
     
+    .mapa{
+        height: 555px;
+        width: 730px;
+
+        .leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom{
+            height: 100% !important;
+        }
+    }
+    
     .forms{
         width: 90%;
         display: flex;
