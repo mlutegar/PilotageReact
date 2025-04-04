@@ -11,42 +11,10 @@ export const CardNossaEquipeStyle = styled.div`
     border: 2px solid transparent;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: zoomIn 4s ease;
+    position: relative;
 
     &:hover {
         transform: translateY(-10px);
-    }
-    
-    .close{
-        position: absolute;
-        z-index: 200;
-    }
-    
-
-    .modal {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        right: 0;
-        background: rgba(2, 39, 71, 0.81);
-        z-index: 100;
-        transform: scale(1.4);
-    }
-
-    .card {
-        background: white;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0.9375rem;
-        box-shadow: 0px 6px 23.9px -15px rgba(0, 0, 0, 0.25);
-    }
-
-    .modal.hidden {
-        display: none;
     }
 
     svg {
@@ -92,5 +60,70 @@ export const CardNossaEquipeStyle = styled.div`
         flex-shrink: 0;
         border-radius: 0.9375rem 0.9375rem 0rem 0rem;
         background: #9CB1C3;
+    }
+
+    /* Modal styles - moved outside main component */
+    & + .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(2, 39, 71, 0.81);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    & + .modal-overlay .modal-content {
+        background: white;
+        border-radius: 0.9375rem;
+        position: relative;
+        transform: scale(1.2);
+        box-shadow: 0px 6px 23.9px -15px rgba(0, 0, 0, 0.25);
+    }
+
+    & + .modal-overlay .close-button {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 1010;
+    }
+
+    & + .modal-overlay .modal-header {
+        width: 24rem;
+        height: 15.33656rem;
+        flex-shrink: 0;
+        border-radius: 0.9375rem 0.9375rem 0rem 0rem;
+        background: #9CB1C3;
+    }
+
+    & + .modal-overlay .modal-body {
+        width: 24rem;
+        height: 20.9375rem;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    & + .modal-overlay .foto img {
+        position: relative;
+        bottom: 2.65rem;
+        left: 1rem;
+        height: 18rem;
+    }
+
+    & + .modal-overlay .urls {
+        justify-content: space-around;
+        align-items: center;
+        gap: 4rem;
+        display: flex;
     }
 `
