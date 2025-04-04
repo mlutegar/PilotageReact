@@ -6,7 +6,7 @@ export const BannerStyle = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     animation: fadeIn 1.5s ease-in-out;
-
+    
     width: 100vw;
     position: relative;
     left: 50%;
@@ -70,7 +70,8 @@ export const BannerStyle = styled.div`
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        max-width: 550px;
+        max-width: 950px;
+        height: 180px;
 
         animation: slideIn 1.5s ease-out;
 

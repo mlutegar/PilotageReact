@@ -16,8 +16,8 @@ const LeitorRelatorio = () => {
 
     return (
         <Base>
-            <div style={{display: "flex", width: "100%", justifyContent: "space-between"}}>
-            <div style={{display: "flex", flexDirection: "column", gap: "3rem", marginTop: "2.69rem", marginRight: "2.69rem"}}>
+            <div style={{display: "flex", width: "100%", justifyContent: "space-between", marginTop: "2.69rem"}}>
+            <div style={{display: "flex", flexDirection: "column", gap: "3rem", marginRight: "2.69rem"}}>
                     <TituloPrimario style={{textAlign: "left", padding: 0}}>
                         <strong> {title} </strong>
                     </TituloPrimario>

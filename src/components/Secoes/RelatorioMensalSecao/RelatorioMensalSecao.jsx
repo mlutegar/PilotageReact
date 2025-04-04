@@ -37,43 +37,43 @@ const RelatorioMensalSecao = () => {
 
     return (
         <RelatorioMensalSecaoStyle>
-            <div className={'conteudo'}>
-                <TituloPrimarioInvertido>
-                    <strong>Relatórios</strong> Mensal
-                </TituloPrimarioInvertido>
+                <div className={'conteudo'}>
+                    <TituloPrimarioInvertido>
+                        <strong>Relatórios</strong> Mensal
+                    </TituloPrimarioInvertido>
 
-                <div className={'cards'}>
-                    {relatoriosPagina
-                        .map((relatorio, index) => {
-                                return (
-                                    <CardRelatorio
-                                        key={index}
-                                        nome={relatorio.post_title}  // Altere para o campo correto
-                                        data={relatorio.post_date}  // Altere para o campo correto
-                                        link={relatorio.guid}  // Altere para o campo correto
-                                        className={index === 1 ? 'principal' : ''}
-                                    />
-                                );
-                            }
-                        )}
+                    <div className={'cards'}>
+                        {relatoriosPagina
+                            .map((relatorio, index) => {
+                                    return (
+                                        <CardRelatorio
+                                            key={index}
+                                            nome={relatorio.post_title}  // Altere para o campo correto
+                                            data={relatorio.post_date}  // Altere para o campo correto
+                                            link={relatorio.guid}  // Altere para o campo correto
+                                            className={index === 1 ? 'principal' : ''}
+                                        />
+                                    );
+                                }
+                            )}
+                    </div>
+
+                    <div className={'botoes'}>
+                        <Dots
+                            total={relatoriosMaisRecentes.length}
+                            ativo={paginaAtual}
+                            onDotClick={onDotClick}
+                        />
+
+                        <BotaoPrimario
+                            onClick={() => navigate('/relatorio-mensal')}
+                        >
+                            Acessar todos
+                        </BotaoPrimario>
+                    </div>
                 </div>
-
-                <div className={'botoes'}>
-                    <Dots
-                        total={relatoriosMaisRecentes.length}
-                        ativo={paginaAtual}
-                        onDotClick={onDotClick}
-                    />
-
-                    <BotaoPrimario
-                        onClick={() => navigate('/relatorio-mensal')}
-                    >
-                        Acessar todos
-                    </BotaoPrimario>
-                </div>
-            </div>
         </RelatorioMensalSecaoStyle>
-    );
+);
 }
 
 export default RelatorioMensalSecao;

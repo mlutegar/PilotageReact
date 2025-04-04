@@ -11,8 +11,8 @@ const Banner = () => {
         {
             titulo: (
                 <>
-                    Construindo seu <strong>Futuro Sólido </strong>
-                    com <strong>Gestão Segura </strong>
+                    Construindo seu <strong>Futuro Sólido </strong><br/>
+                    com <strong>Gestão Segura </strong><br/>
                     e <strong>Independente.</strong>
                 </>
             ),

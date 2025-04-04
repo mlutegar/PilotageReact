@@ -36,8 +36,8 @@ const RelatorioMensal = () => {
 
     return (
         <Base>
-            <div style={{display: "flex", width: "100%", justifyContent: "space-between"}}>
-                <div>
+            <div style={{display: "flex", width: "100%", justifyContent: "space-between", marginTop: "2.69rem"}}>
+                <div style={{display: "flex", flexDirection: "column", gap: "3rem", marginRight: "2.69rem"}}>
                     <TituloPrimario style={{textAlign: "left"}}>
                         <strong>Relatórios Mensais</strong>
                     </TituloPrimario>
