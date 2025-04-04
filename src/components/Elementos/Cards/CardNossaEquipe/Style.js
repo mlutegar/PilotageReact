@@ -63,6 +63,7 @@ export const CardNossaEquipeStyle = styled.div`
     }
 
     /* Modal styles - moved outside main component */
+
     & + .modal-overlay {
         position: fixed;
         top: 0;
@@ -104,13 +105,13 @@ export const CardNossaEquipeStyle = styled.div`
 
     & + .modal-overlay .modal-body {
         width: 24rem;
-        height: 20.9375rem;
-        flex-shrink: 0;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 2rem;
+        padding: 2rem 0;
     }
 
     & + .modal-overlay .foto img {
@@ -125,5 +126,11 @@ export const CardNossaEquipeStyle = styled.div`
         align-items: center;
         gap: 4rem;
         display: flex;
+    }
+
+    & + .modal-overlay .descricao {
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
 `

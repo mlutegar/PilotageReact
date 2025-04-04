@@ -4,15 +4,13 @@ import InputPesquisa from "../../Elementos/InputPesquisa/InputPesquisa";
 import CaixaDeRelatorios from "../../Elementos/CaixaDeRelatorios/CaixaDeRelatorios";
 import SelectPesquisa from "../../Elementos/SelectPesquisa/SelectPesquisa";
 
-const Sidebar = () => {
+const Sidebar = ({setInputValue}) => {
     return (
         <SidebarStyle>
             <TextoCorrido>
                 <strong>Pesquisa</strong>
             </TextoCorrido>
-            <InputPesquisa
-
-            />
+            <InputPesquisa onChange={setInputValue} />
             <TextoCorrido>
                 <strong>Relatórios Recentes</strong>
             </TextoCorrido>

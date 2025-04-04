@@ -1,12 +1,11 @@
 import {CardNossaEquipeStyle} from "./Style";
 import Email from "../../../Icones/Email";
 import Link from "../../../Icones/Link";
-import BotaoPrimario from "../../Botoes/BotaoPrimario/BotaoPrimario";
 import BotaoSecundario from "../../Botoes/BotaoSecundario/BotaoSecundario";
 import {useState, useEffect} from "react";
 import {BotaoFechar} from "../../../Icones/BotaoFechar";
 
-const CardNossaEquipe = ({foto, nome, curriculo, urls}) => {
+const CardNossaEquipe = ({foto, nome, curriculo, descricao, email, linkedin}) => {
     const [modal, setModal] = useState(false);
 
     // Quando o modal está aberto, desabilita o scroll da página
@@ -51,8 +50,12 @@ const CardNossaEquipe = ({foto, nome, curriculo, urls}) => {
                         <img src={curriculo} alt={'Curriculo'}/>
                     </div>
                     <div className={'urls'}>
-                        <Email/>
-                        <Link/>
+                        <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
+                            <Email/>
+                        </a>
+                        <a href={linkedin} target="_blank" rel="noopener noreferrer">
+                            <Link/>
+                        </a>
                     </div>
                     <BotaoSecundario onClick={handleOpenModal}>
                         Saiba mais
@@ -79,12 +82,15 @@ const CardNossaEquipe = ({foto, nome, curriculo, urls}) => {
                                 <img src={curriculo} alt={'Curriculo'}/>
                             </div>
                             <div className='urls'>
-                                <Email/>
-                                <Link/>
+                                <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
+                                    <Email/>
+                                </a>
+                                <a href={linkedin} target="_blank" rel="noopener noreferrer">
+                                    <Link/>
+                                </a>
                             </div>
-                            <BotaoPrimario>
-                                Saiba mais
-                            </BotaoPrimario>
+                            <div className='descricao' dangerouslySetInnerHTML={{__html: descricao}}/>
+
                         </div>
                     </div>
                 </div>

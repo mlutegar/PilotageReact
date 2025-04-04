@@ -8,14 +8,14 @@ const Top = styled.header`
     margin: 0;
     align-items: center;
     justify-content: space-between;
-    
-    .logo-header{
+
+    .logo-header {
         &:hover {
             cursor: pointer;
             transform: scale(1.01);
             transition: 0.3s;
         }
-        
+
         &:active {
             transform: scale(0.99);
             transition: 0.3s;
@@ -35,6 +35,10 @@ const Top = styled.header`
         background-color: var(--background1);
         text-decoration: none;
         transition: color 0.3s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     a::after {
@@ -53,7 +57,6 @@ const Top = styled.header`
     a:hover::after {
         transform: scaleX(1);
     }
-
 
 
     .logo-header {
@@ -75,7 +78,7 @@ const Top = styled.header`
         flex-shrink: 0;
         background: var(--primaria);
     }
-    
+
 
 `
 
