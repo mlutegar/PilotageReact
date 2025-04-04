@@ -1,22 +1,22 @@
-// noinspection CssUnknownTarget
-
 import styled from "styled-components"
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 
 export const BannerStyle = styled.div`
-    .conteudo-banner {
-        width: 100%;
-        height: 500px; /* Ou qualquer altura desejada */
-        background-size: cover;
-        background-position: center;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 3rem;
-    }
+    background: url(${props => props.backgroundImage || "imagens/Banner1.png"});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: fadeIn 1.5s ease-in-out;
+
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @media (max-width: 768px) {
         width: auto;
@@ -27,7 +27,17 @@ export const BannerStyle = styled.div`
     .dots {
         position: relative;
         bottom: 6rem;
-    
+    }
+
+    .conteudo-banner {
+        padding: 15rem 2rem;
+        max-width: 1440px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
 
     @media (max-width: 768px) {
         .conteudo-banner {

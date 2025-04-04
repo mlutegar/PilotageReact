@@ -2,16 +2,37 @@ import Base from "./Base"
 import TituloPrimario from "../components/Elementos/Textos/TituloPrimario/TituloPrimario";
 import Sidebar from "../components/Secoes/Sidebar/Sidebar";
 import CardRelatorio from "../components/Elementos/CardRelatorio/CardRelatorio";
-import { useContext } from "react";
-import {RelatorioContext} from "../contexts/RelatorioContext";
+import { useState, useEffect } from "react";
 
 const RelatorioMensal = () => {
-    const { relatorios, loading } = useContext(RelatorioContext);
+    const [relatorios, setRelatorios] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        // Recupera os dados do localStorage
+        const storedData = localStorage.getItem('relatorios');
+
+        if (storedData) {
+            try {
+                const parsedData = JSON.parse(storedData);
+                setRelatorios(parsedData);
+                console.log('Relatórios carregados:', parsedData);
+            } catch (error) {
+                console.error('Erro ao fazer parse dos dados:', error);
+                setRelatorios([]);
+            }
+        } else {
+            console.log('Nenhum relatório encontrado no localStorage.');
+            setRelatorios([]);
+        }
+
+        setLoading(false);
+    }, []);
 
     // Ordena os relatórios pela data (do mais recente para o mais antigo)
-    const relatoriosOrdenados = [...relatorios].sort((a, b) =>
-        new Date(b.post_date) - new Date(a.post_date)
-    );
+    const relatoriosOrdenados = relatorios.length > 0
+        ? [...relatorios].sort((a, b) => new Date(b.post_date) - new Date(a.post_date))
+        : [];
 
     return (
         <Base>
@@ -23,19 +44,26 @@ const RelatorioMensal = () => {
 
                     {loading ? (
                         <div>Carregando relatórios...</div>
-                    ) : (
+                    ) : relatoriosOrdenados.length > 0 ? (
                         <div style={{display: "flex", flexDirection: "column", gap: "5rem", marginBottom: "5rem"}}>
                             {relatoriosOrdenados.map((relatorio, index) => {
                                 return (
                                     <CardRelatorio
                                         key={index}
+                                        imagem={relatorio.imagem || relatorio.featured_image}
                                         titulo={relatorio.post_title}
-                                        descricao={relatorio.post_excerpt || relatorio.post_content.substring(0, 150) + '...'}
+                                        descricao={"                        Confira aqui o Relatório Mensal Pilotage do mês de [MES] de [ANO] e veja nossas análises sobre\n" +
+                                            "                        economia internacional, economia brasileira e como estamos atuando neste período.\n" +
+                                            "                        A Pilotage publica mensalmente este relatório no site.\n" +
+                                            "                        Use a barra de controle para ampliar ou reduzir, virar páginas ou visualizar o relatório em tela\n" +
+                                            "                        cheia."}
                                         link={relatorio.guid}
                                     />
                                 )
                             })}
                         </div>
+                    ) : (
+                        <div>Nenhum relatório encontrado</div>
                     )}
                 </div>
 

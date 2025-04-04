@@ -15,12 +15,15 @@ export const ComoInvestirStyle = styled.section`
         padding: 0 2rem;
         max-width: 1440px;
         margin: 0 auto;
+        align-items: center;
     }
     
     .cardGrid{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 3rem;
+        row-gap: 8rem;
+        position: relative;
+        column-gap: 8rem;
         
         @media (max-width: 768px){
             grid-template-columns: 1fr;
@@ -34,8 +37,55 @@ export const ComoInvestirStyle = styled.section`
         position: relative;
     }
     
+    .seta1{
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translateY(-50%);
+    }
+
+    .seta2{
+        position: absolute;
+        top: 108%;
+        left: 37%;
+        transform: translateY(-50%);
+        
+        svg{
+            transform: rotate(0deg);
+        }
+    }
+
+    .seta1bola{
+        position: absolute;
+        top: 23%;
+        left: -20%;
+        transform: translateY(-50%);
+    }
+
+    .seta2bola{
+        position: absolute;
+        bottom: 15%;
+        left: -20%;
+        transform: translateY(-50%);
+
+
+        svg{
+            transform: rotate(180deg);
+        }
+    }
+
+    .seta3{
+        position: absolute;
+        top: 50%;
+        left: -90px;
+        transform: translateY(-50%);
+
+        svg{
+            transform: rotate(0deg);
+        }
+    }
+    
     .analise-inicial {
-        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -58,7 +108,6 @@ export const ComoInvestirStyle = styled.section`
         flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
     }
     
     .seta3 {

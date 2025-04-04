@@ -3,8 +3,19 @@ import TextoCorrido from "../Textos/TextoCorrido/TextoCorrido";
 import BotaoSecundario from "../Botoes/BotaoSecundario/BotaoSecundario";
 import {useNavigate} from "react-router-dom";
 
-const CardRelatorio = ({titulo, descricao}) => {
+const CardRelatorio = ({titulo, descricao, link}) => {
     const navigate = useNavigate();
+
+    const handleClick = () => {
+        // Pass the PDF URL as a state parameter when navigating
+        navigate('/leitor-relatorio', {
+            state: {
+                pdfUrl: link,
+                title: titulo
+            }
+        });
+    }
+
 
     return (
         <CardRelatorioStyle>
@@ -28,7 +39,7 @@ const CardRelatorio = ({titulo, descricao}) => {
                 </div>
 
                 <BotaoSecundario
-                    onClick={() => navigate('/leitor')}
+                    onClick={handleClick}
                     >
                     Saiba Mais
                 </BotaoSecundario>
