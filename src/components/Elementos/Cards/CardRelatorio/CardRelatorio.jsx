@@ -17,9 +17,6 @@ const CardRelatorio = ({ data, nome, link, className }) => {
 
     return (
         <CardRelatorioStyle className={className} onClick={handleClick}>
-            <TextoCorridoInvertido className={'data'}>
-                {data}
-            </TextoCorridoInvertido>
             <TextoCorridoInvertido className={'nome'}>
                 {nome}
             </TextoCorridoInvertido>
