@@ -8,8 +8,7 @@ const InputPesquisa = ({onChange}) => {
 
     const handleChange = (e) => {
         setInputValue(e.target.value);
-        console.log(e.target.value);  // Verifique o valor do input
-        onChange(e.target.value);  // Passa o valor para o componente pai
+        onChange(e.target.value);
     };
 
     return (

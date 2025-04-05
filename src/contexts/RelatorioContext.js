@@ -29,9 +29,7 @@ const RelatorioProvider = ({ children }) => {
     };
 
     useEffect(() => {
-        console.log('BBBB:', localStorage.getItem('relatorios'));
         fetchRelatorios();
-        console.log('AAAA:', relatorios);
     }, []);
 
     return (

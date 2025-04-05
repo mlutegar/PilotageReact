@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Teste = ({ pdfUrl }) => {
+const Pdf = ({ pdfUrl }) => {
     return (
-        <div className="pdf-container" style={{ width: '100%', height: '600px' }}>
+        <div className="pdf-container" style={{ width: '100%', height: '100%' }}>
             <iframe
                 src={pdfUrl}
                 width="100%"
@@ -14,4 +14,4 @@ const Teste = ({ pdfUrl }) => {
     );
 };
 
-export default Teste;
+export default Pdf;

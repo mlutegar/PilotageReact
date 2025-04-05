@@ -14,6 +14,7 @@ export const CaixaDeRelatoriosStyle = styled.div`
     .item {
         cursor: pointer;
         transition: 0.5s all ease;
+        font-size: 1rem;
 
         &:hover {
             color: #085696;

@@ -67,6 +67,10 @@ export const FooterPrimarioStyle = styled.div`
         gap: 3rem;
         border-right: 0.125rem solid var(--secundaria);
         width: 11rem;
+        
+        a{
+            cursor: pointer;
+        }
     }
 
     .relatorio {

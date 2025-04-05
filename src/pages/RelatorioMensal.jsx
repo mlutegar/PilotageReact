@@ -22,13 +22,11 @@ const RelatorioMensal = () => {
             try {
                 const parsedData = JSON.parse(storedData);
                 setRelatorios(parsedData);
-                console.log('Relatórios carregados:', parsedData);
             } catch (error) {
                 console.error('Erro ao fazer parse dos dados:', error);
                 setRelatorios([]);
             }
         } else {
-            console.log('Nenhum relatório encontrado no localStorage.');
             setRelatorios([]);
         }
 
@@ -81,6 +79,8 @@ const RelatorioMensal = () => {
                                             "Use a barra de controle para ampliar ou reduzir, virar páginas ou visualizar o relatório em tela\n" +
                                             "cheia."}
                                         link={relatorio.guid}
+                                        mes={mes}
+                                        ano={ano}
                                     />
                                 )
                             })}

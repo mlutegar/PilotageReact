@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import Base from "./Base";
-import Teste from "../components/Teste/Teste";
+import Pdf from "../components/Teste/Pdf";
 import Sidebar from "../components/Secoes/Sidebar/Sidebar";
 import TituloPrimario from "../components/Elementos/Textos/TituloPrimario/TituloPrimario";
 import TextoCorrido from "../components/Elementos/Textos/TextoCorrido/TextoCorrido";
@@ -13,17 +13,19 @@ const LeitorRelatorio = () => {
     // Get the PDF URL and title from the state, or use defaults if they're not available
     const pdfUrl = location.state?.pdfUrl || "https://pilotage.com.br/home/wp-content/uploads/2025/03/Relatorio-mensal-Fevereiro-2025.pdf";
     const title = location.state?.title || "Relatório";
+    const mes = location.state?.mes || "Janeiro";
+    const ano = location.state?.ano || "2025";
 
     return (
         <Base>
-            <div style={{display: "flex", width: "100%", justifyContent: "space-between", marginTop: "2.69rem"}}>
+            <div style={{display: "flex", width: "100%", justifyContent: "space-between", marginTop: "2.69rem", marginBottom: "4.69rem"}}>
             <div style={{display: "flex", flexDirection: "column", gap: "3rem", marginRight: "2.69rem"}}>
                     <TituloPrimario style={{textAlign: "left", padding: 0}}>
                         <strong> {title} </strong>
                     </TituloPrimario>
 
                     <TextoCorrido>
-                        Confira aqui o Relatório Mensal Pilotage do mês de [MES] de [ANO] e veja nossas análises sobre
+                        Confira aqui o Relatório Mensal Pilotage do mês de {mes} de {ano} e veja nossas análises sobre
                         economia internacional, economia brasileira e como estamos atuando neste período.
                         A Pilotage publica mensalmente este relatório no site.
                         Use a barra de controle para ampliar ou reduzir, virar páginas ou visualizar o relatório em tela
@@ -31,7 +33,7 @@ const LeitorRelatorio = () => {
                     </TextoCorrido>
 
 
-                    <Teste
+                    <Pdf
                         pdfUrl={pdfUrl}
                     />
 
