@@ -1,6 +1,6 @@
 export const BotaoFechar = ({className}) => {
     return (
-        <svg className={className} xmlns="http://www.w3.org/2000/svg" width="88" height="86" viewBox="0 0 88 86" fill="none">
+        <svg className={className} xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 88 86" fill="none">
             <path opacity="0.5"
                   d="M80.6666 42.9998C80.6666 62.7899 64.2502 78.8332 43.9999 78.8332C23.7495 78.8332 7.33325 62.7899 7.33325 42.9998C7.33325 23.2096 23.7495 7.1665 43.9999 7.1665C64.2502 7.1665 80.6666 23.2096 80.6666 42.9998Z"
                   fill="white"/>
