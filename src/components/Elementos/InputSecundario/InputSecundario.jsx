@@ -1,10 +1,13 @@
 import { InputSecundarioStyle } from "./Style";
 
-const InputSecundario = ({placeholder, value, className}) => {
+const InputSecundario = ({placeholder, value, className, name, onChange}) => {
     return (
-        <InputSecundarioStyle className={className}
+        <InputSecundarioStyle
+            className={className}
             placeholder={placeholder}
-            value={value}
+            value={value || ""}
+            name={name}
+            onChange={onChange}
         />
     );
 }

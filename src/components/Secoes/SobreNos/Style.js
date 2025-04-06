@@ -14,9 +14,8 @@ export const SobreNosStyle = styled.section`
             width: 50%;
             display: flex;
             flex-direction: column;
+            align-items: flex-end;
             gap: 3rem;
-
-            align-items: center;
             justify-content: center;
         }
         

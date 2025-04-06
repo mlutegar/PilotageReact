@@ -9,4 +9,8 @@ export const TituloPrimarioStyle = styled.div`
     line-height: normal;
     padding-bottom: 3.8rem;
     text-align: center;
+    
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
 `

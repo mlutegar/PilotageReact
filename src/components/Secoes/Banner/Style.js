@@ -85,6 +85,10 @@ export const BannerStyle = styled.div`
                 opacity: 1;
             }
         }
+        
+        @media (max-width: 768px) {
+            font-size: 2rem;g
+        }
     }
 
     .btn {

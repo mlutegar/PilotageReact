@@ -8,6 +8,7 @@ const Top = styled.header`
     margin: 0;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
     .logo-header {
         &:hover {
@@ -78,8 +79,6 @@ const Top = styled.header`
         flex-shrink: 0;
         background: var(--primaria);
     }
-
-
 `
 
 export const Menu = styled.div`
@@ -96,6 +95,64 @@ export const BotaoMenu = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+`
+
+export const HamburgerButton = styled.button`
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+    margin-right: 20px;
+
+    span {
+        width: 100%;
+        height: 3px;
+        background-color: var(--primaria);
+        border-radius: 3px;
+        transition: all 0.3s linear;
+    }
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+    }
+`
+
+export const MenuMobile = styled.div`
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: var(--secundaria);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    max-width: 300px;
+    height: 100vh;
+    padding: 2rem 1rem;
+    transition: transform 0.3s ease-in-out;
+    transform: ${({ isOpen }) => isOpen ? 'translateX(0)' : 'translateX(100%)'};
+    z-index: 9;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+
+    ${BotaoMenu} {
+        margin: 1rem 0;
+    }
+    
+    a {
+        width: 100%;
+        text-align: left;
+        padding: 1rem;
+    }
+    
+    @media screen and (max-width: 768px) {
+        display: flex;
+    }
 `
 
 export {Top}
