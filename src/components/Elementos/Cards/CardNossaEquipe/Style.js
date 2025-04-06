@@ -122,15 +122,16 @@ export const CardNossaEquipeStyle = styled.div`
     }
 
     & + .modal-overlay .urls {
+        display: none;
         justify-content: space-around;
         align-items: center;
         gap: 4rem;
-        display: flex;
     }
 
     & + .modal-overlay .descricao {
         display: flex;
         justify-content: center;
-        text-align: center;
+        text-align: justify;
+        padding: 1rem;
     }
 `
