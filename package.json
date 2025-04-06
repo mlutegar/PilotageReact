@@ -1,6 +1,6 @@
 {
-  "name": "um-react",
-  "homepage": "https://ibmec-tec.github.io/react-base-github-pages",
+  "name": "pilotage-react",
+  "homepage": "https://mlutegar.github.io/PilotageReact/",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,7 +17,7 @@
   "dependencies": {
     "emailjs-com": "^3.2.0",
     "firebase": "^10.6.0",
-    "gh-pages": "^6.1.1",
+    "gh-pages": "^6.3.0",
     "leaflet": "^1.9.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

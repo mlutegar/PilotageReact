@@ -5,7 +5,6 @@ import GraficoSeta from "../../Icones/GraficoSeta";
 import Dinheiro from "../../Icones/Dinheiro";
 import MaoAberta from "../../Icones/MaoAberta";
 import CardComoInvestir from "../../Elementos/Cards/CardComoInvestir/CardComoInvestir";
-import SetasFluxo from "../../Icones/SetasFluxo";
 import {SetaComo} from "../../Icones/SetaComo";
 import {SetaComoBola} from "../../Icones/SetaComoBola";
 

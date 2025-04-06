@@ -35,6 +35,12 @@ export const CardNossaEquipeStyle = styled.div`
         bottom: 2.65rem;
         left: 1rem;
         height: 18rem;
+        
+        @media (max-width: 768px) {
+            bottom: -0.31rem;
+            left: 0;
+            height: 15rem;
+        }
     }
 
     .body {
@@ -46,6 +52,10 @@ export const CardNossaEquipeStyle = styled.div`
         justify-content: center;
         align-items: center;
         gap: 2rem;
+        
+        @media (max-width: 768px) {
+            width: 19rem;
+        }
     }
 
     .urls {
@@ -60,6 +70,10 @@ export const CardNossaEquipeStyle = styled.div`
         flex-shrink: 0;
         border-radius: 0.9375rem 0.9375rem 0rem 0rem;
         background: #9CB1C3;
+
+        @media (max-width: 768px) {
+            width: 19rem;
+        }
     }
 
     /* Modal styles - moved outside main component */
@@ -83,6 +97,10 @@ export const CardNossaEquipeStyle = styled.div`
         position: relative;
         transform: scale(1.2);
         box-shadow: 0px 6px 23.9px -15px rgba(0, 0, 0, 0.25);
+        
+        @media (max-width: 768px) {
+            transform: scale(1);
+        }
     }
 
     & + .modal-overlay .close-button {

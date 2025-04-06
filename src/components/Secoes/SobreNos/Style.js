@@ -24,6 +24,7 @@ export const SobreNosStyle = styled.section`
             .parte{
                 width: 90%;
                 padding: 0 1rem;
+                align-items: center;
             }
             
             .parte svg{

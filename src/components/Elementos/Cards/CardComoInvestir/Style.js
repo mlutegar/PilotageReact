@@ -22,7 +22,7 @@ export const CardComoInvestirStyle = styled.div`
     }
     
     @media (max-width: 768px) {
-        width: auto;
+        width: 16rem;
         height: auto;
         box-shadow: none;
     }

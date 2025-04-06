@@ -99,6 +99,8 @@ export const BannerStyle = styled.div`
         .btn {
             justify-content: center;
             display: flex;
+            position: relative;
+            top: 8rem;  
         }
     }
 

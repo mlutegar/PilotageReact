@@ -3,7 +3,6 @@ import TituloPrimario from "../components/Elementos/Textos/TituloPrimario/Titulo
 import Sidebar from "../components/Secoes/Sidebar/Sidebar";
 import CardRelatorio from "../components/Elementos/CardRelatorio/CardRelatorio";
 import { useState, useEffect } from "react";
-import BotaoPrimario from "../components/Elementos/Botoes/BotaoPrimario/BotaoPrimario";
 import BotaoSecundario from "../components/Elementos/Botoes/BotaoSecundario/BotaoSecundario";
 
 const RelatorioMensal = () => {

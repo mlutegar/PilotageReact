@@ -114,5 +114,23 @@ export const ComoInvestirStyle = styled.section`
         rotate: 180deg;
     }
     
+    @media (max-width: 768px) {
+        .seta1 {
+            display: none;
+        }
+        .seta2 {
+            display: none;
+        }
+        .seta3 {
+            display: none;
+        }
+        .seta1bola {
+            display: none;
+        }
+        .seta2bola {
+            display: none;
+        }
+    }
+    
     
 `

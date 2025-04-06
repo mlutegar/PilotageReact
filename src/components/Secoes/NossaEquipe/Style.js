@@ -9,6 +9,14 @@ export const NossaEquipeStyle = styled.section`
     margin-left: -50vw;
     margin-right: -50vw;
 
+    .card-reinaldo{
+        @media (max-width: 768px) {
+            .foto img {
+                left: 1rem;
+            }
+        }
+    }
+
     .conteudo {
         max-width: 1440px;
         margin: 0 auto;

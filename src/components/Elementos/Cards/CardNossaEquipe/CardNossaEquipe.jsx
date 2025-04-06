@@ -5,7 +5,7 @@ import BotaoSecundario from "../../Botoes/BotaoSecundario/BotaoSecundario";
 import {useState, useEffect} from "react";
 import {BotaoFechar} from "../../../Icones/BotaoFechar";
 
-const CardNossaEquipe = ({foto, nome, curriculo, descricao, email, linkedin}) => {
+const CardNossaEquipe = ({foto, nome, curriculo, descricao, email, linkedin, className}) => {
     const [modal, setModal] = useState(false);
 
     // Quando o modal está aberto, desabilita o scroll da página
@@ -36,7 +36,9 @@ const CardNossaEquipe = ({foto, nome, curriculo, descricao, email, linkedin}) =>
 
     return (
         <>
-            <CardNossaEquipeStyle>
+            <CardNossaEquipeStyle
+                className={className}
+            >
                 <div className={'header'}>
                     <div className={'foto'}>
                         <img src={foto} alt={'Foto do profissional'}/>
