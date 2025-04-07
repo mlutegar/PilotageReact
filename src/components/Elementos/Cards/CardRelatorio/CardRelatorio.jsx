@@ -2,7 +2,7 @@ import { CardRelatorioStyle } from "./Style";
 import TextoCorridoInvertido from "../../Textos/TextoCorridoInvertido/TextoCorridoInvertido";
 import { useNavigate } from "react-router-dom";
 
-const CardRelatorio = ({ data, nome, link, className }) => {
+const CardRelatorio = ({ data, nome, link, className, index }) => {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -10,7 +10,8 @@ const CardRelatorio = ({ data, nome, link, className }) => {
         navigate('/leitor-relatorio', {
             state: {
                 pdfUrl: link,
-                title: nome
+                title: nome,
+                currentIndex: index
             }
         });
     }

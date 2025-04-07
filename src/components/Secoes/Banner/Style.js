@@ -23,6 +23,7 @@ export const BannerStyle = styled.div`
         width: auto;
         position: static;
         margin: 0;
+        background-position-x: -36rem;
     }
 
     .dots {

@@ -3,6 +3,7 @@ import { BannerStyle } from "./Style";
 import BotaoPrimario from "../../Elementos/Botoes/BotaoPrimario/BotaoPrimario";
 import Dots from "../../Elementos/Dots/Dots";
 import { SecoesContext } from "../../../pages/Home";
+import {useSwipeable} from "react-swipeable";
 
 const Banner = () => {
     const [bannerAtual, setBannerAtual] = useState(0);
@@ -15,6 +16,12 @@ const Banner = () => {
             ref.current.scrollIntoView({ behavior: "smooth" });
         }
     };
+
+    const handlers = useSwipeable({
+        onSwipedLeft: () => setBannerAtual((bannerAtual + 1) % banners.length),
+        onSwipedRight: () => setBannerAtual((bannerAtual - 1 + banners.length) % banners.length),
+        trackMouse: true, // para testar swipe com o mouse no navegador
+    });
 
     // Dados dos banners com imagem e funções de navegação
     const banners = [
@@ -82,7 +89,7 @@ const Banner = () => {
     const bannerAtivo = banners[bannerAtual];
 
     return (
-        <BannerStyle backgroundImage={bannerAtivo.imagem}>
+        <BannerStyle {...handlers} backgroundImage={bannerAtivo.imagem}>
             <div className={"conteudo-banner"}>
                 <div className={"Titulo"}>
                     {bannerAtivo.titulo}

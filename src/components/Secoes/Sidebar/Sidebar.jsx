@@ -5,7 +5,7 @@ import CaixaDeRelatorios from "../../Elementos/CaixaDeRelatorios/CaixaDeRelatori
 import SelectPesquisaMes from "../../Elementos/SelectPesquisaMes/SelectPesquisaMes";
 import SelectPesquisaAno from "../../Elementos/SelectPesquisaAno/SelectPesquisaAno";
 
-const Sidebar = ({setInputValue, setSelectedAno}) => {
+const Sidebar = ({setInputValue, setSelectedAno, setSelectedMes}) => {
     return (
         <SidebarStyle>
             <TextoCorrido>
@@ -25,7 +25,7 @@ const Sidebar = ({setInputValue, setSelectedAno}) => {
                         Mês
                     </TextoCorrido>
                     <SelectPesquisaMes
-
+                        onChange={setSelectedMes}
                     />
                 </div>
                 <div>

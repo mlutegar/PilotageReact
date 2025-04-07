@@ -29,6 +29,7 @@ const RelatorioMensal = () => {
     const [relatoriosExibidos, setRelatoriosExibidos] = useState(10);
     const [inputValue, setInputValue] = useState("");  // Adicione isso para o estado de pesquisa
     const [selectedAno, setSelectedAno] = useState(""); // Adicione isso para o estado do ano selecionado
+    const [selectedMes, setSelectedMes] = useState("");
 
     useEffect(() => {
         // Recupera os dados do localStorage
@@ -64,11 +65,12 @@ const RelatorioMensal = () => {
     };
 
     const relatoriosFiltrados = relatoriosOrdenados.filter((relatorio) => {
-        const {ano} = getMesEAno(relatorio.post_title);
+        const {mes, ano} = getMesEAno(relatorio.post_title);
         const matchesTexto = relatorio.post_title.toLowerCase().includes(inputValue.toLowerCase());
         const matchesAno = selectedAno === "" || ano === selectedAno;
+        const matchesMes = selectedMes === "" || mes === selectedMes;
 
-        return matchesTexto && matchesAno;
+        return matchesTexto && matchesAno && matchesMes;
     });
 
     const relatoriosParaExibir = relatoriosFiltrados.slice(0, relatoriosExibidos);
@@ -90,13 +92,14 @@ const RelatorioMensal = () => {
 
                         {loading ? (
                             <div>Carregando relatórios...</div>
-                        ) : relatoriosOrdenados.length > 0 ? (
+                        ) : relatoriosFiltrados.length > 0 ? (
                             <div style={{display: "flex", flexDirection: "column", gap: "5rem", marginBottom: "5rem"}}>
                                 {relatoriosParaExibir.map((relatorio, index) => {
                                     const {mes, ano} = getMesEAno(relatorio.post_title);
                                     return (
                                         <CardRelatorio
                                             key={index}
+                                            index={index}
                                             imagem={relatorio.imagem || relatorio.featured_image}
                                             titulo={relatorio.post_title}
                                             descricao={`Confira aqui o Relatório Mensal Pilotage do mês de ${mes} de ${ano} e veja nossas análises sobre\n` +
@@ -112,10 +115,12 @@ const RelatorioMensal = () => {
                                 })}
                             </div>
                         ) : (
-                            <div>Nenhum relatório encontrado</div>
+                            <div style={{padding: "2rem", textAlign: "center"}}>
+                                Nenhum relatório encontrado com os filtros selecionados.
+                            </div>
                         )}
 
-                        {relatoriosExibidos < relatoriosOrdenados.length && (
+                        {relatoriosFiltrados.length > 0 && relatoriosExibidos < relatoriosFiltrados.length && (
                             <BotaoSecundario onClick={() => setRelatoriosExibidos(relatoriosExibidos + 10)}>
                                 Mostrar Mais
                             </BotaoSecundario>
@@ -126,7 +131,8 @@ const RelatorioMensal = () => {
                     <Sidebar
                         setInputValue={setInputValue}
                         setSelectedAno={setSelectedAno}
-                        relatoriosRecentes={relatoriosOrdenados.slice(0, 4)} // Passa os 4 últimos relatórios
+                        setSelectedMes={setSelectedMes}
+                        relatoriosRecentes={relatoriosOrdenados.slice(0, 4)}
                     />
                 </div>
             </RelatorioMensalStyle>
