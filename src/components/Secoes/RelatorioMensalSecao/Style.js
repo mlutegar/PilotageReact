@@ -27,6 +27,10 @@ export const RelatorioMensalSecaoStyle = styled.section`
     
     .principal{
         transform: scale(1.2);
+        
+        @media (max-width: 768px) {
+            transform: scale(1);
+        }
     }
     
     .botoes{
@@ -36,5 +40,11 @@ export const RelatorioMensalSecaoStyle = styled.section`
         justify-content: center;
         align-items: center;
         margin: 10px;
+    }
+    
+    .secundario{
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 `

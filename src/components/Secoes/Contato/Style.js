@@ -14,13 +14,18 @@ export const ContatoStyle = styled.section`
         .leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom{
             height: 100% !important;
         }
+        
+        @media (max-width: 768px){
+            width: 80%;
+        }
     }
     
     .forms{
-        width: 90%;
+        width: 80%;
         display: flex;
         gap: 5rem;
         flex-direction: column;
+        align-items: center;
     }
     
     .secao{
@@ -39,7 +44,12 @@ export const ContatoStyle = styled.section`
         flex-direction: row;
         align-items: center;
         gap: 1rem;
-        
+     
+        @media (max-width: 768px){
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
     }
     
     .endereco {
@@ -50,6 +60,11 @@ export const ContatoStyle = styled.section`
         display: flex;
         gap: 6rem;
         flex-direction: column;
+        
+        @media (max-width: 768px){
+            align-items: center;
+            gap: 1rem;
+        }
     }
     
     .info-item{
@@ -61,6 +76,10 @@ export const ContatoStyle = styled.section`
 
         &:hover {
             transform: translateY(-10px);
+        }
+        
+        @media (max-width: 768px){
+            align-items: center;
         }
     }
 

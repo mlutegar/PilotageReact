@@ -8,6 +8,10 @@ export const InputPrimarioStyle = styled.input`
     padding: 0 1.25rem;
     border: none;
     
+    @media (max-width: 768px){
+        width: 80%;
+    }
+    
     &::placeholder {
         color: rgba(0, 0, 0, 0.43);
         font-family: "PT Sans";

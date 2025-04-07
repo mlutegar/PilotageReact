@@ -9,6 +9,10 @@ const Top = styled.header`
     align-items: center;
     justify-content: space-between;
     position: relative;
+    
+    @media screen and (max-width: 768px) {
+        padding:1.1rem 1rem;
+    }
 
     .logo-header {
         &:hover {
@@ -138,7 +142,6 @@ export const MenuMobile = styled.div`
     transition: transform 0.3s ease-in-out;
     transform: ${({ isOpen }) => isOpen ? 'translateX(0)' : 'translateX(100%)'};
     z-index: 9;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
 
     ${BotaoMenu} {
         margin: 1rem 0;

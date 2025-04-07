@@ -2,15 +2,32 @@ import Base from "./Base"
 import TituloPrimario from "../components/Elementos/Textos/TituloPrimario/TituloPrimario";
 import Sidebar from "../components/Secoes/Sidebar/Sidebar";
 import CardRelatorio from "../components/Elementos/CardRelatorio/CardRelatorio";
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 import BotaoSecundario from "../components/Elementos/Botoes/BotaoSecundario/BotaoSecundario";
+
+
+import styled from "styled-components"
+
+export const RelatorioMensalStyle = styled.div`
+    .conteudo {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-right: 2.69rem;
+        text-align: center;
+
+        @media (max-width: 768px) {
+            margin-right: 0;
+            align-items: center;
+        }
+    }
+`
 
 const RelatorioMensal = () => {
     const [relatorios, setRelatorios] = useState([]);
     const [loading, setLoading] = useState(true);
     const [relatoriosExibidos, setRelatoriosExibidos] = useState(10);
     const [inputValue, setInputValue] = useState("");  // Adicione isso para o estado de pesquisa
-
 
 
     useEffect(() => {
@@ -48,60 +65,67 @@ const RelatorioMensal = () => {
         const regex = /Relatório mensal (\w+) (\d{4})/;
         const match = titulo.match(regex);
         if (match) {
-            return { mes: match[1], ano: match[2] };
+            return {mes: match[1], ano: match[2]};
         }
-        return { mes: "", ano: "" };  // Retorna valores em branco se não encontrar o padrão
+        return {mes: "", ano: ""};  // Retorna valores em branco se não encontrar o padrão
     };
 
     return (
         <Base>
-            <div style={{display: "flex", width: "100%", justifyContent: "space-between", marginTop: "2.69rem", marginBottom: "4.69rem"}}>
-                <div style={{display: "flex", flexDirection: "column", gap: "3rem", marginRight: "2.69rem"}}>
-                    <TituloPrimario style={{textAlign: "left"}}>
-                        <strong>Relatórios Mensais</strong>
-                    </TituloPrimario>
+            <RelatorioMensalStyle>
+                <div style={{
+                    display: "flex",
+                    width: "100%",
+                    justifyContent: "space-between",
+                    marginTop: "2.69rem",
+                    marginBottom: "4.69rem"
+                }}>
+                    <div className={'conteudo'}>
+                        <TituloPrimario style={{textAlign: "left"}}>
+                            <strong>Relatórios Mensais</strong>
+                        </TituloPrimario>
 
-                    {loading ? (
-                        <div>Carregando relatórios...</div>
-                    ) : relatoriosOrdenados.length > 0 ? (
-                        <div style={{display: "flex", flexDirection: "column", gap: "5rem", marginBottom: "5rem"}}>
-                            {relatoriosParaExibir.map((relatorio, index) => {
-                                const { mes, ano } = getMesEAno(relatorio.post_title);
-                                return (
-                                    <CardRelatorio
-                                        key={index}
-                                        imagem={relatorio.imagem || relatorio.featured_image}
-                                        titulo={relatorio.post_title}
-                                        descricao={`Confira aqui o Relatório Mensal Pilotage do mês de ${mes} de ${ano} e veja nossas análises sobre\n` +
-                                            "economia internacional, economia brasileira e como estamos atuando neste período.\n" +
-                                            "A Pilotage publica mensalmente este relatório no site.\n" +
-                                            "Use a barra de controle para ampliar ou reduzir, virar páginas ou visualizar o relatório em tela\n" +
-                                            "cheia."}
-                                        link={relatorio.guid}
-                                        mes={mes}
-                                        ano={ano}
-                                    />
-                                )
-                            })}
-                        </div>
-                    ) : (
-                        <div>Nenhum relatório encontrado</div>
-                    )}
+                        {loading ? (
+                            <div>Carregando relatórios...</div>
+                        ) : relatoriosOrdenados.length > 0 ? (
+                            <div style={{display: "flex", flexDirection: "column", gap: "5rem", marginBottom: "5rem"}}>
+                                {relatoriosParaExibir.map((relatorio, index) => {
+                                    const {mes, ano} = getMesEAno(relatorio.post_title);
+                                    return (
+                                        <CardRelatorio
+                                            key={index}
+                                            imagem={relatorio.imagem || relatorio.featured_image}
+                                            titulo={relatorio.post_title}
+                                            descricao={`Confira aqui o Relatório Mensal Pilotage do mês de ${mes} de ${ano} e veja nossas análises sobre\n` +
+                                                "economia internacional, economia brasileira e como estamos atuando neste período.\n" +
+                                                "A Pilotage publica mensalmente este relatório no site.\n" +
+                                                "Use a barra de controle para ampliar ou reduzir, virar páginas ou visualizar o relatório em tela\n" +
+                                                "cheia."}
+                                            link={relatorio.guid}
+                                            mes={mes}
+                                            ano={ano}
+                                        />
+                                    )
+                                })}
+                            </div>
+                        ) : (
+                            <div>Nenhum relatório encontrado</div>
+                        )}
 
-                    {relatoriosExibidos < relatoriosOrdenados.length && (
-                        <BotaoSecundario onClick={() => setRelatoriosExibidos(relatoriosExibidos + 10)}>
-                            Mostrar Mais
-                        </BotaoSecundario>
-                    )}
+                        {relatoriosExibidos < relatoriosOrdenados.length && (
+                            <BotaoSecundario onClick={() => setRelatoriosExibidos(relatoriosExibidos + 10)}>
+                                Mostrar Mais
+                            </BotaoSecundario>
+                        )}
 
+                    </div>
+
+                    <Sidebar
+                        setInputValue={setInputValue} // Passa a função para o Sidebar
+                        relatoriosRecentes={relatoriosOrdenados.slice(0, 4)} // Passa os 4 últimos relatórios
+                    />
                 </div>
-
-                <Sidebar
-                    setInputValue={setInputValue} // Passa a função para o Sidebar
-                    relatoriosRecentes={relatoriosOrdenados.slice(0, 4)} // Passa os 4 últimos relatórios
-                />
-
-            </div>
+            </RelatorioMensalStyle>
         </Base>
     )
 }

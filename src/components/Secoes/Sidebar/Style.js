@@ -11,6 +11,10 @@ export const SidebarStyle = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    @media (max-width: 768px){
+        display: none;
+    }
     
     .filtros{
         display: flex;
