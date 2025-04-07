@@ -1,7 +1,5 @@
 import {FooterPrimarioStyle} from "./Style";
 import LogoFooter from "../../Icones/LogoFooter";
-import {ContatoInfoFooterStyle} from "../../Elementos/Cards/ContatoInfoFooter/Style";
-import Predio from "../../Icones/Predio";
 import ContatoInfoFooter from "../../Elementos/Cards/ContatoInfoFooter/ContatoInfoFooter";
 import PredioClaro from "../../Icones/PredioClaro";
 import TelefoneClaro from "../../Icones/TelefoneClaro";

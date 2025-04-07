@@ -28,7 +28,7 @@ const RelatorioMensal = () => {
     const [loading, setLoading] = useState(true);
     const [relatoriosExibidos, setRelatoriosExibidos] = useState(10);
     const [inputValue, setInputValue] = useState("");  // Adicione isso para o estado de pesquisa
-
+    const [selectedAno, setSelectedAno] = useState(""); // Adicione isso para o estado do ano selecionado
 
     useEffect(() => {
         // Recupera os dados do localStorage
@@ -54,13 +54,6 @@ const RelatorioMensal = () => {
         ? [...relatorios].sort((a, b) => new Date(b.post_date) - new Date(a.post_date))
         : [];
 
-    const relatoriosFiltrados = relatoriosOrdenados.filter((relatorio) =>
-        relatorio.post_title.toLowerCase().includes(inputValue.toLowerCase())
-    );
-
-    const relatoriosParaExibir = relatoriosFiltrados.slice(0, relatoriosExibidos);
-
-
     const getMesEAno = (titulo) => {
         const regex = /Relatório mensal (\w+) (\d{4})/;
         const match = titulo.match(regex);
@@ -69,6 +62,16 @@ const RelatorioMensal = () => {
         }
         return {mes: "", ano: ""};  // Retorna valores em branco se não encontrar o padrão
     };
+
+    const relatoriosFiltrados = relatoriosOrdenados.filter((relatorio) => {
+        const {ano} = getMesEAno(relatorio.post_title);
+        const matchesTexto = relatorio.post_title.toLowerCase().includes(inputValue.toLowerCase());
+        const matchesAno = selectedAno === "" || ano === selectedAno;
+
+        return matchesTexto && matchesAno;
+    });
+
+    const relatoriosParaExibir = relatoriosFiltrados.slice(0, relatoriosExibidos);
 
     return (
         <Base>
@@ -121,7 +124,8 @@ const RelatorioMensal = () => {
                     </div>
 
                     <Sidebar
-                        setInputValue={setInputValue} // Passa a função para o Sidebar
+                        setInputValue={setInputValue}
+                        setSelectedAno={setSelectedAno}
                         relatoriosRecentes={relatoriosOrdenados.slice(0, 4)} // Passa os 4 últimos relatórios
                     />
                 </div>

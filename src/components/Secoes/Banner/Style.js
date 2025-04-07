@@ -6,6 +6,7 @@ export const BannerStyle = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     animation: fadeIn 1.5s ease-in-out;
+    overflow: hidden;
     
     width: 100vw;
     position: relative;

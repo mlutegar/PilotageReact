@@ -1,9 +1,9 @@
 import styled from "styled-components"
 
-export const SelectPesquisaStyle = styled.div`
+export const SelectPesquisaMesStyle = styled.div`
     position: relative;
-    
-    select{
+
+    select {
         flex-shrink: 0;
         width: 90% !important;
         height: 3.0625rem;
@@ -11,6 +11,15 @@ export const SelectPesquisaStyle = styled.div`
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+        
+        color: rgba(0, 0, 0, 0.43);
+        font-family: "PT Sans";
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 0 1rem;
+
 
         &:focus {
             outline: none;
@@ -20,8 +29,8 @@ export const SelectPesquisaStyle = styled.div`
     select::-ms-expand {
         display: none;
     }
-    
-    .lupa{
+
+    .lupa {
         width: 3.4375rem;
         height: 3.0625rem;
         flex-shrink: 0;
@@ -33,27 +42,27 @@ export const SelectPesquisaStyle = styled.div`
         top: 0;
         align-items: center;
         transition: 0.5s all ease;
-        
-        &:hover{
+
+        &:hover {
             cursor: pointer;
         }
-        
-        svg{
+
+        svg {
             transition: 0.5s all ease;
-        
-            &:hover{
+
+            &:hover {
                 fill: #fff;
             }
-            
-            &:active{
+
+            &:active {
                 transform: scale(0.9);
             }
         }
     }
-    
-    .input{
+
+    .input {
         width: 80% !important;
         height: 3.0625rem;
-        
+
     }
 `

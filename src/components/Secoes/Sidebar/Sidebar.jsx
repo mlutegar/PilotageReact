@@ -2,9 +2,10 @@ import {SidebarStyle} from "./Style";
 import TextoCorrido from "../../Elementos/Textos/TextoCorrido/TextoCorrido";
 import InputPesquisa from "../../Elementos/InputPesquisa/InputPesquisa";
 import CaixaDeRelatorios from "../../Elementos/CaixaDeRelatorios/CaixaDeRelatorios";
-import SelectPesquisa from "../../Elementos/SelectPesquisa/SelectPesquisa";
+import SelectPesquisaMes from "../../Elementos/SelectPesquisaMes/SelectPesquisaMes";
+import SelectPesquisaAno from "../../Elementos/SelectPesquisaAno/SelectPesquisaAno";
 
-const Sidebar = ({setInputValue}) => {
+const Sidebar = ({setInputValue, setSelectedAno}) => {
     return (
         <SidebarStyle>
             <TextoCorrido>
@@ -23,7 +24,7 @@ const Sidebar = ({setInputValue}) => {
                     <TextoCorrido>
                         Mês
                     </TextoCorrido>
-                    <SelectPesquisa
+                    <SelectPesquisaMes
 
                     />
                 </div>
@@ -31,8 +32,8 @@ const Sidebar = ({setInputValue}) => {
                     <TextoCorrido>
                         Ano
                     </TextoCorrido>
-                    <SelectPesquisa
-
+                    <SelectPesquisaAno
+                        onChange={setSelectedAno}
                     />
                 </div>
             </div>

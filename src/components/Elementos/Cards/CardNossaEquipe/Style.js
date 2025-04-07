@@ -99,7 +99,7 @@ export const CardNossaEquipeStyle = styled.div`
         box-shadow: 0px 6px 23.9px -15px rgba(0, 0, 0, 0.25);
         
         @media (max-width: 768px) {
-            transform: scale(1);
+            transform: scale(0.8);
         }
     }
 
