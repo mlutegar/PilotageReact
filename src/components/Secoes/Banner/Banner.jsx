@@ -1,12 +1,22 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { BannerStyle } from "./Style";
 import BotaoPrimario from "../../Elementos/Botoes/BotaoPrimario/BotaoPrimario";
 import Dots from "../../Elementos/Dots/Dots";
+import { SecoesContext } from "../../../pages/Home";
 
 const Banner = () => {
     const [bannerAtual, setBannerAtual] = useState(0);
+    // Acessando as refs através do contexto
+    const { sobreNosRef, contatoRef, comoInvestirRef, nossaEquipeRef } = useContext(SecoesContext);
 
-    // Dados dos banners com imagem
+    // Função para rolar para a seção correspondente
+    const scrollToSection = (ref) => {
+        if (ref && ref.current) {
+            ref.current.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+    // Dados dos banners com imagem e funções de navegação
     const banners = [
         {
             titulo: (
@@ -17,7 +27,8 @@ const Banner = () => {
                 </>
             ),
             btnTexto: <><strong>Fale conosco</strong></>,
-            imagem: "imagens/Banner1.png"
+            imagem: "imagens/Banner1.png",
+            onClick: () => scrollToSection(contatoRef)
         },
         {
             titulo: (
@@ -27,7 +38,8 @@ const Banner = () => {
                 </>
             ),
             btnTexto: <><strong>Saiba mais</strong></>,
-            imagem: "imagens/Banner2.png"
+            imagem: "imagens/Banner2.png",
+            onClick: () => scrollToSection(sobreNosRef)
         },
         {
             titulo: (
@@ -37,7 +49,8 @@ const Banner = () => {
                 </>
             ),
             btnTexto: <><strong>Nossa Equipe</strong></>,
-            imagem: "imagens/Banner3.png"
+            imagem: "imagens/Banner3.png",
+            onClick: () => scrollToSection(nossaEquipeRef)
         },
         {
             titulo: (
@@ -46,7 +59,8 @@ const Banner = () => {
                 </>
             ),
             btnTexto: <><strong>Como investir?</strong></>,
-            imagem: "imagens/Banner4.png"
+            imagem: "imagens/Banner4.png",
+            onClick: () => scrollToSection(comoInvestirRef)
         },
         {
             titulo: (
@@ -55,7 +69,8 @@ const Banner = () => {
                 </>
             ),
             btnTexto: <><strong>Como investir?</strong></>,
-            imagem: "imagens/Banner5.png"
+            imagem: "imagens/Banner5.png",
+            onClick: () => scrollToSection(comoInvestirRef)
         }
     ];
 
@@ -73,7 +88,9 @@ const Banner = () => {
                     {bannerAtivo.titulo}
                 </div>
                 <div className={"btn"}>
-                    <BotaoPrimario>{bannerAtivo.btnTexto}</BotaoPrimario>
+                    <BotaoPrimario onClick={bannerAtivo.onClick}>
+                        {bannerAtivo.btnTexto}
+                    </BotaoPrimario>
                 </div>
             </div>
 

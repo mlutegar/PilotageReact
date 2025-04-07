@@ -17,7 +17,7 @@ export const FooterPrimarioStyle = styled.div`
         max-width: 1440px;
         margin: 0 auto;
         padding: 2rem 2rem 5rem;
-        
+
         @media (max-width: 768px) {
             flex-direction: column;
         }
@@ -36,10 +36,11 @@ export const FooterPrimarioStyle = styled.div`
         padding-top: 7rem;
         justify-content: center;
     }
-    
+
     @media screen and (max-width: 768px) {
         .colunaMeio {
             flex-direction: column;
+            padding-top: 0;
         }
     }
 
@@ -67,9 +68,14 @@ export const FooterPrimarioStyle = styled.div`
         gap: 3rem;
         border-right: 0.125rem solid var(--secundaria);
         width: 11rem;
-        
-        a{
+
+        a {
             cursor: pointer;
+        }
+
+        @media screen and (max-width: 768px) {
+            border-right: none;
+            width: auto;
         }
     }
 
@@ -80,6 +86,11 @@ export const FooterPrimarioStyle = styled.div`
         border-right: 0.125rem solid var(--secundaria);
         max-width: 15rem;
         padding-right: 3rem;
+        
+        @media screen and (max-width: 768px) {
+            border-right: none;
+            padding-right: 0;
+        }
     }
 
     .colunaDireita {

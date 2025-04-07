@@ -51,7 +51,7 @@ const RelatorioMensalSecao = () => {
                                             nome={relatorio.post_title}  // Altere para o campo correto
                                             data={relatorio.post_date}  // Altere para o campo correto
                                             link={relatorio.guid}  // Altere para o campo correto
-                                            className={index === 1 ? 'principal' : ''}
+                                            className={index === 1 ? 'principal' : 'secundario'}
                                         />
                                     );
                                 }

@@ -11,6 +11,10 @@ export const FooterSecundarioStyle = styled.div`
     margin-right: -50vw;
     align-content: center;
 
+    @media (max-width: 768px) {
+        height: auto;
+    }
+
     .conteudo{
         display: flex;
         flex-direction: row;
@@ -18,6 +22,11 @@ export const FooterSecundarioStyle = styled.div`
         max-width: 1440px;
         margin: 0 auto;
         justify-content: space-between;
+        
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     
     .conteudo a {
@@ -26,5 +35,9 @@ export const FooterSecundarioStyle = styled.div`
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        
+        @media (max-width: 768px) {
+            text-align: center;
+        }
     }
 `

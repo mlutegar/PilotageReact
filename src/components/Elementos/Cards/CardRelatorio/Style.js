@@ -16,6 +16,10 @@ export const CardRelatorioStyle = styled.div`
         cursor: pointer;
         border-radius: 0.9375rem;
         background: linear-gradient(0deg, rgba(107, 135, 165, 0.77) 0%, rgba(107, 135, 165, 0.77) 100%), url('/imagens/relatorio/default.png') lightgray 50% / cover no-repeat;
+        
+        @media (max-width: 768px) {
+            transform: scale(1);    
+        }
     }
 
     &:hover .data {
