@@ -81,11 +81,11 @@ const FooterPrimario = () => {
                 </div>
                 <div className={'colunaDireita'}>
                     <div className={'selo'}>
-                        <img src={'/imagens/selo.png'} alt={'Selo'}/>
+                        <img src={'imagens/selo.png'} alt={'Selo'}/>
                     </div>
                     <h3>PARCEIRO PILOTAGE</h3>
                     <div className={'panamby'}>
-                        <img src={'/imagens/panamby.png'} alt={'Panamby'}/>
+                        <img src={'imagens/panamby.png'} alt={'Panamby'}/>
                     </div>
                 </div>
 
