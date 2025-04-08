@@ -14,7 +14,6 @@ export const RelatorioMensalStyle = styled.div`
         flex-direction: column;
         gap: 3rem;
         margin-right: 2.69rem;
-        text-align: center;
 
         @media (max-width: 768px) {
             margin-right: 0;
