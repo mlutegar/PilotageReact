@@ -28,6 +28,10 @@ export const DocumentosRegulatoriosPageStyle = styled.section`
         grid-template-columns: repeat(3, 1fr);
         gap: 5rem;
         padding-bottom: 5rem;
+        
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
     
     .texto {
