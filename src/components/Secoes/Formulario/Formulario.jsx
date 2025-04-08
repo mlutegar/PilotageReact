@@ -73,49 +73,52 @@ const Formulario = () => {
             </TituloPrimario>
 
             <form onSubmit={enviarEmail}>
-                <div className={"inputs"}>
-                    <InputSecundario
-                        placeholder={"Nome completo"}
-                        name="nome"
-                        value={formData.nome}
-                        onChange={handleChange}
-                    />
-                    <InputSecundario
-                        placeholder={"E-mail"}
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                    />
-                </div>
+                <div className={"inputs-grid"}>
+                    <div className={"inputs"}>
+                        <InputSecundario
+                            placeholder={"Nome completo"}
+                            name="nome"
+                            value={formData.nome}
+                            onChange={handleChange}
+                        />
+                        <InputSecundario
+                            placeholder={"E-mail"}
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                        />
+                    </div>
 
-                <div className={"inputs"}>
-                    <InputSecundario
-                        placeholder={"Telefone"}
-                        name="telefone"
-                        value={formData.telefone}
-                        onChange={handleChange}
-                    />
-                    <InputSecundario
-                        placeholder={"Cidade"}
-                        name="cidade"
-                        value={formData.cidade}
-                        onChange={handleChange}
-                    />
-                </div>
+                    <div className={"inputs"}>
+                        <InputSecundario
+                            placeholder={"Telefone"}
+                            name="telefone"
+                            value={formData.telefone}
+                            onChange={handleChange}
+                        />
+                        <InputSecundario
+                            placeholder={"Cidade"}
+                            name="cidade"
+                            value={formData.cidade}
+                            onChange={handleChange}
+                        />
+                    </div>
 
-                <div className={"inputs"}>
-                    <InputSecundario
-                        className={"mensagem"}
-                        placeholder={"Mensagem"}
-                        name="mensagem"
-                        value={formData.mensagem}
-                        onChange={handleChange}
-                    />
+                    <div className={"inputs"}>
+                        <InputSecundario
+                            className={"mensagem"}
+                            placeholder={"Mensagem"}
+                            name="mensagem"
+                            value={formData.mensagem}
+                            onChange={handleChange}
+                        />
+                    </div>
                 </div>
-
-                <BotaoSecundario type="submit">
-                    Enviar
-                </BotaoSecundario>
+                <div className={"btn"}>
+                    <BotaoSecundario type="submit">
+                        Enviar
+                    </BotaoSecundario>
+                </div>
             </form>
         </FormularioStyle>
     );

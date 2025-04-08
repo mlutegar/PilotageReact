@@ -9,7 +9,7 @@ export const FormularioStyle = styled.div`
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 3rem 2rem;
+    padding: 3rem 4rem;
     width: 100%;
 
     .titulo {
@@ -28,14 +28,40 @@ export const FormularioStyle = styled.div`
         gap: 1rem;
         justify-content: center;
         flex-wrap: wrap;
+        margin: 1rem 0;
 
         @media (max-width: 768px) {
             flex-direction: column;
         }
     }
+
+    
+    @media (max-width: 768px) {
+        .inputs-grid {
+            display: flex;
+            flex-direction: column;
+        }
+    }
     
     .mensagem {
-        width: 85%;
+        width: 95%;
         height: 10rem;
+        
+        @media (max-width: 1440px) {
+            width: 50%;
+        }
+        
+        @media (max-width: 1024px) {
+            width: 75%;
+        }
     }
+    
+    
+    .btn{
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    
 `
