@@ -28,6 +28,7 @@ export const NossosValoresStyle = styled.section`
     @media (max-width: 768px) {
         .itens{
             flex-direction: column;
+            align-items: center;
         }
     }
     

@@ -20,11 +20,12 @@ export const CardComoInvestirStyle = styled.div`
         transform: translateY(-10px);
         box-shadow: 20px 20px 0px var(--sombra);
     }
-    
+
     @media (max-width: 768px) {
         width: 16rem;
         height: auto;
         box-shadow: none;
+        gap: 1rem;
     }
 
     .header {
@@ -41,7 +42,7 @@ export const CardComoInvestirStyle = styled.div`
             height: auto;
         }
     }
-    
+
     .conteudo {
         display: flex;
         justify-content: center;
@@ -53,7 +54,7 @@ export const CardComoInvestirStyle = styled.div`
         line-height: normal;
         text-align: center;
     }
-    
+
     .titulo {
         color: var(--primaria);
         text-align: center;
@@ -62,7 +63,7 @@ export const CardComoInvestirStyle = styled.div`
         font-weight: 700;
         line-height: normal;
     }
-    
+
     .subtitulo {
         color: #333333;
         font-size: 1.375rem;
@@ -72,5 +73,20 @@ export const CardComoInvestirStyle = styled.div`
         text-align: center;
         max-width: 20rem;
     }
-    
+
+    @media (max-width: 768px) {
+        .conteudo {
+            font-size: 1rem;
+            padding: 0 1rem 0.5rem;
+        }
+
+        .titulo {
+            font-size: 1.5rem;
+        }
+
+        .subtitulo {
+            font-size: 1rem;
+        }
+    }
+
 `
