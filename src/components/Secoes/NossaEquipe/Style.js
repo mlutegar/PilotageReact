@@ -9,7 +9,23 @@ export const NossaEquipeStyle = styled.section`
     margin-left: -50vw;
     margin-right: -50vw;
 
-    .card-reinaldo{
+    .card-marcelo {
+        .foto img {
+            height: 19rem;
+            bottom: 3.7rem;
+            left: 0rem;
+        }
+    }
+
+    .card-fraga {
+        .foto img {
+            height: 19rem;
+            bottom: 3.7rem;
+            left: -1rem;
+        }
+    }
+
+    .card-reinaldo {
         @media (max-width: 768px) {
             .foto img {
                 left: 1rem;
@@ -30,8 +46,8 @@ export const NossaEquipeStyle = styled.section`
         gap: 3rem;
         margin-top: 6rem;
         flex-wrap: wrap;
-        
-        
+
+
         @media (max-width: 768px) {
             flex-direction: column;
             gap: 2rem;

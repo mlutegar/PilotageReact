@@ -26,6 +26,7 @@ const NossaEquipe = () => {
                             ⬤ Desempenhou funções em diversas áreas em instituições como Lloyds Bank Plc, Banco Pecúnia, Banco Paulista e SOCOPA – Sociedade Corretora Paulista, onde foi Diretor de Marketing e Recursos (Tecnológicos, Humanos e Materiais).<br/><br/>
                             ⬤ Sócio Fundador da Pilotage Investimentos, atualmente é responsável pelas Áreas Financeira e de Risco e Compliance.`
                         }
+                        className={'card-fraga'}
                     />
 
                     <CardNossaEquipe
@@ -39,6 +40,7 @@ const NossaEquipe = () => {
                             ⬤ Foi Diretor de Renda Fixa da Sulamérica Investimentos, Diretor de Renda Fixa do BNP Asset Management, além de ter sido Gerente de Renda Fixa em Gestão de Ativos do Lloyds Bank Plc.<br/><br/>
                             ⬤ Sócio da Pilotage Investimentos, atualmente é responsável pelas áreas de Gestão e Alocação de Recursos.`
                         }
+                        className={'card-marcelo'}
                     />
 
                     <CardNossaEquipe
