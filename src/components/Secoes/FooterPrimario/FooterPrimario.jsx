@@ -32,6 +32,10 @@ const FooterPrimario = () => {
         }
     };
 
+    const handlePanambyClick = () => {
+        window.open('https://www.panambycapital.com.br', '_blank');
+    }
+
 
     return (
         <FooterPrimarioStyle>
@@ -82,7 +86,7 @@ const FooterPrimario = () => {
                         <img src={'imagens/selo.png'} alt={'Selo'}/>
                     </div>
                     <h3>PARCEIRO PILOTAGE</h3>
-                    <div className={'panamby'}>
+                    <div className={'panamby'} onClick={}>
                         <img src={'imagens/panamby.png'} alt={'Panamby'}/>
                     </div>
                 </div>
