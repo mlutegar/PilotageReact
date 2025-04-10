@@ -54,7 +54,7 @@ const FooterPrimario = () => {
                     />
                     <ContatoInfoFooter
                         icone={<LinkClaro/>}
-                        texto={<Link to="/">LinkedIn</Link>}
+                        texto={<Link to="https://www.linkedin.com/company/pilotage-wealth-management/">LinkedIn</Link>}
                     />
                 </div>
                 <div className={'colunaMeio'}>
@@ -86,7 +86,7 @@ const FooterPrimario = () => {
                         <img src={'imagens/selo.png'} alt={'Selo'}/>
                     </div>
                     <h3>PARCEIRO PILOTAGE</h3>
-                    <div className={'panamby'} onClick={}>
+                    <div className={'panamby'} onClick={handlePanambyClick}>
                         <img src={'imagens/panamby.png'} alt={'Panamby'}/>
                     </div>
                 </div>
