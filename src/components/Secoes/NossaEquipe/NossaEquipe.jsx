@@ -50,7 +50,7 @@ const NossaEquipe = () => {
                         email={"reinaldo.grazie@pilotage.com.br"}
                         linkedin={"https://www.linkedin.com/in/reinaldo-le-grazie-3038691/"}
                         descricao={
-                            `⬤ Sócio da Panamby Capital, com vasta experiência no setor financeiro, incluindo passagens pelo Banco Central do Brasil como Vice-Governador de Política Monetária e membro do Comitê de Política Monetária e de Estabilidade Financeira.<br/><br/>
+                            `⬤ Sócio da Panamby Capital, com vasta experiência no setor financeiro, incluindo passagens pelo Banco Central do Brasil como Diretor de Política Monetária e membro do Comitê de Política Monetária e de Estabilidade Financeira.<br/><br/>
                             ⬤ Anteriormente, foi CIO e CEO da Bradesco Asset Management, além de atuar em posições de liderança em instituições como Lloyds Bank, Nitor e Proventus Invest.<br/><br/>
                             ⬤ Membro de think tanks como o Capital Markets Group do NBEE e o grupo de Estudos de Regulação do Sistema Financeiro da FGV, com foco em inovação e evolução dos sistemas de pagamento e bancários.`
                         }

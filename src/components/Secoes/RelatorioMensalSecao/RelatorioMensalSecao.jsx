@@ -44,7 +44,7 @@ const RelatorioMensalSecao = () => {
         <RelatorioMensalSecaoStyle {...handlers}>
             <div className={'conteudo'}>
                 <TituloPrimarioInvertido>
-                    <strong>Relatórios</strong> Mensal
+                    <strong>Relatórios</strong> Mensais
                 </TituloPrimarioInvertido>
 
                 <div className={'cards'}>

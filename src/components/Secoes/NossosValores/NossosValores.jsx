@@ -20,7 +20,7 @@ const NossosValores = () => {
                         estilo de trabalho baseado nas <strong>relações de confiança mútua</strong>, construídas cuidadosamente <strong>ao longo
                         do tempo</strong>,
                         sempre personalizando seus serviços à estratégia de longo prazo de cada cliente, sem perder o
-                        <strong>foco nos resultados</strong>.”
+                        <strong> foco nos resultados</strong>.”
                     </TextoCorridoInvertido>
                 </div>
                 <div className={'paragrafo2'}>

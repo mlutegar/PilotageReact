@@ -20,22 +20,19 @@ const Header = () => {
         setMenuOpen(!menuOpen);
     };
 
-    const scrollToSection = (ref) => {
-        if (isHomePage && ref && ref.current) {
-            ref.current.scrollIntoView({behavior: "smooth"});
-            setMenuOpen(false);
+    // No Header.jsx, modifique o scrollToSection:
+    const scrollToSection = (sectionName) => {
+        if (isHomePage) {
+            const ref = {sobreNos: sobreNosRef, contato: contatoRef}[sectionName];
+            if (ref && ref.current) {
+                ref.current.scrollIntoView({ behavior: "smooth" });
+            }
         } else {
-            // Se não estiver na página inicial, primeiro navegue para Home e então role para a seção
-            navigate("/");
-            setMenuOpen(false);
-            // Precisamos esperar a navegação ser concluída antes de tentar rolar
-            setTimeout(() => {
-                if (ref && ref.current) {
-                    ref.current.scrollIntoView({behavior: "smooth"});
-                }
-            }, 100);
+            navigate(`/?section=${sectionName}`);
         }
+        setMenuOpen(false);
     };
+
 
     return (
         <Top>
@@ -54,19 +51,20 @@ const Header = () => {
                 <BotaoMenu>
                     <a onClick={(e) => {
                         e.preventDefault();
-                        scrollToSection(sobreNosRef);
+                        scrollToSection('contato');
                     }}>
-                        Sobre Nós
+                        Contato
                     </a>
                 </BotaoMenu>
                 <BotaoMenu>
                     <a onClick={(e) => {
                         e.preventDefault();
-                        scrollToSection(contatoRef);
+                        scrollToSection('sobreNos');
                     }}>
-                        Contato
+                        Sobre Nós
                     </a>
                 </BotaoMenu>
+
             </Menu>
 
             {/* Botão Hamburguer */}

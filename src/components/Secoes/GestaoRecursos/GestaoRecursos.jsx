@@ -37,7 +37,7 @@ const GestaoRecursos = () => {
                         </TextoCorrido>
                         <TextoCorrido>
                             Seus ativos são sempre registrados em seu nome e movimentados diretamente entre sua conta e as
-                            aplicações, sem intermediação da Pilotage.
+                            aplicações.
                         </TextoCorrido>
                     </div>
                 </div>

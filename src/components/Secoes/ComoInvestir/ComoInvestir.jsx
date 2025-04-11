@@ -64,7 +64,7 @@ const ComoInvestir = () => {
                         <div className={"escolha-ativos"}>
                             <CardComoInvestir
                                 icone={<Dinheiro/>}
-                                titulo={"Escolha dos Ativos"}
+                                titulo={"Escolha dos Ativos!"}
                                 subtitulo={"Escolha inteligente de ativos para um futuro sólido!."}
                                 conteudo={"Com seu perfil definido, selecionamos os melhores ativos disponíveis, seguindo a Política de Investimentos acordada. Nossa equipe realiza uma gestão de ativos, buscando oportunidades estratégicas para maximizar seus retornos, sempre com transparência e alinhamento aos seus interesses."}
                             />
