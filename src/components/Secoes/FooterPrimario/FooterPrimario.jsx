@@ -14,7 +14,6 @@ const FooterPrimario = () => {
     const location = useLocation();
     const isHomePage = location.pathname === "/";
 
-    // Acessando as refs através do contexto
     const { sobreNosRef, contatoRef } = useContext(SecoesContext);
 
     const scrollToSection = (ref) => {

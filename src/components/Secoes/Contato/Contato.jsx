@@ -59,7 +59,7 @@ const Contato = () => {
                         <div className={"descricao"}>
                             <Predio/>
                             <TextoCorrido className={"endereco"}>
-                                Av, Magalhães de Castro, 4800 - 10º andar sala 104 Jardim Panorama, São Paulo/SP CEP
+                                Av. Magalhães de Castro, 4800 - 10º andar sala 104 Jardim Panorama, São Paulo/SP CEP
                                 05676-120
                             </TextoCorrido>
                         </div>

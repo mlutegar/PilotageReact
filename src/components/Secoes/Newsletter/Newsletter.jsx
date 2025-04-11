@@ -10,7 +10,7 @@ const Newsletter = () => {
         <NewsletterStyle>
             <Logo/>
             <TituloPrimario className={"titulo"}>
-                <strong>Gostaria de receber os Relatórios Mensais da Pilotage</strong>
+                <strong>Gostaria de receber os Relatórios Mensais da Pilotage?</strong>
             </TituloPrimario>
             <InputPrimario
                 placeholder="Seu e-mail"
