@@ -15,7 +15,6 @@ const Contato = () => {
 
     // Carregando o CSS do Leaflet no componente
     useEffect(() => {
-        // Importando o CSS do Leaflet
         const link = document.createElement('link');
         link.rel = 'stylesheet';
         link.href = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';

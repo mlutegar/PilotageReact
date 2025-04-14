@@ -9,6 +9,10 @@ export const ComoInvestirStyle = styled.section`
     margin-left: -50vw;
     margin-right: -50vw;
     
+    @media (max-width: 768px) {
+        padding: 2rem 0 !important;
+    }
+    
     .conteudo{
         display: flex;
         flex-direction: column;

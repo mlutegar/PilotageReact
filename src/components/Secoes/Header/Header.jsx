@@ -75,7 +75,7 @@ const Header = () => {
             </HamburgerButton>
 
             {/* Menu Mobile */}
-            <MenuMobile isOpen={menuOpen}>
+            <MenuMobile isopen={menuOpen}>
                 <BotaoMenu>
                     <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
                 </BotaoMenu>

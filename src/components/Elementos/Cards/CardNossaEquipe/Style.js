@@ -37,9 +37,9 @@ export const CardNossaEquipeStyle = styled.div`
         height: 18rem;
         
         @media (max-width: 768px) {
-            bottom: -0.31rem;
-            left: 0;
-            height: 15rem;
+            bottom: -0.31rem !important;
+            left: 0 !important;
+            height: 15rem !important;
         }
     }
 

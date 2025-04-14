@@ -17,6 +17,10 @@ export const SobreNosStyle = styled.section`
             align-items: flex-end;
             gap: 3rem;
             justify-content: center;
+
+            svg {
+                width: 100%;
+            }
         }
         
         @media (max-width: 768px) {

@@ -16,7 +16,7 @@ export const ContatoStyle = styled.section`
         }
         
         @media (max-width: 768px){
-            width: 80%;
+            width: 90%;
         }
     }
     

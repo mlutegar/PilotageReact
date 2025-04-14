@@ -140,7 +140,7 @@ export const MenuMobile = styled.div`
     height: 100vh;
     padding: 2rem 1rem;
     transition: transform 0.3s ease-in-out;
-    transform: ${({ isOpen }) => isOpen ? 'translateX(0)' : 'translateX(100%)'};
+    transform: ${({ isopen }) => isopen ? 'translateX(0)' : 'translateX(100%)'};
     z-index: 9;
 
     ${BotaoMenu} {

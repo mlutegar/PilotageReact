@@ -8,6 +8,10 @@ export const NossosValoresStyle = styled.section`
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+
+    @media (max-width: 768px) {
+        padding: 2rem 0 !important;
+    }
     
     .conteudo{
         display: flex;
@@ -23,14 +27,13 @@ export const NossosValoresStyle = styled.section`
         justify-content: space-between;
         width: 100%;
         
-    }
-
-    @media (max-width: 768px) {
-        .itens{
+        @media (max-width: 768px) {
             flex-direction: column;
             align-items: center;
         }
     }
+
+
     
     .item{
         display: flex;

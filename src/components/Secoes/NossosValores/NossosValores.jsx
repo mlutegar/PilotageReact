@@ -4,7 +4,6 @@ import Grafico from "../../Icones/Grafico";
 import Calendario from "../../Icones/Calendario";
 import TituloPrimarioInvertido from "../../Elementos/Textos/TituloPrimarioInvertido/TituloPrimarioInvertido";
 import TextoCorridoInvertido from "../../Elementos/Textos/TextoCorridoInvertido/TextoCorridoInvertido";
-import TextoCorrido from "../../Elementos/Textos/TextoCorrido/TextoCorrido";
 
 const NossosValores = () => {
     return (

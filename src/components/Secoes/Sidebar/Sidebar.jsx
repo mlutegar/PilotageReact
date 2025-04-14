@@ -5,9 +5,9 @@ import CaixaDeRelatorios from "../../Elementos/CaixaDeRelatorios/CaixaDeRelatori
 import SelectPesquisaMes from "../../Elementos/SelectPesquisaMes/SelectPesquisaMes";
 import SelectPesquisaAno from "../../Elementos/SelectPesquisaAno/SelectPesquisaAno";
 
-const Sidebar = ({setInputValue, setSelectedAno, setSelectedMes}) => {
+const Sidebar = ({setInputValue, setSelectedAno, setSelectedMes, className}) => {
     return (
-        <SidebarStyle>
+        <SidebarStyle className={className}>
             <TextoCorrido>
                 <strong>Pesquisa</strong>
             </TextoCorrido>

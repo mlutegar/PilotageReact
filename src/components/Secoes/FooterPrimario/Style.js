@@ -71,6 +71,10 @@ export const FooterPrimarioStyle = styled.div`
 
         a {
             cursor: pointer;
+            
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
         @media screen and (max-width: 768px) {

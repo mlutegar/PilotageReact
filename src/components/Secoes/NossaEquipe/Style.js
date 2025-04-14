@@ -8,6 +8,10 @@ export const NossaEquipeStyle = styled.section`
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+    
+    @media (max-width: 768px) {
+        padding: 2rem 0 !important;
+    }
 
     .card-marcelo {
         .foto img {
@@ -28,7 +32,7 @@ export const NossaEquipeStyle = styled.section`
     .card-reinaldo {
         @media (max-width: 768px) {
             .foto img {
-                left: 1rem;
+                left: 1rem !important;
             }
         }
     }
