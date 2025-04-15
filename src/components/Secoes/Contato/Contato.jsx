@@ -5,8 +5,34 @@ import TextoCorrido from "../../Elementos/Textos/TextoCorrido/TextoCorrido";
 import Newsletter from "../Newsletter/Newsletter";
 import Formulario from "../Formulario/Formulario";
 import TituloPrimario from "../../Elementos/Textos/TituloPrimario/TituloPrimario";
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import { useEffect } from 'react';
+
+function MapResizer() {
+    const map = useMap();
+
+    useEffect(() => {
+        // Função para redimensionar o mapa
+        const handleResize = () => {
+            map.invalidateSize();
+        };
+
+        // Chama o invalidateSize após o componente ter sido renderizado
+        setTimeout(() => {
+            handleResize();
+        }, 300);
+
+        // Adiciona listener para redimensionamento da janela
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [map]);
+
+    return null;
+}
 
 const Contato = () => {
     // Coordenadas do endereço (Av. Magalhães de Castro, 4800)
@@ -37,6 +63,7 @@ const Contato = () => {
                         zoom={15}
                         style={{ height: '400px', width: '100%' }}
                     >
+                        <MapResizer />
                         <TileLayer
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
