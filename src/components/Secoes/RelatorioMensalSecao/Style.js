@@ -12,6 +12,12 @@ export const RelatorioMensalSecaoStyle = styled.section`
     @media screen and (max-width: 768px) {
         padding: 2rem 0 !important;
     }
+    
+    .titulo{
+        @media (max-width: 768px) {
+            padding-bottom: 0;
+        }
+    }
 
     .conteudo {
         display: flex;

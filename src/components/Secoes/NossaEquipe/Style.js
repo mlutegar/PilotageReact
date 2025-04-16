@@ -51,10 +51,10 @@ export const NossaEquipeStyle = styled.section`
         margin-top: 6rem;
         flex-wrap: wrap;
 
-
         @media (max-width: 768px) {
             flex-direction: column;
             gap: 2rem;
+            margin-top: 3rem;
         }
     }
 `

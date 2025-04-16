@@ -1,8 +1,8 @@
 import {TituloPrimarioInvertidoStyle} from "./Style";
 
-const TituloPrimarioInvertido = ({children}) => {
+const TituloPrimarioInvertido = ({children, className}) => {
     return (
-        <TituloPrimarioInvertidoStyle>
+        <TituloPrimarioInvertidoStyle className={className}>
             {children}
         </TituloPrimarioInvertidoStyle>
     );

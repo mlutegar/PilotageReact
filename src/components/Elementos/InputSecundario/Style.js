@@ -9,7 +9,7 @@ export const InputSecundarioStyle = styled.input`
     border: none;
     
     @media (max-width: 768px) {
-        width: 16.5rem !important;
+        width: 12.5rem !important;
     }
     
     &::placeholder {

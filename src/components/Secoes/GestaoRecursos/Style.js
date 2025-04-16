@@ -9,7 +9,7 @@ export const GestaoRecursosStyle = styled.section`
         max-width: 1440px;
         margin: 0 auto;
     }
-    
+
     .item {
         display: flex;
         align-items: center;
@@ -49,19 +49,26 @@ export const GestaoRecursosStyle = styled.section`
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+
+        @media (max-width: 768px) {
+            font-size: 1.5rem;
+        }
     }
     
     .caixaTexto{
         max-width: 75.6875rem;
         padding-bottom: 3.8rem;
+
+        a {
+            color: var(--primaria);
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        
+        @media (max-width: 768px) {
+            text-align: center;
+        }
     }
-    
-    .caixaTexto a {
-        color: var(--primaria);
-        font-size: 2rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
-    
 `

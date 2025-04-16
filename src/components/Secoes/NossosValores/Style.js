@@ -68,6 +68,10 @@ export const NossosValoresStyle = styled.section`
             font-weight: 700;
             line-height: normal;
         }
+
+        @media (max-width: 768px) {
+            text-align: center;
+        }
     }
     
     .titulo2{
