@@ -5,39 +5,15 @@ import TextoCorrido from "../../Elementos/Textos/TextoCorrido/TextoCorrido";
 import Newsletter from "../Newsletter/Newsletter";
 import Formulario from "../Formulario/Formulario";
 import TituloPrimario from "../../Elementos/Textos/TituloPrimario/TituloPrimario";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import { Map, Marker, Overlay } from 'pigeon-maps';
+import { useState } from 'react';
 import { useEffect } from 'react';
-
-function MapResizer() {
-    const map = useMap();
-
-    useEffect(() => {
-        // Função para redimensionar o mapa
-        const handleResize = () => {
-            map.invalidateSize();
-        };
-
-        // Chama o invalidateSize após o componente ter sido renderizado
-        setTimeout(() => {
-            handleResize();
-        }, 300);
-
-        // Adiciona listener para redimensionamento da janela
-        window.addEventListener('resize', handleResize);
-
-        // Cleanup
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, [map]);
-
-    return null;
-}
 
 const Contato = () => {
     // Coordenadas do endereço (Av. Magalhães de Castro, 4800)
     // Estas são coordenadas aproximadas, você deve ajustar para o endereço exato
     const posicao = [-23.5942, -46.7244];
+    const [showOverlay, setShowOverlay] = useState(false);
 
     // Carregando o CSS do Leaflet no componente
     useEffect(() => {
@@ -58,24 +34,31 @@ const Contato = () => {
             </TituloPrimario>
             <div className={'secao'}>
                 <div className={'mapa'}>
-                    <MapContainer
-                        center={posicao}
-                        zoom={15}
-                        style={{ height: '400px', width: '100%' }}
+                    <Map
+                        height={400}
+                        defaultCenter={posicao}
+                        defaultZoom={15}
                     >
-                        <MapResizer />
-                        <TileLayer
-                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        <Marker
+                            width={50}
+                            anchor={posicao}
+                            onClick={() => setShowOverlay(!showOverlay)}
                         />
-                        <Marker position={posicao}>
-                            <Popup>
-                                Av. Magalhães de Castro, 4800 - 10º andar sala 104<br />
-                                Jardim Panorama, São Paulo/SP<br />
-                                CEP 05676-120
-                            </Popup>
-                        </Marker>
-                    </MapContainer>
+                        {showOverlay && (
+                            <Overlay anchor={posicao} offset={[120, 79]}>
+                                <div style={{
+                                    backgroundColor: 'white',
+                                    padding: '10px',
+                                    borderRadius: '5px',
+                                    boxShadow: '0 2px 4px rgba(0,0,0,0.3)'
+                                }}>
+                                    Av. Magalhães de Castro, 4800 - 10º andar sala 104<br />
+                                    Jardim Panorama, São Paulo/SP<br />
+                                    CEP 05676-120
+                                </div>
+                            </Overlay>
+                        )}
+                    </Map>
                 </div>
                 <div className={'info'}>
                     <div className={'info-item'}>
