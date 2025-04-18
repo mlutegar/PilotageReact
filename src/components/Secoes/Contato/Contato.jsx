@@ -12,7 +12,7 @@ import { useEffect } from 'react';
 const Contato = () => {
     // Coordenadas do endereço (Av. Magalhães de Castro, 4800)
     // Estas são coordenadas aproximadas, você deve ajustar para o endereço exato
-    const posicao = [-23.5942, -46.7244];
+    const posicao = [-23.602071828436216, -46.698261025410225];
     const [showOverlay, setShowOverlay] = useState(false);
 
     // Carregando o CSS do Leaflet no componente
@@ -29,7 +29,7 @@ const Contato = () => {
 
     return (
         <ContatoStyle>
-            <TituloPrimario>
+            <TituloPrimario className={'titulo'}>
                 <strong>Contato</strong>
             </TituloPrimario>
             <div className={'secao'}>

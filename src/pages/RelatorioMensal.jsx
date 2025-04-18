@@ -20,6 +20,20 @@ export const RelatorioMensalStyle = styled.div`
             align-items: center;
         }
     }
+    
+    .relatorio {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 2.69rem;
+        margin-bottom: 4.69rem;
+        
+        @media (max-width: 768px) {
+            .titulo{
+                padding-bottom: 0.5rem;
+            }
+        }
+    }
 `
 
 const RelatorioMensal = () => {
@@ -77,15 +91,9 @@ const RelatorioMensal = () => {
     return (
         <Base>
             <RelatorioMensalStyle>
-                <div style={{
-                    display: "flex",
-                    width: "100%",
-                    justifyContent: "space-between",
-                    marginTop: "2.69rem",
-                    marginBottom: "4.69rem"
-                }}>
+                <div className={'relatorio'}>
                     <div className={'conteudo'}>
-                        <TituloPrimario style={{textAlign: "left"}}>
+                        <TituloPrimario className={'titulo'} style={{textAlign: "left"}}>
                             <strong>Relatórios Mensais</strong>
                         </TituloPrimario>
 

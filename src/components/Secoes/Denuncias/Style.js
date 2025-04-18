@@ -11,6 +11,10 @@ export const DenunciasStyle = styled.div`
     gap: 2rem;
     padding: 3rem 2rem;
     width: 100%;
+    
+    @media (max-width: 768px) {
+        width: auto !important;
+    }
 
     .titulo {
         font-size: 2rem;
@@ -45,11 +49,21 @@ export const DenunciasStyle = styled.div`
     }
     
     .form {
-        width: 85%;
+        width: 85%; 
+        
+        @media (max-width: 768px) {
+            width: 85% !important;
+            margin-bottom: 1rem;
+        }
     }
 
     .form-mensagem {
         width: 85%;
         height: 10rem;
+        
+        @media (max-width: 768px) {
+            width: 85% !important;
+            margin-bottom: 1rem;
+        }
     }
 `

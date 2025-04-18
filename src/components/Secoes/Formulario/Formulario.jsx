@@ -91,7 +91,7 @@ const Formulario = () => {
 
                     <div className={"inputs"}>
                         <InputSecundario
-                            placeholder={"Telefone"}
+                            placeholder={"Telefone"}s
                             name="telefone"
                             value={formData.telefone}
                             onChange={handleChange}
