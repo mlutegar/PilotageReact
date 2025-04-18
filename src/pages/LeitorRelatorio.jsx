@@ -9,6 +9,15 @@ import styled from "styled-components";
 import PdfLeitor from "../components/PdfLeitor/PdfLeitor";
 
 export const LeitorRelatorioStyle = styled.div`
+    .page.stf__item.--hard.--left.--simple, .page.stf__item.--soft.--right.--simple{
+        width: 50% !important;
+    }
+
+    canvas.react-pdf__Page__canvas{
+        width: 100% !important;
+        height: auto !important;
+    }
+    
     .conteudo {
         display: flex;
         flex-direction: column;
@@ -17,6 +26,7 @@ export const LeitorRelatorioStyle = styled.div`
 
         @media (max-width: 768px) {
             margin-right: 0;
+            width: 100%;
             align-items: center;
             text-align: center !important;
         }
