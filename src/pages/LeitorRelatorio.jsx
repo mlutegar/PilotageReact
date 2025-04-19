@@ -15,7 +15,7 @@ export const LeitorRelatorioStyle = styled.div`
 
     canvas.react-pdf__Page__canvas{
         width: 100% !important;
-        height: auto !important;
+        height: auto !important;""
     }
     
     .conteudo {

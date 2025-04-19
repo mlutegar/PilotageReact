@@ -5,7 +5,7 @@ import PredioClaro from "../../Icones/PredioClaro";
 import TelefoneClaro from "../../Icones/TelefoneClaro";
 import LinkClaro from "../../Icones/LinkClaro";
 import {Link, useLocation, useNavigate} from "react-router-dom";
-import React, {useContext} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {SecoesContext} from "../../../pages/Home";
 
 
@@ -13,8 +13,42 @@ const FooterPrimario = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const isHomePage = location.pathname === "/";
-
+    const [ultimosRelatorios, setUltimosRelatorios] = useState([]);
     const { sobreNosRef, contatoRef } = useContext(SecoesContext);
+
+    useEffect(() => {
+        const relatoriosStorage = localStorage.getItem('relatorios');
+        if (relatoriosStorage) {
+            try {
+                const relatorios = JSON.parse(relatoriosStorage);
+                // Ordenar os relatórios por data (mais recente primeiro)
+                const relatoriosOrdenados = [...relatorios].sort((a, b) =>
+                    new Date(b.post_date) - new Date(a.post_date)
+                );
+                // Pegar apenas os 3 últimos
+                setUltimosRelatorios(relatoriosOrdenados.slice(0, 3));
+            } catch (error) {
+                console.error("Erro ao carregar relatórios:", error);
+                setUltimosRelatorios([]);
+            }
+        }
+    }, []);
+
+    const handleRelatorioClick = (relatorio, index) => {
+        navigate('/leitor-relatorio', {
+            state: {
+                pdfUrl: relatorio.guid,
+                title: relatorio.post_title,
+                currentIndex: index
+            }
+        });
+    };
+
+
+    const formatarData = (dataString) => {
+        const data = new Date(dataString);
+        return data.toLocaleDateString('pt-BR');
+    };
 
     const scrollToSection = (ref) => {
         if (isHomePage && ref && ref.current) {
@@ -34,7 +68,6 @@ const FooterPrimario = () => {
     const handlePanambyClick = () => {
         window.open('https://www.panambycapital.com.br', '_blank');
     }
-
 
     return (
         <FooterPrimarioStyle>
@@ -72,12 +105,15 @@ const FooterPrimario = () => {
                     </div>
                     <div className={'relatorio'}>
                         <h3>Relatórios Mensais</h3>
-                        <Link to={'/'}>Relatório Mensal Pilotage – FEV / 2025
-                            28/02/2025</Link>
-                        <Link to={'/'}>Relatório Mensal Pilotage – JAN / 2025
-                            31/01/2025</Link>
-                        <Link to={'/'}>Relatório Mensal Pilotage – DEZ / 2024
-                            31/12/2024</Link>
+                        {ultimosRelatorios.map((relatorio, index) => (
+                            <a
+                                key={index}
+                                onClick={() => handleRelatorioClick(relatorio, index)}
+                                style={{cursor: 'pointer'}}
+                            >
+                                {relatorio.post_title} {formatarData(relatorio.post_date)}
+                            </a>
+                        ))}
                     </div>
                 </div>
                 <div className={'colunaDireita'}>
