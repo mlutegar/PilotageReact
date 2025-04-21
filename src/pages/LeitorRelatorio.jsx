@@ -7,8 +7,26 @@ import TextoCorrido from "../components/Elementos/Textos/TextoCorrido/TextoCorri
 import { Botaoseta } from "../components/Icones/Botaoseta";
 import styled from "styled-components";
 import PdfLeitor from "../components/PdfLeitor/PdfLeitor";
+import BotaoSecundario from "../components/Elementos/Botoes/BotaoSecundario/BotaoSecundario";
+import Pdf from "../components/Teste/Pdf";
 
 export const LeitorRelatorioStyle = styled.div`
+    .desktop{
+        display: flex;
+        
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+    
+    .mobile{
+        display: none;
+        
+        @media (max-width: 768px) {
+            display: flex;
+        }
+    }
+    
     .page.stf__item.--hard.--left.--simple, .page.stf__item.--soft.--right.--simple{
         width: 50% !important;
     }
@@ -167,10 +185,21 @@ const LeitorRelatorio = () => {
             ) : errorMsg ? (
               <div style={{ color: "red" }}>{errorMsg}</div>
             ) : (
-              <>
-                <PdfLeitor file={pdfUrl} />
-              </>
+                <>
+                    <div className={'desktop'}>
+                        <PdfLeitor file={pdfUrl}/>
+                    </div>
+
+                    <div className={'mobile'}>
+                        <Pdf pdfUrl={pdfUrl}/>
+                    </div>
+
+                </>
             )}
+
+              <BotaoSecundario onClick={() => window.open(pdfUrl, "_blank")}>
+                  Baixar PDF
+              </BotaoSecundario>
 
             <div
               style={{

@@ -5,16 +5,16 @@ export const DocumentosRegulatoriosPageStyle = styled.section`
         display: flex;
         justify-content: flex-start;
     }
-    
-    .conteudo{
+
+    .conteudo {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
         padding-bottom: 1.5rem;
         align-items: center;
     }
-        
-    .subtitulo h3{
+
+    .subtitulo h3 {
         color: #333333;
         font-size: 2rem;
         font-style: normal;
@@ -23,17 +23,18 @@ export const DocumentosRegulatoriosPageStyle = styled.section`
         padding-bottom: 3.8rem;
     }
 
-    .cardsGrid{
+    .cardsGrid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 5rem;
         padding-bottom: 5rem;
-        
+        width: 100%;
+
         @media (max-width: 768px) {
             grid-template-columns: repeat(1, 1fr);
         }
     }
-    
+
     .texto {
         text-align: justify;
         border-radius: 0.9375rem;
@@ -45,6 +46,6 @@ export const DocumentosRegulatoriosPageStyle = styled.section`
         font-weight: 400;
         line-height: normal;
         font-family: "PT Sans";
-        
+
     }
 `

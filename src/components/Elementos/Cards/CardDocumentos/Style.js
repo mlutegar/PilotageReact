@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const CardDocumentosStyle = styled.div`
-    width: 21.9375rem;
+    width: 100%;
     height: 19.625rem;
     border-radius: 0.9375rem;
     background: var(--background4);
@@ -11,6 +11,7 @@ export const CardDocumentosStyle = styled.div`
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
+    box-sizing: border-box;
     
     
     

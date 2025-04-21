@@ -23,24 +23,28 @@ const Home = () => {
     const relatorioRef = useRef(null);
     const contatoRef = useRef(null);
 
+// Modificação no Home.jsx
     useEffect(() => {
-        const params = new URLSearchParams(location.search);
-        const section = params.get('section');
+        // Adicionando um pequeno atraso para garantir que os refs estão montados
+        setTimeout(() => {
+            const params = new URLSearchParams(location.search);
+            const section = params.get('section');
 
-        const refs = {
-            sobreNos: sobreNosRef,
-            gestaoRecursos: gestaoRecursosRef,
-            comoInvestir: comoInvestirRef,
-            nossaEquipe: nossaEquipeRef,
-            relatorio: relatorioRef,
-            contato: contatoRef
-        };
+            const refs = {
+                sobreNos: sobreNosRef,
+                gestaoRecursos: gestaoRecursosRef,
+                comoInvestir: comoInvestirRef,
+                nossaEquipe: nossaEquipeRef,
+                relatorio: relatorioRef,
+                contato: contatoRef
+            };
 
-        const ref = refs[section];
+            const ref = refs[section];
 
-        if (ref && ref.current) {
-            ref.current.scrollIntoView({ behavior: "smooth" });
-        }
+            if (ref && ref.current) {
+                ref.current.scrollIntoView({ behavior: "smooth" });
+            }
+        }, 300); // Um pequeno atraso para garantir que a página foi carregada
     }, [location]);
 
     return (

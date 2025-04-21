@@ -85,7 +85,7 @@ const Header = () => {
                 <BotaoMenu>
                     <a onClick={(e) => {
                         e.preventDefault();
-                        scrollToSection(sobreNosRef);
+                        scrollToSection('sobreNos');
                     }}>
                         Sobre Nós
                     </a>
@@ -93,7 +93,7 @@ const Header = () => {
                 <BotaoMenu>
                     <a onClick={(e) => {
                         e.preventDefault();
-                        scrollToSection(contatoRef);
+                        scrollToSection('contato');
                     }}>
                         Contato
                     </a>
