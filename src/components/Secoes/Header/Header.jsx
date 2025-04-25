@@ -37,7 +37,7 @@ const Header = () => {
     return (
         <Top>
             <div className="logo-header" onClick={handleLogoClick}>
-                <img src="imagens/pilotage.jpg" alt="Logo"/>
+                <img src="imagens/Logo10.png" alt="Logo"/>
             </div>
 
             {/* Menu Desktop */}
