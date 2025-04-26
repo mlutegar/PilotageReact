@@ -4,16 +4,26 @@ import BotaoPrimario from "../../Elementos/Botoes/BotaoPrimario/BotaoPrimario";
 import Dots from "../../Elementos/Dots/Dots";
 import { SecoesContext } from "../../../pages/Home";
 import {useSwipeable} from "react-swipeable";
+import {useNavigate} from "react-router-dom";
 
 const Banner = () => {
+    const navigate = useNavigate();
+
     const [bannerAtual, setBannerAtual] = useState(0);
-    // Acessando as refs através do contexto
+
     const { sobreNosRef, contatoRef, comoInvestirRef, nossaEquipeRef } = useContext(SecoesContext);
 
-    // Função para rolar para a seção correspondente
-    const scrollToSection = (ref) => {
-        if (ref && ref.current) {
-            ref.current.scrollIntoView({ behavior: "smooth" });
+    const isHomePage = location.pathname === "/";
+
+    const scrollToSection = (sectionName) => {
+        if (isHomePage) {
+            const ref = {sobreNos: sobreNosRef, contato: contatoRef, nossaEquipe: nossaEquipeRef, comoInvestir: comoInvestirRef}[sectionName];
+
+            if (ref && ref.current) {
+                ref.current.scrollIntoView({ behavior: "smooth" });
+            }
+        } else {
+            navigate(`/?section=${sectionName}`);
         }
     };
 
@@ -22,6 +32,7 @@ const Banner = () => {
         onSwipedRight: () => setBannerAtual((bannerAtual - 1 + banners.length) % banners.length),
         trackMouse: true, // para testar swipe com o mouse no navegador
     });
+
 
     // Dados dos banners com imagem e funções de navegação
     const banners = [
@@ -35,7 +46,7 @@ const Banner = () => {
             ),
             btnTexto: <><strong>Fale conosco</strong></>,
             imagem: "imagens/Banner1.png",
-            onClick: () => scrollToSection(contatoRef)
+            onClick: () => scrollToSection('contato')
         },
         {
             titulo: (
@@ -46,7 +57,7 @@ const Banner = () => {
             ),
             btnTexto: <><strong>Saiba mais</strong></>,
             imagem: "imagens/Banner2.png",
-            onClick: () => scrollToSection(sobreNosRef)
+            onClick: () => scrollToSection('sobreNos')
         },
         {
             titulo: (
@@ -57,7 +68,7 @@ const Banner = () => {
             ),
             btnTexto: <><strong>Nossa Equipe</strong></>,
             imagem: "imagens/Banner3.png",
-            onClick: () => scrollToSection(nossaEquipeRef)
+            onClick: () => scrollToSection('nossaEquipe')
         },
         {
             titulo: (
@@ -67,7 +78,7 @@ const Banner = () => {
             ),
             btnTexto: <><strong>Como investir?</strong></>,
             imagem: "imagens/Banner4.png",
-            onClick: () => scrollToSection(comoInvestirRef)
+            onClick: () => scrollToSection('comoInvestir')
         },
         {
             titulo: (
@@ -77,7 +88,7 @@ const Banner = () => {
             ),
             btnTexto: <><strong>Como investir?</strong></>,
             imagem: "imagens/Banner5.png",
-            onClick: () => scrollToSection(comoInvestirRef)
+            onClick: () => scrollToSection('gestaoRecursos')
         }
     ];
 

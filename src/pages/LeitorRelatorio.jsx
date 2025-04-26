@@ -70,6 +70,8 @@ const LeitorRelatorio = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const [pdfUrlCerto, setPdfUrlCerto] = useState("");
+
   // pega a URL, ou usa uma default
   const pdfUrl =
     location.state?.pdfUrl ||
@@ -84,22 +86,24 @@ const LeitorRelatorio = () => {
   const [errorMsg, setErrorMsg] = useState("");
 
   useEffect(() => {
+      formatandoOdominioDaUrl(pdfUrl);
+
     // 1) URL presente?
-    if (!pdfUrl) {
+    if (!pdfUrlCerto) {
       setErrorMsg("URL do PDF não foi fornecida.");
       setChecking(false);
       return;
     }
 
     // 2) extensão .pdf?
-    if (!pdfUrl.toLowerCase().endsWith(".pdf")) {
+    if (!pdfUrlCerto.toLowerCase().endsWith(".pdf")) {
       setErrorMsg("O link informado não aponta para um arquivo .pdf.");
       setChecking(false);
       return;
     }
 
     // 3) (opcional) HEAD request para checar Content-Type
-    fetch(pdfUrl, { method: "HEAD" })
+    fetch(pdfUrlCerto, { method: "HEAD" })
       .then((res) => {
         const ct = res.headers.get("content-type") || "";
         if (!res.ok || !ct.includes("application/pdf")) {
@@ -113,7 +117,9 @@ const LeitorRelatorio = () => {
         );
       })
       .finally(() => setChecking(false));
-  }, [pdfUrl]);
+
+
+  }, [pdfUrlCerto]);
 
   // navegação entre relatórios (igual ao seu código)
   const storedData = localStorage.getItem("relatorios");
@@ -152,6 +158,13 @@ const LeitorRelatorio = () => {
     }
   };
 
+  const formatandoOdominioDaUrl = (url) => {
+    const urlParts = url.split("/");
+    const domain = "api.pilotage.com.br";
+    const path = urlParts.slice(3).join("/");
+    setPdfUrlCerto(`https://${domain}/${path}`);
+  }
+
   return (
     <Base>
       <LeitorRelatorioStyle>
@@ -187,17 +200,17 @@ const LeitorRelatorio = () => {
             ) : (
                 <>
                     <div className={'desktop'}>
-                        <PdfLeitor file={pdfUrl}/>
+                        <PdfLeitor file={pdfUrlCerto}/>
                     </div>
 
                     <div className={'mobile'}>
-                        <Pdf pdfUrl={pdfUrl}/>
+                        <Pdf pdfUrl={pdfUrlCerto}/>
                     </div>
 
                 </>
             )}
 
-              <BotaoSecundario onClick={() => window.open(pdfUrl, "_blank")}>
+              <BotaoSecundario onClick={() => window.open(pdfUrlCerto, "_blank")}>
                   Baixar PDF
               </BotaoSecundario>
 

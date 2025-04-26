@@ -149,7 +149,7 @@ export const CardNossaEquipeStyle = styled.div`
     & + .modal-overlay .descricao {
         display: flex;
         justify-content: center;
-        text-align: justify;
+        text-align: left;
         padding: 1rem;
     }
 `
