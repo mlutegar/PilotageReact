@@ -8,16 +8,19 @@ import {useNavigate} from "react-router-dom";
 
 const Banner = () => {
     const navigate = useNavigate();
-
     const [bannerAtual, setBannerAtual] = useState(0);
-
-    const { sobreNosRef, contatoRef, comoInvestirRef, nossaEquipeRef } = useContext(SecoesContext);
-
+    const { sobreNosRef, contatoRef, comoInvestirRef, nossaEquipeRef , gestaoRecursosRef } = useContext(SecoesContext);
     const isHomePage = location.pathname === "/";
 
     const scrollToSection = (sectionName) => {
         if (isHomePage) {
-            const ref = {sobreNos: sobreNosRef, contato: contatoRef, nossaEquipe: nossaEquipeRef, comoInvestir: comoInvestirRef}[sectionName];
+            const ref = {
+                sobreNos: sobreNosRef,
+                contato: contatoRef,
+                nossaEquipe: nossaEquipeRef,
+                comoInvestir: comoInvestirRef,
+                gestaoRecursos: gestaoRecursosRef
+            }[sectionName];
 
             if (ref && ref.current) {
                 ref.current.scrollIntoView({ behavior: "smooth" });
@@ -33,8 +36,14 @@ const Banner = () => {
         trackMouse: true, // para testar swipe com o mouse no navegador
     });
 
+    const handleNossaEquipeClick = () => {
+        if (isHomePage) {
+            scrollToSection('nossaEquipe');
+        } else {
+            navigate("/?section=nossaEquipe");
+        }
+    }
 
-    // Dados dos banners com imagem e funções de navegação
     const banners = [
         {
             titulo: (
@@ -68,7 +77,7 @@ const Banner = () => {
             ),
             btnTexto: <><strong>Nossa Equipe</strong></>,
             imagem: "imagens/Banner3.png",
-            onClick: () => scrollToSection('nossaEquipe')
+            onClick: handleNossaEquipeClick
         },
         {
             titulo: (
@@ -100,7 +109,7 @@ const Banner = () => {
     const bannerAtivo = banners[bannerAtual];
 
     return (
-        <BannerStyle {...handlers} backgroundImage={bannerAtivo.imagem}>
+        <BannerStyle {...handlers} backgroundimage={bannerAtivo.imagem}>
             <div className={"conteudo-banner"}>
                 <div className={"Titulo"}>
                     {bannerAtivo.titulo}

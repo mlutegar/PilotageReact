@@ -38,6 +38,10 @@ const Contato = () => {
                         height={400}
                         defaultCenter={posicao}
                         defaultZoom={15}
+                        twoFingerDrag={true} // Ativa arrasto com dois dedos em móveis
+                        metaWheelZoom={true} // Exige tecla meta (ctrl) para zoom em móveis
+                        touchEvents={true} // Garante que eventos de toque sejam processados
+                        animate={true} // Suaviza animações
                     >
                         <Marker
                             width={50}

@@ -48,7 +48,7 @@ const Home = () => {
     }, [location]);
 
     return (
-        <SecoesContext.Provider value={{ sobreNosRef, contatoRef }}>
+        <SecoesContext.Provider value={{ sobreNosRef, contatoRef , comoInvestirRef, nossaEquipeRef, gestaoRecursosRef }}>
             <Base>
                 <Banner />
                 <div ref={sobreNosRef}>

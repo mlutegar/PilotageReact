@@ -1,6 +1,5 @@
 import { NewsletterStyle } from "./Style";
 import Logo from "../../Icones/Logo";
-import TextoCorrido from "../../Elementos/Textos/TextoCorrido/TextoCorrido";
 import InputPrimario from "../../Elementos/InputPrimario/InputPrimario";
 import BotaoSecundario from "../../Elementos/Botoes/BotaoSecundario/BotaoSecundario";
 import TituloPrimario from "../../Elementos/Textos/TituloPrimario/TituloPrimario";

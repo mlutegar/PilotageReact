@@ -2,10 +2,10 @@ import styled from "styled-components"
 
 export const BannerStyle = styled.div`
     background: linear-gradient(0deg,
-    ${props => props.backgroundImage?.includes("Banner5.png") ? "rgb(4 40 68 / 87%)" : "rgb(0 56 101 / 71%)"} 0%,
-    ${props => props.backgroundImage?.includes("Banner5.png") ? "rgba(0, 56, 101, 0.54)" : "rgba(0, 56, 101, 0.54)"} 100%
+    ${props => props.backgroundimage?.includes("Banner5.png") ? "rgb(4 40 68 / 87%)" : "rgb(0 56 101 / 71%)"} 0%,
+    ${props => props.backgroundimage?.includes("Banner5.png") ? "rgba(0, 56, 101, 0.54)" : "rgba(0, 56, 101, 0.54)"} 100%
     ),
-    url(${props => props.backgroundImage || "imagens/Banner1.png"}) lightgray -270.204px -135.111px / 118.746% 146.55% no-repeat;
+    url(${props => props.backgroundimage || "imagens/Banner1.png"}) lightgray -270.204px -135.111px / 118.746% 146.55% no-repeat;
      background-size: cover;
     background-position: ${props =>
             props.backgroundImage?.includes("Banner5.png") ? "top" : "center"};
