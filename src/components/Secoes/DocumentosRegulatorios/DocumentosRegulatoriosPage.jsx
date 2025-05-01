@@ -28,7 +28,7 @@ const DocumentosRegulatoriosPage = () => {
                         icone={<FormularioReferencia/>}
                         titulo={"Formulário de Referência"}
                         botao={"Acessar"}
-                        link={"https://cvmweb.cvm.gov.br/SWB/Sistemas/SCW/CPublica/FormRefAdmCart/ConsultaFormReferenciaAdmCarteiraPJ.aspx?PK_PARTIC=144475&COMPTC=2023"}
+                        link={"https://cvmweb.cvm.gov.br/SWB/Sistemas/SCW/CPublica/FormRefAdmCart/ConsultaFormReferenciaAdmCarteiraPJ.aspx?PK_PARTIC=144475&COMPTC=2024"}
                     />
                     <CardDocumentos
                         icone={<CodigoEtica/>}

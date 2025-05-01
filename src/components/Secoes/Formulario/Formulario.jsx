@@ -48,9 +48,6 @@ const Formulario = () => {
             .then(
                 (response) => {
                     alert("Mensagem enviada com sucesso para a equipe Pilotage!");
-                    console.log("SUCCESS!", response.status, response.text);
-
-                    // Limpar o formulário após envio
                     setFormData({
                         nome: "",
                         email: "",

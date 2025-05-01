@@ -61,14 +61,9 @@ const PdfLeitor = ({ file }) => {
                             usePortrait={isMobile}           // modo retrato em mobile
                             startPage={currentPage}          // página inicial controlada
                             renderOnlyPageLengthChange
-                            onInit={(e) => console.log('Flipbook iniciado:', e)}
                             onFlip={(e) => {
-                                console.log('Virou para a página', e.data);
                                 setCurrentPage(e.data);
                             }}
-                            onChangeOrientation={(orientation) =>
-                                console.log('Orientação mudou para', orientation)
-                            }
                         >
                             {Array.from({ length: numPages }, (_, index) => (
                                 <div key={index} className="page">

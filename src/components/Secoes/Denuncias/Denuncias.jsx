@@ -45,9 +45,6 @@ const Denuncias = () => {
             .then(
                 (response) => {
                     alert("Denúncia enviada com sucesso!");
-                    console.log("SUCCESS!", response.status, response.text);
-
-                    // Limpar o formulário após envio
                     setFormData({
                         nome: "",
                         email: "",
