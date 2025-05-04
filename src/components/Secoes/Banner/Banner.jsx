@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import {useState, useContext, useEffect} from "react";
 import { BannerStyle } from "./Style";
 import BotaoPrimario from "../../Elementos/Botoes/BotaoPrimario/BotaoPrimario";
 import Dots from "../../Elementos/Dots/Dots";
@@ -107,6 +107,14 @@ const Banner = () => {
 
     // Banner atual baseado no estado
     const bannerAtivo = banners[bannerAtual];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setBannerAtual(prev => (prev + 1) % banners.length);
+        }, 5000); // troca a cada 5000 ms
+
+        return () => clearInterval(interval);
+    }, [banners.length]);
 
     return (
         <BannerStyle {...handlers} backgroundimage={bannerAtivo.imagem}>
