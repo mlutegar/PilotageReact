@@ -3,7 +3,7 @@ import HTMLFlipBook from 'react-pageflip';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 
-pdfjs.GlobalWorkerOptions.workerSrc = `pdf.worker.min.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc = `pdf.worker.min.js`;
 
 const PdfLeitor = ({ file }) => {
     const [numPages, setNumPages] = useState(0);
