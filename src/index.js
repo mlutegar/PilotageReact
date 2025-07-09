@@ -20,7 +20,7 @@ root.render(
                 <Route path="/documentos-regulatorios" element={<DocumentosRegulatorios/>}/>
                 <Route path="/politicas-de-privacidade" element={<PoliticaDePrivacidade/>}/>
                 <Route path="/relatorio-mensal" element={<RelatorioMensal/>}/>
-                <Route path="/leitor-relatorio" element={<LeitorRelatorio/>}/>
+                <Route path="/relatorio/:slug" element={<LeitorRelatorio/>}/>
             </Routes>
         </HashRouter>
     </React.StrictMode>

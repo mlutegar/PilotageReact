@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import {useLocation, useNavigate} from "react-router-dom";
+import {useLocation, useNavigate, useParams} from "react-router-dom";
 import Base from "./Base";
 import Sidebar from "../components/Secoes/Sidebar/Sidebar";
 import TituloPrimario from "../components/Elementos/Textos/TituloPrimario/TituloPrimario";
@@ -84,12 +84,24 @@ const LeitorRelatorio = () => {
         (a, b) => new Date(b.post_date) - new Date(a.post_date)
     );
 
+    const createSlug = (titulo) => {
+        return titulo
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '') // Remove acentos
+            .replace(/[^a-z0-9\s-]/g, '') // Remove caracteres especiais
+            .replace(/\s+/g, '-') // Substitui espaços por hífens
+            .replace(/-+/g, '-') // Remove hífens duplicados
+            .trim();
+    };
+
     const handleAnterior = () => {
         if (currentIndex < relatoriosOrdenados.length - 1) {
             const newIndex = currentIndex + 1;
             const novoRelatorio = relatoriosOrdenados[newIndex];
+            const slug = createSlug(novoRelatorio.post_title);
             window.scrollTo(0, 0);
-            navigate("/leitor-relatorio", {
+            navigate(`/relatorio/${slug}`, {
                 state: {
                     pdfUrl: novoRelatorio.guid,
                     title: novoRelatorio.post_title,
@@ -103,8 +115,9 @@ const LeitorRelatorio = () => {
         if (currentIndex > 0) {
             const newIndex = currentIndex - 1;
             const novoRelatorio = relatoriosOrdenados[newIndex];
+            const slug = createSlug(novoRelatorio.post_title);
             window.scrollTo(0, 0);
-            navigate("/leitor-relatorio", {
+            navigate(`/relatorio/${slug}`, {
                 state: {
                     pdfUrl: novoRelatorio.guid,
                     title: novoRelatorio.post_title,
