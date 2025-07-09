@@ -5,67 +5,11 @@ import Sidebar from "../components/Secoes/Sidebar/Sidebar";
 import TituloPrimario from "../components/Elementos/Textos/TituloPrimario/TituloPrimario";
 import TextoCorrido from "../components/Elementos/Textos/TextoCorrido/TextoCorrido";
 import {Botaoseta} from "../components/Icones/Botaoseta";
-import styled from "styled-components";
+import {LeitorRelatorioStyle} from "./LeitorRelatorioStyle";
 import PdfLeitor from "../components/PdfLeitor/PdfLeitor";
 import BotaoSecundario from "../components/Elementos/Botoes/BotaoSecundario/BotaoSecundario";
 import Pdf from "../components/Teste/Pdf";
-
-export const LeitorRelatorioStyle = styled.div`
-    .desktop {
-        display: flex;
-
-        @media (max-width: 768px) {
-            display: none;
-        }
-    }
-
-    .mobile {
-        display: none;
-
-        @media (max-width: 768px) {
-            display: flex;
-        }
-    }
-
-    .page.stf__item.--hard.--left.--simple, .page.stf__item.--soft.--right.--simple {
-        width: 50% !important;
-    }
-
-    canvas.react-pdf__Page__canvas {
-        width: 100% !important;
-        height: auto !important;
-    ""
-    }
-
-    .conteudo {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-        margin-right: 2.69rem;
-
-        @media (max-width: 768px) {
-            margin-right: 0;
-            width: 100%;
-            align-items: center;
-            text-align: center !important;
-        }
-    }
-
-    .titulo {
-        text-align: left;
-        padding: 0;
-
-        @media (max-width: 768px) {
-            text-align: center !important;
-        }
-    }
-
-    .mobile {
-        @media (max-width: 1024px) {
-            display: none;
-        }
-    }
-`
+import CompartilharRelatorio from "../components/Elementos/CompartilharRelatorio/CompartilharRelatorio";
 
 const LeitorRelatorio = () => {
     const navigate = useNavigate();
@@ -221,6 +165,13 @@ const LeitorRelatorio = () => {
 
                             </>
                         )}
+
+                        <CompartilharRelatorio
+                            title={title}
+                            pdfUrl={pdfUrlCerto}
+                            mes={mes}
+                            ano={ano}
+                        />
 
                         <BotaoSecundario onClick={() => window.open(pdfUrlCerto, "_blank")}>
                             Baixar PDF
