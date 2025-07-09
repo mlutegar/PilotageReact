@@ -34,11 +34,23 @@ const FooterPrimario = () => {
         }
     }, []);
 
+    const createSlug = (titulo) => {
+        return titulo
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '') // Remove acentos
+            .replace(/[^a-z0-9\s-]/g, '') // Remove caracteres especiais
+            .replace(/\s+/g, '-') // Substitui espaços por hífens
+            .replace(/-+/g, '-') // Remove hífens duplicados
+            .trim();
+    };
+
     const handleRelatorioClick = (relatorio, index) => {
-        navigate('/leitor-relatorio', {
+        const slug = createSlug(relatorio);
+        navigate(`/relatorio/${slug}`, {
             state: {
-                pdfUrl: relatorio.guid,
-                title: relatorio.post_title,
+                pdfUrl: link,
+                title: relatorio,
                 currentIndex: index
             }
         });
