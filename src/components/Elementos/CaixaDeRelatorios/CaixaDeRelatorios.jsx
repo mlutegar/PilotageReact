@@ -7,6 +7,11 @@ const CaixaDeRelatorios = () => {
     const relatorios = JSON.parse(localStorage.getItem("relatorios")) || [];
     const navigate = useNavigate();
 
+    // Ordena por data (mais recentes primeiro) e pega os 5 últimos
+    const relatoriosOrdenados = relatorios
+        .sort((a, b) => new Date(b.post_date) - new Date(a.post_date))
+        .slice(0, 5);
+
     const createSlug = (titulo) => {
         return titulo
             .toLowerCase()
@@ -19,6 +24,10 @@ const CaixaDeRelatorios = () => {
     };
 
     const handleClick = (link, titulo) => {
+        // Encontra o índice correto no array ordenado completo
+        const todosRelatoriosOrdenados = relatorios.sort((a, b) => new Date(b.post_date) - new Date(a.post_date));
+        const index = todosRelatoriosOrdenados.findIndex(rel => rel.guid === link);
+
         const slug = createSlug(titulo);
         navigate(`/relatorio/${slug}`, {
             state: {
@@ -31,9 +40,9 @@ const CaixaDeRelatorios = () => {
 
     return (
         <CaixaDeRelatoriosStyle>
-            {relatorios.slice(0, 5).map((relatorio, index) => (  // Pega apenas os 5 primeiros
+            {relatoriosOrdenados.map((relatorio, index) => (
                 <TextoCorrido key={index} className={'item'} onClick={() => handleClick(relatorio.guid, relatorio.post_title)}>
-                        {relatorio.post_title}
+                    {relatorio.post_title}
                 </TextoCorrido>
             ))}
         </CaixaDeRelatoriosStyle>

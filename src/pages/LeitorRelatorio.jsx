@@ -10,25 +10,73 @@ import PdfLeitor from "../components/PdfLeitor/PdfLeitor";
 import BotaoSecundario from "../components/Elementos/Botoes/BotaoSecundario/BotaoSecundario";
 import Pdf from "../components/Teste/Pdf";
 import CompartilharRelatorio from "../components/Elementos/CompartilharRelatorio/CompartilharRelatorio";
-
 const LeitorRelatorio = () => {
     const navigate = useNavigate();
     const location = useLocation();
+    const { slug } = useParams(); // Pega o slug da URL
 
     const [pdfUrlCerto, setPdfUrlCerto] = useState("");
-    const pdfUrl =
-        location.state?.pdfUrl ||
-        "https://pilotage.com.br/home/wp-content/uploads/2025/03/Relatorio-mensal-Fevereiro-2025.pdf";
-    const title = location.state?.title || "Relatório";
-    const currentIndex = location.state?.currentIndex || 0;
+    const [title, setTitle] = useState("");
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [relatorioEncontrado, setRelatorioEncontrado] = useState(null);
 
     const [checking, setChecking] = useState(true);
     const [errorMsg, setErrorMsg] = useState("");
     const [mes, setMes] = useState("");
     const [ano, setAno] = useState("");
 
+    // Função para criar slug (mesma do CardRelatorio)
+    const createSlug = (titulo) => {
+        return titulo
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/[^a-z0-9\s-]/g, '')
+            .replace(/\s+/g, '-')
+            .replace(/-+/g, '-')
+            .trim();
+    };
+
+    // Buscar dados do relatório baseado no slug ou state
     useEffect(() => {
-        formatandoOdominioDaUrl(pdfUrl);
+        const storedData = localStorage.getItem("relatorios");
+        const relatorios = storedData ? JSON.parse(storedData) : [];
+        const relatoriosOrdenados = relatorios.sort(
+            (a, b) => new Date(b.post_date) - new Date(a.post_date)
+        );
+
+        // Se veio do state (navegação interna), usa os dados do state
+        if (location.state?.pdfUrl) {
+            setTitle(location.state.title);
+            setCurrentIndex(location.state.currentIndex);
+            const pdfUrl = location.state.pdfUrl;
+            formatandoOdominioDaUrl(pdfUrl);
+        } else {
+            // Se não tem state (acesso direto), busca pelo slug
+            const relatorio = relatoriosOrdenados.find(rel =>
+                createSlug(rel.post_title) === slug
+            );
+
+            if (relatorio) {
+                setTitle(relatorio.post_title);
+                const index = relatoriosOrdenados.findIndex(rel => rel.guid === relatorio.guid);
+                setCurrentIndex(index);
+                setRelatorioEncontrado(relatorio);
+                formatandoOdominioDaUrl(relatorio.guid);
+            } else {
+                setErrorMsg("Relatório não encontrado.");
+                setChecking(false);
+                return;
+            }
+        }
+    }, [slug, location.state]);
+
+    // Resto dos useEffects permanecem iguais...
+    useEffect(() => {
+        if (!pdfUrlCerto) return;
+
+        setChecking(true);
+        setErrorMsg("");
 
         // 1) URL presente?
         if (!pdfUrlCerto) {
@@ -59,8 +107,6 @@ const LeitorRelatorio = () => {
                 );
             })
             .finally(() => setChecking(false));
-
-
     }, [pdfUrlCerto]);
 
     useEffect(() => {
@@ -74,28 +120,20 @@ const LeitorRelatorio = () => {
             }
         }
 
-        retirarMesDoTitulo();
-    }, [pdfUrlCerto, title]);
+        if (title) {
+            retirarMesDoTitulo();
+        }
+    }, [title]);
 
-
-    const storedData = localStorage.getItem("relatorios");
-    const relatorios = storedData ? JSON.parse(storedData) : [];
-    const relatoriosOrdenados = relatorios.sort(
-        (a, b) => new Date(b.post_date) - new Date(a.post_date)
-    );
-
-    const createSlug = (titulo) => {
-        return titulo
-            .toLowerCase()
-            .normalize('NFD')
-            .replace(/[\u0300-\u036f]/g, '') // Remove acentos
-            .replace(/[^a-z0-9\s-]/g, '') // Remove caracteres especiais
-            .replace(/\s+/g, '-') // Substitui espaços por hífens
-            .replace(/-+/g, '-') // Remove hífens duplicados
-            .trim();
+    // Mover a lógica dos relatórios para dentro dos handlers
+    const getRelatoriosOrdenados = () => {
+        const storedData = localStorage.getItem("relatorios");
+        const relatorios = storedData ? JSON.parse(storedData) : [];
+        return relatorios.sort((a, b) => new Date(b.post_date) - new Date(a.post_date));
     };
 
     const handleAnterior = () => {
+        const relatoriosOrdenados = getRelatoriosOrdenados();
         if (currentIndex < relatoriosOrdenados.length - 1) {
             const newIndex = currentIndex + 1;
             const novoRelatorio = relatoriosOrdenados[newIndex];
@@ -112,6 +150,7 @@ const LeitorRelatorio = () => {
     };
 
     const handleAvancar = () => {
+        const relatoriosOrdenados = getRelatoriosOrdenados();
         if (currentIndex > 0) {
             const newIndex = currentIndex - 1;
             const novoRelatorio = relatoriosOrdenados[newIndex];
@@ -134,6 +173,7 @@ const LeitorRelatorio = () => {
         setPdfUrlCerto(`https://${domain}/${path}`);
     }
 
+    // Resto do componente permanece igual...
     return (
         <Base>
             <LeitorRelatorioStyle>
@@ -175,7 +215,6 @@ const LeitorRelatorio = () => {
                                 <div className={'mobile'}>
                                     <Pdf pdfUrl={pdfUrlCerto}/>
                                 </div>
-
                             </>
                         )}
 
