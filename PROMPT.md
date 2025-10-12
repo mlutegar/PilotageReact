@@ -22,3 +22,6 @@ Os cards que eu estou falando é:
 ```
 
 A capa desses relatórios seria a primeira página do pdf.
+
+Tipo, quando eu acesso "https://pilotage.com.br/#/relatorio/relatorio-mensal-setembro-2025", o pdf que aparece tem a
+capa. Queria que a foto dessa capa aparecesse nos outros.
