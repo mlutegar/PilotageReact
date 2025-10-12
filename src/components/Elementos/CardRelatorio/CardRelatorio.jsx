@@ -3,7 +3,7 @@ import TextoCorrido from "../Textos/TextoCorrido/TextoCorrido";
 import BotaoSecundario from "../Botoes/BotaoSecundario/BotaoSecundario";
 import {useNavigate} from "react-router-dom";
 
-const CardRelatorio = ({titulo, descricao, link, index}) => {
+const CardRelatorio = ({titulo, descricao, link, index, imagem}) => {
     const navigate = useNavigate();
 
     const createSlug = (titulo) => {
@@ -32,7 +32,7 @@ const CardRelatorio = ({titulo, descricao, link, index}) => {
         <CardRelatorioStyle>
             <div>
                 <img
-                    src={"imagens/relatorio/default.png"}
+                    src={imagem || "imagens/relatorio/default.png"}
                 />
             </div>
 
