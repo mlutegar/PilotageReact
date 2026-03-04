@@ -136,6 +136,13 @@ const FooterPrimario = () => {
                     <div className={'panamby'} onClick={handlePanambyClick}>
                         <img src={'imagens/panamby.png'} alt={'Panamby'}/>
                     </div>
+                    <div className={'rendimento'}>
+                        <h3>CORRESPONDENTE CAMBIAL</h3>
+                        <img src={'imagens/rendimento.jpeg'} alt={'Banco Rendimento'}/>
+                        <p>Banco Rendimento S.A.</p>
+                        <p>CNPJ 68.900.810/0001-38</p>
+                        <p>Ouvidoria Rendimento - 0800 722 0132</p>
+                    </div>
                 </div>
 
             </div>

@@ -100,17 +100,22 @@ export const FooterPrimarioStyle = styled.div`
     .colunaDireita {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: 1.5rem;
         padding-top: 7rem;
         align-items: center;
+
+        @media screen and (max-width: 768px) {
+            padding-top: 0;
+        }
     }
 
-    .colunaDireita h3 {
+    .colunaDireita > h3 {
         color: var(--secundaria);
         font-size: 1.25rem;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        margin-top: 1.5rem;
     }
 
     .selo img {
@@ -119,12 +124,47 @@ export const FooterPrimarioStyle = styled.div`
         flex-shrink: 0;
     }
 
+    .panamby {
+        cursor: pointer;
+    }
+
     .panamby img {
         width: 12.1875rem;
         height: 5.6875rem;
         flex-shrink: 0;
     }
 
+    .rendimento {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        margin-top: 2.5rem;
+        padding-top: 2.5rem;
+        border-top: 0.125rem solid rgba(255, 255, 255, 0.2);
 
+        h3 {
+            color: var(--secundaria);
+            font-size: 1.25rem;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 0.75rem;
+        }
+
+        img {
+            max-width: 10rem;
+            flex-shrink: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: var(--secundaria);
+            font-size: 0.95rem;
+            font-weight: 400;
+            line-height: normal;
+            text-align: center;
+            margin: 0;
+        }
+    }
 
 `
